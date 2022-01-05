@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.polarsys.capella.core.data.oa:OperationalAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.polarsys.capella.core.data.cs="http://www.polarsys.org/capella/core/cs/5.0.0" xmlns:org.polarsys.capella.core.data.fa="http://www.polarsys.org/capella/core/fa/5.0.0" xmlns:org.polarsys.capella.core.data.interaction="http://www.polarsys.org/capella/core/interaction/5.0.0" xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/5.0.0" id="0c90c85c-ebd7-4bdc-b1b3-fa6a5d2ff731" name="Operational Analysis">
+  <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg" id="ef4549ee-f9b7-48ef-bc28-be97586e5104" name="Operational Activities">
+    <ownedOperationalActivities id="1775be4e-c356-46e4-b33f-2e69022790ef" name="Root Operational Activity">
+      <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.oa:OperationalProcess" id="4cd488cf-fe20-426e-b30c-8e7f7e315df7" name="Play process">
+        <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction" id="9c9b4e53-0168-4f0a-8d19-285ae91c7bd4" involved="4cdfb713-f700-437d-8e7c-3bc38dd5f764"/>
+        <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink" id="53f417a8-1120-49e7-aa77-c8f225158562" involved="a2f2a1cf-70f1-472f-a280-7c4bf8eee52d" source="3dba7d7b-8471-46c4-8b71-d8ea370dd967" target="9c9b4e53-0168-4f0a-8d19-285ae91c7bd4"/>
+        <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction" id="3dba7d7b-8471-46c4-8b71-d8ea370dd967" involved="095f6d95-678c-41e2-a1bc-ef6496769313"/>
+      </ownedFunctionalChains>
+      <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity" id="6629b6cf-8fa8-491e-abac-60d47aa1c0ee" name="Retrieve toy from storage"/>
+      <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity" id="095f6d95-678c-41e2-a1bc-ef6496769313" name="Play with toy"/>
+      <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity" id="4cdfb713-f700-437d-8e7c-3bc38dd5f764" name="Return Toy to Storage"/>
+      <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity" id="760aa31f-7e88-4fa4-90f4-b381ab4bea8d" name="Demonstrate novel use of toy"/>
+      <ownedFunctionalExchanges id="c75a8c12-8ea1-4498-8506-332f32d4c118" name="Toy moved to play area" target="095f6d95-678c-41e2-a1bc-ef6496769313" source="6629b6cf-8fa8-491e-abac-60d47aa1c0ee"/>
+      <ownedFunctionalExchanges id="a2f2a1cf-70f1-472f-a280-7c4bf8eee52d" name="Toy abandoned in play area" target="4cdfb713-f700-437d-8e7c-3bc38dd5f764" source="095f6d95-678c-41e2-a1bc-ef6496769313"/>
+      <ownedFunctionalExchanges id="5cd9d30e-1748-4273-b10d-7c7188297b45" name="Toy transferred to parent" target="760aa31f-7e88-4fa4-90f4-b381ab4bea8d" source="6629b6cf-8fa8-491e-abac-60d47aa1c0ee"/>
+      <ownedFunctionalExchanges id="91e2af2c-41bc-4f42-b4cd-fc3cf5e8773a" name="Toy transferred to child" target="095f6d95-678c-41e2-a1bc-ef6496769313" source="760aa31f-7e88-4fa4-90f4-b381ab4bea8d"/>
+    </ownedOperationalActivities>
+  </ownedFunctionPkg>
+  <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg" id="8d3c3b29-0c37-4b0c-8810-66853d70b585" name="Operational Capabilities">
+    <ownedOperationalCapabilities id="90c83c94-39cc-4924-b633-fb6aa2fce997" name="Entertain Child and Parent">
+      <ownedScenarios id="c57e090f-1e0a-4693-8897-0ee335f529be" name="[OES] Child Plays" kind="INTERACTION">
+        <ownedInstanceRoles id="3bcbded5-6f44-4b6f-a3a2-70609fabd6c0" name="Child" representedInstance="f320d91d-407e-4ed9-9506-e7890a7b4417"/>
+        <ownedInstanceRoles id="0bd9913c-92ab-40dd-84a0-6b3e19b02cc6" name="Parent" representedInstance="8d266c38-9c06-4268-90f5-a9dc0b86c6f8"/>
+        <ownedMessages id="16568892-4a18-4871-89e8-aa1a45e23742" name="Toy moved to play area" kind="ASYNCHRONOUS_CALL" sendingEnd="688c95dd-5fa1-4221-8c83-f2b560b3ace0" receivingEnd="7754de34-c1ad-4301-b170-f816d3d640cf"/>
+        <ownedMessages id="15fecd80-0c7d-41ce-b084-9aaf2b8e233d" name="Toy abandoned in play area" kind="ASYNCHRONOUS_CALL" sendingEnd="6d3c89ec-4541-44a8-a655-0f17aa87dcdc" receivingEnd="690dee0e-0f8c-42e1-b3f4-19d351fc404e"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="8ba8cd7a-fe15-4745-93cf-edbb16544869" name="Retrieve toy from storage" coveredInstanceRoles="3bcbded5-6f44-4b6f-a3a2-70609fabd6c0" relatedAbstractFunction="6629b6cf-8fa8-491e-abac-60d47aa1c0ee"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="94f62e9b-1e3b-40b6-8991-689ed0b40e46" name="Retrieve toy from storage" coveredInstanceRoles="3bcbded5-6f44-4b6f-a3a2-70609fabd6c0" relatedAbstractFunction="6629b6cf-8fa8-491e-abac-60d47aa1c0ee"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="688c95dd-5fa1-4221-8c83-f2b560b3ace0" name="Send Call Message Call" coveredInstanceRoles="3bcbded5-6f44-4b6f-a3a2-70609fabd6c0" event="34b3563e-84b6-4f39-8127-175c3b752668"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="7754de34-c1ad-4301-b170-f816d3d640cf" name="Receive Call Message Call" coveredInstanceRoles="3bcbded5-6f44-4b6f-a3a2-70609fabd6c0" event="01504076-94cb-4532-9963-3e6122facd01"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="61d080d7-0491-4a53-9fbd-07da82e73d3a" name="Play with toy" coveredInstanceRoles="3bcbded5-6f44-4b6f-a3a2-70609fabd6c0" relatedAbstractFunction="095f6d95-678c-41e2-a1bc-ef6496769313"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="f276b39c-6286-407f-a17b-03e0b8b72c47" name="Play with toy" coveredInstanceRoles="3bcbded5-6f44-4b6f-a3a2-70609fabd6c0" relatedAbstractFunction="095f6d95-678c-41e2-a1bc-ef6496769313"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="6d3c89ec-4541-44a8-a655-0f17aa87dcdc" name="Send Call Message Call" coveredInstanceRoles="3bcbded5-6f44-4b6f-a3a2-70609fabd6c0" event="60464dc1-011f-4aae-9826-80a7e777421d"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="690dee0e-0f8c-42e1-b3f4-19d351fc404e" name="Receive Call Message Call" coveredInstanceRoles="0bd9913c-92ab-40dd-84a0-6b3e19b02cc6" event="915723bc-a670-4de5-9628-85907b9127c4"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="af8cbd75-a2b3-48a7-ace6-cd33fb8cf94d" name="Return Toy to Storage" coveredInstanceRoles="0bd9913c-92ab-40dd-84a0-6b3e19b02cc6" relatedAbstractFunction="4cdfb713-f700-437d-8e7c-3bc38dd5f764"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd" id="e1fd4b0c-cdf1-4eb6-829e-35c9f226e531" name="endExec" coveredInstanceRoles="3bcbded5-6f44-4b6f-a3a2-70609fabd6c0" event="5cd8409e-cc1a-4236-9006-8139aa7cc94f"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="fd12c7c0-ffd2-4d63-b459-e41cc2d2493c" name="Return Toy to Storage" coveredInstanceRoles="0bd9913c-92ab-40dd-84a0-6b3e19b02cc6" relatedAbstractFunction="4cdfb713-f700-437d-8e7c-3bc38dd5f764"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd" id="b9418318-c7d7-4356-89fc-1a4990b9e5f1" name="endExec" coveredInstanceRoles="0bd9913c-92ab-40dd-84a0-6b3e19b02cc6" event="10a80990-27e7-4b3e-94c0-6efaecb53f23"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment" id="8ad172c4-2672-4732-bd4d-f3b1bb6d5adb" start="8ba8cd7a-fe15-4745-93cf-edbb16544869" finish="94f62e9b-1e3b-40b6-8991-689ed0b40e46" relatedAbstractFunction="6629b6cf-8fa8-491e-abac-60d47aa1c0ee"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment" id="4605e9f4-fac8-41ce-a72e-6333611b41ac" start="61d080d7-0491-4a53-9fbd-07da82e73d3a" finish="f276b39c-6286-407f-a17b-03e0b8b72c47" relatedAbstractFunction="095f6d95-678c-41e2-a1bc-ef6496769313"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment" id="0c5ccb09-dc67-4f3c-86a7-d30409cc2df4" start="af8cbd75-a2b3-48a7-ace6-cd33fb8cf94d" finish="fd12c7c0-ffd2-4d63-b459-e41cc2d2493c" relatedAbstractFunction="4cdfb713-f700-437d-8e7c-3bc38dd5f764"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:Execution" id="d24b0c08-7c40-4caf-986b-16ad92e9da45" start="7754de34-c1ad-4301-b170-f816d3d640cf" finish="e1fd4b0c-cdf1-4eb6-829e-35c9f226e531"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:Execution" id="b41fb419-af4d-48cd-b792-347f827612b7" start="690dee0e-0f8c-42e1-b3f4-19d351fc404e" finish="b9418318-c7d7-4356-89fc-1a4990b9e5f1"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventSentOperation" id="34b3563e-84b6-4f39-8127-175c3b752668" operation="c75a8c12-8ea1-4498-8506-332f32d4c118"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventReceiptOperation" id="01504076-94cb-4532-9963-3e6122facd01" operation="c75a8c12-8ea1-4498-8506-332f32d4c118"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEvent" id="5cd8409e-cc1a-4236-9006-8139aa7cc94f"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventSentOperation" id="60464dc1-011f-4aae-9826-80a7e777421d" operation="a2f2a1cf-70f1-472f-a280-7c4bf8eee52d"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventReceiptOperation" id="915723bc-a670-4de5-9628-85907b9127c4" operation="a2f2a1cf-70f1-472f-a280-7c4bf8eee52d"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEvent" id="10a80990-27e7-4b3e-94c0-6efaecb53f23"/>
+      </ownedScenarios>
+      <ownedScenarios id="e6770678-fb61-4f5c-a163-f573940e4d1b" name="Parent teaches" kind="INTERACTION">
+        <ownedInstanceRoles id="dac98df9-7c22-48a8-83b2-0050f03755fb" name="Child" representedInstance="f320d91d-407e-4ed9-9506-e7890a7b4417"/>
+        <ownedInstanceRoles id="12b722dd-b308-480b-9fd0-1270c926fbd2" name="Parent" representedInstance="8d266c38-9c06-4268-90f5-a9dc0b86c6f8"/>
+        <ownedMessages id="c9a18a37-a689-4d97-934f-6f693c358ed1" name="Toy transferred to parent" kind="ASYNCHRONOUS_CALL" sendingEnd="785e4568-acce-4e98-a645-bd1682982521" receivingEnd="52f14d97-1c89-4cb0-883d-42c62711ecf3"/>
+        <ownedMessages id="144c3e55-3e28-4caf-8096-2c041eca46a0" name="Toy transferred to child" kind="ASYNCHRONOUS_CALL" sendingEnd="c789b682-4c1a-4ca8-a2c7-c1a397b4de2e" receivingEnd="8555356a-4cbb-4f73-a232-f67ddc127d5e"/>
+        <ownedMessages id="0bd11b6f-2294-42e4-8089-db7aa7d9fe8b" name="Toy abandoned in play area" kind="ASYNCHRONOUS_CALL" sendingEnd="9db3a2da-53ee-4289-b0db-eb62e3ebd264" receivingEnd="9223e693-6c89-42e9-986f-8a6901c39351"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="908f32d0-dad9-4158-9258-801079d4a7cd" name="Retrieve toy from storage" coveredInstanceRoles="dac98df9-7c22-48a8-83b2-0050f03755fb" relatedAbstractFunction="6629b6cf-8fa8-491e-abac-60d47aa1c0ee"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="25a9c477-4c96-43ca-ac99-845bd7694650" name="Retrieve toy from storage" coveredInstanceRoles="dac98df9-7c22-48a8-83b2-0050f03755fb" relatedAbstractFunction="6629b6cf-8fa8-491e-abac-60d47aa1c0ee"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="785e4568-acce-4e98-a645-bd1682982521" name="Send Call Message Call" coveredInstanceRoles="dac98df9-7c22-48a8-83b2-0050f03755fb" event="13281a13-ff30-4eb7-abfa-e3ba90291d9d"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="52f14d97-1c89-4cb0-883d-42c62711ecf3" name="Receive Call Message Call" coveredInstanceRoles="12b722dd-b308-480b-9fd0-1270c926fbd2" event="b93c80f0-07ea-4024-8176-458b9e7ad3a9"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="297b4c2a-4cb9-4ec1-91eb-605ab48c1ac9" name="Demonstrate novel use of toy" coveredInstanceRoles="12b722dd-b308-480b-9fd0-1270c926fbd2" relatedAbstractFunction="760aa31f-7e88-4fa4-90f4-b381ab4bea8d"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="cdffdcda-bd22-4533-9606-fb16e5d14529" name="Demonstrate novel use of toy" coveredInstanceRoles="12b722dd-b308-480b-9fd0-1270c926fbd2" relatedAbstractFunction="760aa31f-7e88-4fa4-90f4-b381ab4bea8d"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd" id="6ffe5f11-ed60-4903-ad0c-9da57d1b7bc5" name="endExec" coveredInstanceRoles="12b722dd-b308-480b-9fd0-1270c926fbd2" event="7f0b9695-f63b-459a-9e19-d728867b7ea0"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="c789b682-4c1a-4ca8-a2c7-c1a397b4de2e" name="Send Call Message Call" coveredInstanceRoles="12b722dd-b308-480b-9fd0-1270c926fbd2" event="54fec6f3-10c9-4265-a5b2-383b401dbe07"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="8555356a-4cbb-4f73-a232-f67ddc127d5e" name="Receive Call Message Call" coveredInstanceRoles="dac98df9-7c22-48a8-83b2-0050f03755fb" event="d3ed5b17-d707-46d5-a9df-651fdecc3123"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="0470d954-bb26-48df-8263-41ddf48d3fab" name="Play with toy" coveredInstanceRoles="dac98df9-7c22-48a8-83b2-0050f03755fb" relatedAbstractFunction="095f6d95-678c-41e2-a1bc-ef6496769313"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="1505950a-9cd9-47f7-826e-7008fd820538" name="Play with toy" coveredInstanceRoles="dac98df9-7c22-48a8-83b2-0050f03755fb" relatedAbstractFunction="095f6d95-678c-41e2-a1bc-ef6496769313"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd" id="c0fd685c-b453-4712-b855-d477ec01bd8d" name="endExec" coveredInstanceRoles="dac98df9-7c22-48a8-83b2-0050f03755fb" event="f7cc843e-66c4-41fa-b8f2-2f3aa598b798"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="9db3a2da-53ee-4289-b0db-eb62e3ebd264" name="Send Call Message Call" coveredInstanceRoles="dac98df9-7c22-48a8-83b2-0050f03755fb" event="169b16fa-bae4-4257-a87f-0192a0e3b181"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd" id="9223e693-6c89-42e9-986f-8a6901c39351" name="Receive Call Message Call" coveredInstanceRoles="12b722dd-b308-480b-9fd0-1270c926fbd2" event="ffccb87d-82ac-4036-b51d-7e130e00807f"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd" id="756d3f46-57a2-4b07-9498-9f816a1f827d" name="endExec" coveredInstanceRoles="12b722dd-b308-480b-9fd0-1270c926fbd2" event="9242ef73-ace3-4e8d-b5fc-3dbdb690d2f5"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="56e5da14-3f2e-434b-bbff-6d4f10a064cc" name="Return Toy to Storage" coveredInstanceRoles="12b722dd-b308-480b-9fd0-1270c926fbd2" relatedAbstractFunction="4cdfb713-f700-437d-8e7c-3bc38dd5f764"/>
+        <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState" id="e1050e78-2bc0-41b6-906d-acd3e5093277" name="Return Toy to Storage" coveredInstanceRoles="12b722dd-b308-480b-9fd0-1270c926fbd2" relatedAbstractFunction="4cdfb713-f700-437d-8e7c-3bc38dd5f764"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment" id="a6467681-db00-4fde-b1dd-dd4a89e4e06d" start="908f32d0-dad9-4158-9258-801079d4a7cd" finish="25a9c477-4c96-43ca-ac99-845bd7694650" relatedAbstractFunction="6629b6cf-8fa8-491e-abac-60d47aa1c0ee"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment" id="8b79777e-675a-4578-a240-307994a40d3c" start="297b4c2a-4cb9-4ec1-91eb-605ab48c1ac9" finish="cdffdcda-bd22-4533-9606-fb16e5d14529" relatedAbstractFunction="760aa31f-7e88-4fa4-90f4-b381ab4bea8d"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:Execution" id="f8a240d2-73a7-4ae7-8acd-28e61b9af49d" start="52f14d97-1c89-4cb0-883d-42c62711ecf3" finish="6ffe5f11-ed60-4903-ad0c-9da57d1b7bc5"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:Execution" id="4e8efbb9-4152-47ff-8dff-4b382a51e952" start="8555356a-4cbb-4f73-a232-f67ddc127d5e" finish="c0fd685c-b453-4712-b855-d477ec01bd8d"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment" id="87f7aad2-7384-46e5-a7ec-41bfba31a485" start="0470d954-bb26-48df-8263-41ddf48d3fab" finish="1505950a-9cd9-47f7-826e-7008fd820538" relatedAbstractFunction="095f6d95-678c-41e2-a1bc-ef6496769313"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment" id="0c3cbc40-6caa-4609-bece-82f136f17fcd" start="56e5da14-3f2e-434b-bbff-6d4f10a064cc" finish="e1050e78-2bc0-41b6-906d-acd3e5093277" relatedAbstractFunction="4cdfb713-f700-437d-8e7c-3bc38dd5f764"/>
+        <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:Execution" id="29769f04-6a76-4fd0-9dbd-75484c17500b" start="9223e693-6c89-42e9-986f-8a6901c39351" finish="756d3f46-57a2-4b07-9498-9f816a1f827d"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventSentOperation" id="13281a13-ff30-4eb7-abfa-e3ba90291d9d" operation="5cd9d30e-1748-4273-b10d-7c7188297b45"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventReceiptOperation" id="b93c80f0-07ea-4024-8176-458b9e7ad3a9" operation="5cd9d30e-1748-4273-b10d-7c7188297b45"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEvent" id="7f0b9695-f63b-459a-9e19-d728867b7ea0"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventSentOperation" id="54fec6f3-10c9-4265-a5b2-383b401dbe07" operation="91e2af2c-41bc-4f42-b4cd-fc3cf5e8773a"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventReceiptOperation" id="d3ed5b17-d707-46d5-a9df-651fdecc3123" operation="91e2af2c-41bc-4f42-b4cd-fc3cf5e8773a"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEvent" id="f7cc843e-66c4-41fa-b8f2-2f3aa598b798"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventSentOperation" id="169b16fa-bae4-4257-a87f-0192a0e3b181" operation="a2f2a1cf-70f1-472f-a280-7c4bf8eee52d"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventReceiptOperation" id="ffccb87d-82ac-4036-b51d-7e130e00807f" operation="a2f2a1cf-70f1-472f-a280-7c4bf8eee52d"/>
+        <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEvent" id="9242ef73-ace3-4e8d-b5fc-3dbdb690d2f5"/>
+      </ownedScenarios>
+      <ownedEntityOperationalCapabilityInvolvements id="2b40b493-3327-416f-a287-879e43af5f20" involved="31bb8359-392a-4dc6-84a0-7747dfc302c4"/>
+      <ownedEntityOperationalCapabilityInvolvements id="6d3bea2f-a096-4032-9bce-88525ee83511" involved="063a3c85-c32f-4be7-ab8e-5d9a23121dca"/>
+    </ownedOperationalCapabilities>
+  </ownedAbstractCapabilityPkg>
+  <ownedInterfacePkg id="b946989b-acc8-4707-9a53-f5f8359f986f" name="Interfaces"/>
+  <ownedDataPkg id="e86cca2b-8eb6-49f4-a96c-fbd7e2d8932b" name="Data"/>
+  <ownedRolePkg id="df8bb0e5-2b7f-4bd4-a214-d23b4575b9f3" name="Roles"/>
+  <ownedEntityPkg id="e24fb35d-1e54-48dc-91ef-4e5c4f1e2c4a" name="Operational Entities">
+    <ownedParts id="8d266c38-9c06-4268-90f5-a9dc0b86c6f8" name="Parent" abstractType="31bb8359-392a-4dc6-84a0-7747dfc302c4"/>
+    <ownedParts id="f320d91d-407e-4ed9-9506-e7890a7b4417" name="Child" abstractType="063a3c85-c32f-4be7-ab8e-5d9a23121dca"/>
+    <ownedParts id="b7e45fb1-6ef8-4a83-8f03-58dd8202f536" name="Toy" abstractType="c7d891cf-19a1-4eae-ac3b-750f6ac66050"/>
+    <ownedParts id="0137d6c3-db56-48da-be92-1dcc7d8503f9" name="OA 4" abstractType="485fb148-294b-4b16-a31f-9b2609373df9"/>
+    <ownedEntities id="31bb8359-392a-4dc6-84a0-7747dfc302c4" name="Parent" actor="true" human="true">
+      <ownedFunctionalAllocation id="47162193-1024-43fc-9c57-247684ff60ff" targetElement="4cdfb713-f700-437d-8e7c-3bc38dd5f764" sourceElement="31bb8359-392a-4dc6-84a0-7747dfc302c4"/>
+      <ownedFunctionalAllocation id="da751ddc-7642-41cc-bd53-df738f11b8aa" targetElement="760aa31f-7e88-4fa4-90f4-b381ab4bea8d" sourceElement="31bb8359-392a-4dc6-84a0-7747dfc302c4"/>
+    </ownedEntities>
+    <ownedEntities id="063a3c85-c32f-4be7-ab8e-5d9a23121dca" name="Child" actor="true" human="true">
+      <ownedFunctionalAllocation id="9ed47723-a64d-412d-88f3-4a8741dfb348" targetElement="6629b6cf-8fa8-491e-abac-60d47aa1c0ee" sourceElement="063a3c85-c32f-4be7-ab8e-5d9a23121dca"/>
+      <ownedFunctionalAllocation id="e3d3a953-3b81-4f14-8202-cd37ffa0d815" targetElement="095f6d95-678c-41e2-a1bc-ef6496769313" sourceElement="063a3c85-c32f-4be7-ab8e-5d9a23121dca"/>
+    </ownedEntities>
+    <ownedEntities id="c7d891cf-19a1-4eae-ac3b-750f6ac66050" name="Toy">
+      <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="bf7d594f-0e1f-4162-a800-e39c9a08f452" name="Toy Train" abstractType="c02deedb-d500-4cfa-8fca-e72e16927040"/>
+      <ownedEntities id="c02deedb-d500-4cfa-8fca-e72e16927040" name="Toy Train"/>
+    </ownedEntities>
+    <ownedEntities id="485fb148-294b-4b16-a31f-9b2609373df9" name="OA 4" actor="true" human="true"/>
+  </ownedEntityPkg>
+</org.polarsys.capella.core.data.oa:OperationalAnalysis>

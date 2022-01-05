@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: test
+Bundle-SymbolicName: test;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: 
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-16
+Automatic-Module-Name: test
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.polarsys.capella.core.data.gen;bundle-version="5.2.0",
+ org.polarsys.capella.common.libraries.gen;bundle-version="5.2.0",
+ org.polarsys.capella.common.re.gen;bundle-version="5.2.0"

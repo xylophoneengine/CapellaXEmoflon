@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.polarsys.capella.core.data.pa:PhysicalArchitecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.polarsys.capella.core.data.la="http://www.polarsys.org/capella/core/la/5.0.0" xmlns:org.polarsys.capella.core.data.pa="http://www.polarsys.org/capella/core/pa/5.0.0" id="9ffb21ab-e59f-43a7-a357-0946d6cede4d" name="Physical Architecture">
+  <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunctionPkg" id="7be5b18b-089f-4f6e-9c64-05febe32900d" name="Physical Functions">
+    <ownedPhysicalFunctions id="0eda11d3-8d79-4f23-850d-2e0271441fb2" name="Root Physical Function">
+      <ownedFunctionRealizations id="39b04c52-66fc-4724-8aa8-a1c823ac7304" sourceElement="0eda11d3-8d79-4f23-850d-2e0271441fb2">
+        <targetElement xsi:type="org.polarsys.capella.core.data.la:LogicalFunction" href="instances/LogicalArchitecture.xmi#f09c6037-3cd4-406a-a58f-7ecb14d1c107"/>
+      </ownedFunctionRealizations>
+    </ownedPhysicalFunctions>
+  </ownedFunctionPkg>
+  <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg" id="e305f58c-3d35-4896-bf22-2f3f67a2d9ea" name="Capabilities"/>
+  <ownedInterfacePkg id="4f46c0bb-7338-4b27-9aa5-f2cf2499f0a1" name="Interfaces"/>
+  <ownedDataPkg id="c9702b84-f252-40c4-8961-ca850d0182bc" name="Data"/>
+  <ownedPhysicalComponentPkg id="9acdb2b5-543a-4e2c-9bf6-642b85783550" name="Structure">
+    <ownedParts id="0a9bc83f-1bea-44d3-b056-75e3b149d2ef" name="Physical System" abstractType="3cc98e97-f8db-4cb0-b375-358383df6ea5"/>
+    <ownedPhysicalComponents id="3cc98e97-f8db-4cb0-b375-358383df6ea5" name="Physical System">
+      <ownedComponentRealizations id="c3ad9626-0d49-4c8e-a106-1c79516eeb8c" sourceElement="3cc98e97-f8db-4cb0-b375-358383df6ea5">
+        <targetElement xsi:type="org.polarsys.capella.core.data.la:LogicalComponent" href="instances/LogicalArchitecture.xmi#9aa22cca-a432-4a2c-8044-11be2f7c5836"/>
+      </ownedComponentRealizations>
+    </ownedPhysicalComponents>
+  </ownedPhysicalComponentPkg>
+  <ownedLogicalArchitectureRealizations id="e88d14c4-177c-44cf-a92b-7286ca857954" sourceElement="9ffb21ab-e59f-43a7-a357-0946d6cede4d">
+    <targetElement xsi:type="org.polarsys.capella.core.data.la:LogicalArchitecture" href="instances/LogicalArchitecture.xmi#24fc02f7-f7bf-41b3-ac52-74a777d806f6"/>
+  </ownedLogicalArchitectureRealizations>
+</org.polarsys.capella.core.data.pa:PhysicalArchitecture>
