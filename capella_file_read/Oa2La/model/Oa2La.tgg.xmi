@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:language="platform:/plugin/org.emoflon.ibex.tgg.language/model/Language.ecore" name="Oa2La">
+  <src href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#/"/>
+  <trg href="platform:/resource/org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore#/"/>
+  <corr href="platform:/resource/Oa2La/model/Oa2La.ecore#/"/>
+  <attributeConstraintDefinitionLibrary/>
+</language:TGG>

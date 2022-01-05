@@ -1,0 +1,20 @@
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore"
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"
+
+#schema Oa2La
+	
+#source {
+	oa
+}
+
+#target { 
+	la
+} 
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	
+}
