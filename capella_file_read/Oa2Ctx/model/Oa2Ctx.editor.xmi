@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tgg="http://www.moflon.org/ide/tgg/mosl/TGG">
+  <imports name="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"/>
+  <imports name="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore"/>
+  <schema name="Oa2Ctx">
+    <sourceTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#/"/>
+    <targetTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#/"/>
+    <correspondenceTypes name="OperationalAnalysis2SystemAnalysis">
+      <source href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+      <target href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    </correspondenceTypes>
+  </schema>
+  <rules name="OperationalAnalysis2SystemAnalysis" schema="//@schema">
+    <sourcePatterns name="oa_arch">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    </sourcePatterns>
+    <targetPatterns name="ctx_arch">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    </targetPatterns>
+  </rules>
+</tgg:TripleGraphGrammarFile>

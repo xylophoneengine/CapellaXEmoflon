@@ -1,0 +1,20 @@
+#using Oa2Ctx.*
+#using AttrCondDefLibrary.*
+
+#rule OperationalAnalysis2SystemAnalysis #with Oa2Ctx
+
+#source { 
+	++ oa_arch : OperationalAnalysis
+}
+
+#target {
+	++ ctx_arch : SystemAnalysis
+}
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	
+}

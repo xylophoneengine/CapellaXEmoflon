@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.polarsys.capella.core.data.ctx.CtxPackage"
+            genModel="../org.polarsys.capella.core.data.gen/model/CapellaModeller.genmodel"
+            uri="http://www.polarsys.org/capella/core/ctx/5.0.0">
+      </package>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.polarsys.capella.core.data.oa.OaPackage"
+            genModel="../org.polarsys.capella.core.data.gen/model/CapellaModeller.genmodel"
+            uri="http://www.polarsys.org/capella/core/oa/5.0.0">
+      </package>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Oa2Ctx -->
+      <package
+            uri="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore"
+            class="Oa2Ctx.Oa2CtxPackage"
+            genModel="model/Oa2Ctx.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="org.polarsys.capella.core.data.oa.util.OaResourceFactoryImpl"
+            type="oa">
+      </parser>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="org.polarsys.capella.core.data.ctx.util.CtxResourceFactoryImpl"
+            type="ctx">
+      </parser>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.polarsys.kitalpha.emde.model.EmdePackage"
+            genModel="org.polarsys.kitalpha.emde.model/model/eMDE.genmodel"
+            uri="http://www.polarsys.org/kitalpha/emde/1.0.0">
+      </package>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="org.polarsys.kitalpha.emde.model.util.EmdeResourceFactoryImpl"
+            type="emde">
+      </parser>
+   </extension>
+
+</plugin>

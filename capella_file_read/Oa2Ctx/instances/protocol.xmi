@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Oa2Ctx="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore">
+  <Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker>
+    <CREATE__SRC__oa_arch href="src.xmi#506dd055-6ea4-4a0f-aa0b-160d5aa1bb5b"/>
+    <CREATE__TRG__ctx_arch href="trg.xmi#b01b9846-509f-4e39-9086-2034d1c44230"/>
+  </Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker>
+  <Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker>
+    <CREATE__SRC__oa_arch href="src.xmi#a89bb949-ef40-45a9-b4ba-ddc98f1af83c"/>
+    <CREATE__TRG__ctx_arch href="trg.xmi#21ecedee-2631-470b-afd4-088e72308f58"/>
+  </Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker>
+  <Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker>
+    <CREATE__SRC__oa_arch href="src.xmi#abe3fb7f-770e-42f2-a2fc-db87ccae7254"/>
+    <CREATE__TRG__ctx_arch href="trg.xmi#d69e45c1-719e-45f6-96aa-19c1c64f113f"/>
+  </Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker>
+  <Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker>
+    <CREATE__SRC__oa_arch href="src.xmi#e1f0db1d-5abe-4709-b53a-e006843aa4b2"/>
+    <CREATE__TRG__ctx_arch href="trg.xmi#80edc595-1daf-4174-addd-68e62f988a64"/>
+  </Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker>
+</xmi:XMI>

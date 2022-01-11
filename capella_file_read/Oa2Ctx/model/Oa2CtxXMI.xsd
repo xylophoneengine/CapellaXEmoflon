@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:Oa2Ctx="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore" xmlns:org.emoflon.ibex.tgg.runtime="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore" xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/5.0.0" xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/5.0.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore">
+  <xsd:import namespace="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore" schemaLocation="runtime.xsd"/>
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:import namespace="http://www.polarsys.org/capella/core/ctx/5.0.0" schemaLocation="ctx.xsd"/>
+  <xsd:import namespace="http://www.polarsys.org/capella/core/oa/5.0.0" schemaLocation="oa.xsd"/>
+  <xsd:complexType name="OperationalAnalysis2SystemAnalysis">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="source" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+      <xsd:element name="target" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="target" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="OperationalAnalysis2SystemAnalysis" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
+  <xsd:complexType name="OperationalAnalysis2SystemAnalysis__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__TRG__ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__ctx_arch" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OperationalAnalysis2SystemAnalysis__Marker" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker"/>
+</xsd:schema>

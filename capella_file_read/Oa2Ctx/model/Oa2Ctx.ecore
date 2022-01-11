@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Oa2Ctx" nsURI="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore"
+    nsPrefix="Oa2Ctx">
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalAnalysis2SystemAnalysis">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalAnalysis2SystemAnalysis__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__oa_arch" lowerBound="1"
+        eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__ctx_arch"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+  </eClassifiers>
+</ecore:EPackage>

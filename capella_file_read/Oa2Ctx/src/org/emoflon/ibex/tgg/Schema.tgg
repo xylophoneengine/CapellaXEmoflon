@@ -1,0 +1,23 @@
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore"
+
+#schema Oa2Ctx
+	
+#source {
+	oa
+}
+
+#target { 
+	ctx
+} 
+
+#correspondence {
+	OperationalAnalysis2SystemAnalysis{
+		#src-> OperationalAnalysis
+		#trg-> SystemAnalysis
+	}
+}
+
+#attributeConditions {
+	
+}
