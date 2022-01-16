@@ -123,22 +123,40 @@ public interface Oa2CtxPackage extends EPackage {
 	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
 
 	/**
-	 * The feature id for the '<em><b>CREATE SRC oa arch</b></em>' reference.
+	 * The feature id for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>CREATE TRG ctx arch</b></em>' reference.
+	 * The feature id for the '<em><b>CREATE SRC src oa arch</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>CREATE CORR oa2ctx</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Operational Analysis2 System Analysis Marker</em>' class.
@@ -147,7 +165,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Operational Analysis2 System Analysis Marker</em>' class.
@@ -202,26 +220,48 @@ public interface Oa2CtxPackage extends EPackage {
 	EClass getOperationalAnalysis2SystemAnalysis__Marker();
 
 	/**
-	 * Returns the meta object for the reference '{@link Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__SRC__oa_arch <em>CREATE SRC oa arch</em>}'.
+	 * Returns the meta object for the reference '{@link Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>CREATE SRC oa arch</em>'.
-	 * @see Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__SRC__oa_arch()
+	 * @return the meta object for the reference '<em>CREATE SRC src abstract capability pkg</em>'.
+	 * @see Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__SRC__src_abstract_capability_pkg()
 	 * @see #getOperationalAnalysis2SystemAnalysis__Marker()
 	 * @generated
 	 */
-	EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__oa_arch();
+	EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__src_abstract_capability_pkg();
 
 	/**
-	 * Returns the meta object for the reference '{@link Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__TRG__ctx_arch <em>CREATE TRG ctx arch</em>}'.
+	 * Returns the meta object for the reference '{@link Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>CREATE TRG ctx arch</em>'.
-	 * @see Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__TRG__ctx_arch()
+	 * @return the meta object for the reference '<em>CREATE SRC src oa arch</em>'.
+	 * @see Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__SRC__src_oa_arch()
 	 * @see #getOperationalAnalysis2SystemAnalysis__Marker()
 	 * @generated
 	 */
-	EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__TRG__ctx_arch();
+	EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__src_oa_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg ctx arch</em>'.
+	 * @see Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__TRG__trg_ctx_arch()
+	 * @see #getOperationalAnalysis2SystemAnalysis__Marker()
+	 * @generated
+	 */
+	EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__TRG__trg_ctx_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE CORR oa2ctx</em>'.
+	 * @see Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker#getCREATE__CORR__oa2ctx()
+	 * @see #getOperationalAnalysis2SystemAnalysis__Marker()
+	 * @generated
+	 */
+	EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__CORR__oa2ctx();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -283,20 +323,36 @@ public interface Oa2CtxPackage extends EPackage {
 		EClass OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER = eINSTANCE.getOperationalAnalysis2SystemAnalysis__Marker();
 
 		/**
-		 * The meta object literal for the '<em><b>CREATE SRC oa arch</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_OA_ARCH = eINSTANCE.getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__oa_arch();
+		EReference OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = eINSTANCE.getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__src_abstract_capability_pkg();
 
 		/**
-		 * The meta object literal for the '<em><b>CREATE TRG ctx arch</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>CREATE SRC src oa arch</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_TRG_CTX_ARCH = eINSTANCE.getOperationalAnalysis2SystemAnalysis__Marker_CREATE__TRG__ctx_arch();
+		EReference OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_SRC_OA_ARCH = eINSTANCE.getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__src_oa_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_TRG_TRG_CTX_ARCH = eINSTANCE.getOperationalAnalysis2SystemAnalysis__Marker_CREATE__TRG__trg_ctx_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE CORR oa2ctx</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getOperationalAnalysis2SystemAnalysis__Marker_CREATE__CORR__oa2ctx();
 
 	}
 

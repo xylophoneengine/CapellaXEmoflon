@@ -20,11 +20,15 @@
     <xsd:complexContent>
       <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
-          <xsd:element name="CREATE__SRC__oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
-          <xsd:element name="CREATE__TRG__ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__SRC__src_abstract_capability_pkg" type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"/>
+          <xsd:element name="CREATE__SRC__src_oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__TRG__trg_ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__CORR__oa2ctx" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
         </xsd:choice>
-        <xsd:attribute name="CREATE__SRC__oa_arch" type="xsd:string"/>
-        <xsd:attribute name="CREATE__TRG__ctx_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_abstract_capability_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_ctx_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__oa2ctx" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

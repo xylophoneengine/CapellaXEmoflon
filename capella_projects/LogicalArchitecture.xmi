@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.polarsys.capella.core.data.la:LogicalArchitecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/5.0.0" xmlns:org.polarsys.capella.core.data.la="http://www.polarsys.org/capella/core/la/5.0.0" id="358d4fe4-28e9-4e7e-9cc5-d108b4d9f8ff" name="Logical Architecture">
+  <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.la:LogicalFunctionPkg" id="92e63e96-2490-4ec3-8024-caf053ead146" name="Logical Functions">
+    <ownedLogicalFunctions id="bdb76afd-be4e-4784-8ad4-fc99bffc48c1" name="Root Logical Function">
+      <ownedFunctionRealizations id="68099dc3-8b83-4000-80c1-f9cca2ea435e" sourceElement="bdb76afd-be4e-4784-8ad4-fc99bffc48c1">
+        <targetElement xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction" href="../../capella_projects/SystemAnalysis.xmi#f323b864-c80b-45e6-933f-f8d957bdb77d"/>
+      </ownedFunctionRealizations>
+    </ownedLogicalFunctions>
+  </ownedFunctionPkg>
+  <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg" id="7571f87e-4fc0-4200-9a7a-4ca3afa0fe61" name="Capabilities"/>
+  <ownedInterfacePkg id="887a6c59-0afb-4689-a93c-36afdd9297dd" name="Interfaces"/>
+  <ownedDataPkg id="610acdab-188f-490f-ad70-8dcf19bebb46" name="Data"/>
+  <ownedLogicalComponentPkg id="b4278d7c-af20-4c4f-84ff-190e88f886d8" name="Structure">
+    <ownedParts id="524900bf-fdd5-47aa-b1e7-7951453032bc" name="Logical System" abstractType="e03209f0-7c5e-4304-b641-d9232c7cc76a"/>
+    <ownedLogicalComponents id="e03209f0-7c5e-4304-b641-d9232c7cc76a" name="Logical System">
+      <ownedComponentRealizations id="272caed2-cfd1-42ce-a411-9d1b423f4cab" sourceElement="e03209f0-7c5e-4304-b641-d9232c7cc76a">
+        <targetElement xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent" href="../../capella_projects/SystemAnalysis.xmi#8c3d865f-88ef-4233-974d-a1d39f928b53"/>
+      </ownedComponentRealizations>
+    </ownedLogicalComponents>
+  </ownedLogicalComponentPkg>
+  <ownedSystemAnalysisRealizations id="b60b6711-e60a-4d3b-90b9-3d7b2862b55f" sourceElement="358d4fe4-28e9-4e7e-9cc5-d108b4d9f8ff">
+    <targetElement xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis" href="../../capella_projects/SystemAnalysis.xmi#760d33f4-86e4-4fe8-97f6-7a84c6a42b82"/>
+  </ownedSystemAnalysisRealizations>
+</org.polarsys.capella.core.data.la:LogicalArchitecture>

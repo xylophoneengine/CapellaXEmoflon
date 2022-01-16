@@ -1,16 +1,83 @@
 <?xml version="1.0" encoding="ASCII"?>
-<language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:language="platform:/plugin/org.emoflon.ibex.tgg.language/model/Language.ecore" name="Oa2Ctx">
+<language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:language="platform:/plugin/org.emoflon.ibex.tgg.language/model/Language.ecore" name="Oa2Ctx">
   <src href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#/"/>
   <trg href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#/"/>
   <corr href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#/"/>
   <rules name="OperationalAnalysis2SystemAnalysis">
-    <nodes name="oa_arch" bindingType="CREATE">
+    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.0/@edges.0" outgoingEdges="//@rules.0/@edges.2" incomingCorrsSource="//@rules.0/@nodes.3">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
     </nodes>
-    <nodes name="ctx_arch" domainType="TRG" bindingType="CREATE">
+    <nodes name="src_abstract_capability_pkg" bindingType="CREATE" incomingEdges="//@rules.0/@edges.2">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
+    </nodes>
+    <nodes name="trg_ctx_arch" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.1" incomingCorrsTarget="//@rules.0/@nodes.3">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
     </nodes>
-    <attributeConditionLibrary/>
+    <nodes xsi:type="language:TGGRuleCorr" name="oa2ctx" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.0/@edges.0 //@rules.0/@edges.1" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.2">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis"/>
+    </nodes>
+    <edges name="oa2ctx__source__src_oa_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/source"/>
+    </edges>
+    <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
+    </edges>
+    <edges name="src_oa_arch__ownedAbstractCapabilityPkg__src_abstract_capability_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.1">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
   </rules>
-  <attributeConstraintDefinitionLibrary/>
+  <attributeConstraintDefinitionLibrary>
+    <tggAttributeConstraintDefinitions name="set_string_to_value_if_not_bound">
+      <parameterDefinitions name="field">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="string">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setRandomString" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+  </attributeConstraintDefinitionLibrary>
 </language:TGG>

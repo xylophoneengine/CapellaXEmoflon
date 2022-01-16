@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.polarsys.capella.core.data.oa:OperationalAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/5.0.0" id="5419553c-3807-4691-b581-115c3bbe8129" name="Operational Analysis">
+  <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg" id="270af1ba-1c80-4769-9c1c-ca325b4efc29" name="Operational Activities">
+    <ownedOperationalActivities id="c93ad70e-9908-404c-b7e6-35fb31e9b9b9" name="Root Operational Activity"/>
+  </ownedFunctionPkg>
+  <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg" id="1dda3380-4886-4fc5-83f9-1e881c914ba3" name="Operational Capabilities"/>
+  <ownedInterfacePkg id="66e0606d-73d0-4d65-9caf-819d1da88f6e" name="Interfaces"/>
+  <ownedDataPkg id="c382be20-1b5f-4cf8-89c7-39d7f1e0bf58" name="Data"/>
+  <ownedRolePkg id="50c567d6-3280-4fa0-9fd4-68849f7ef2d5" name="Roles"/>
+  <ownedEntityPkg id="e74bfc02-b143-4476-aaf9-be8b9b8754b3" name="Operational Entities"/>
+</org.polarsys.capella.core.data.oa:OperationalAnalysis>

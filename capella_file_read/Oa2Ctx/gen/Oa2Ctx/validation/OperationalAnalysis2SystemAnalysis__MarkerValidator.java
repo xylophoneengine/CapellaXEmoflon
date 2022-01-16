@@ -4,9 +4,12 @@
  */
 package Oa2Ctx.validation;
 
+import Oa2Ctx.OperationalAnalysis2SystemAnalysis;
+
 import org.polarsys.capella.core.data.ctx.SystemAnalysis;
 
 import org.polarsys.capella.core.data.oa.OperationalAnalysis;
+import org.polarsys.capella.core.data.oa.OperationalCapabilityPkg;
 
 /**
  * A sample validator interface for {@link Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker}.
@@ -17,6 +20,8 @@ import org.polarsys.capella.core.data.oa.OperationalAnalysis;
 public interface OperationalAnalysis2SystemAnalysis__MarkerValidator {
 	boolean validate();
 
-	boolean validateCREATE__SRC__oa_arch(OperationalAnalysis value);
-	boolean validateCREATE__TRG__ctx_arch(SystemAnalysis value);
+	boolean validateCREATE__SRC__src_abstract_capability_pkg(OperationalCapabilityPkg value);
+	boolean validateCREATE__SRC__src_oa_arch(OperationalAnalysis value);
+	boolean validateCREATE__TRG__trg_ctx_arch(SystemAnalysis value);
+	boolean validateCREATE__CORR__oa2ctx(OperationalAnalysis2SystemAnalysis value);
 }

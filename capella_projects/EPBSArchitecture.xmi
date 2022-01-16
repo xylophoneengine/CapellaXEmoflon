@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.polarsys.capella.core.data.epbs:EPBSArchitecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.polarsys.capella.core.data.epbs="http://www.polarsys.org/capella/core/epbs/5.0.0" xmlns:org.polarsys.capella.core.data.la="http://www.polarsys.org/capella/core/la/5.0.0" xmlns:org.polarsys.capella.core.data.pa="http://www.polarsys.org/capella/core/pa/5.0.0" id="9a6b9601-d2bf-4f5d-ab8d-a969fef083ab" name="EPBS Architecture">
+  <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg" id="cc51bbae-76c5-4141-8cdb-276b3856484d" name="Capabilities"/>
+  <ownedConfigurationItemPkg id="e9e17aad-f1ab-4567-ba76-5b89550129d8" name="Structure">
+    <ownedParts id="3144d18c-17d3-4cff-9d71-5bdc8db7c87c" name="System" abstractType="3f012c42-f504-490b-976d-d6697c823c6e"/>
+    <ownedConfigurationItems id="3f012c42-f504-490b-976d-d6697c823c6e" name="System" kind="SystemCI">
+      <ownedPhysicalArtifactRealizations id="27caa1df-891d-43c3-ae90-07e8fd9858a5" sourceElement="3f012c42-f504-490b-976d-d6697c823c6e">
+        <targetElement xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent" href="../../capella_projects/PhysicalArchitecture.xmi#606bca9e-f64b-47c4-858f-0710f505b390"/>
+      </ownedPhysicalArtifactRealizations>
+    </ownedConfigurationItems>
+  </ownedConfigurationItemPkg>
+  <ownedPhysicalArchitectureRealizations id="51b93b78-3311-4af2-af8f-a6ae1cf2844a" sourceElement="9a6b9601-d2bf-4f5d-ab8d-a969fef083ab">
+    <targetElement xsi:type="org.polarsys.capella.core.data.pa:PhysicalArchitecture" href="../../capella_projects/PhysicalArchitecture.xmi#b7e21f38-c18d-43e3-8773-1aea515c7be9"/>
+  </ownedPhysicalArchitectureRealizations>
+</org.polarsys.capella.core.data.epbs:EPBSArchitecture>

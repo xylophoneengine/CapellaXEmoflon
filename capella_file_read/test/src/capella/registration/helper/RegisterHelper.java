@@ -34,7 +34,8 @@ import org.polarsys.capella.core.data.sharedmodel.SharedmodelPackage;
 
 public class RegisterHelper {
 	
-	public static String instances_path = "instances/";
+//	public static String instances_path = "instances/";
+	public static String instances_path = "../../capella_projects/";
 	
 	private void init_Epackages() {
 		System.out.println("Now initializing EPackages");
@@ -66,7 +67,10 @@ public class RegisterHelper {
 	
 	public static void main(String[] args) {
 		RegisterHelper reg = new RegisterHelper();
-		String p_name = "ToyCatapult.capella";
+		String p_name = "empty_project/empty_project.capella";
+//		String p_name = "user_through_stages/user_through_stages.capella";
+
+		//		String p_name = "ToyCatapult.capella";
 		//String p_name = "In-Flight Entertainment System.capella";
 		ProjectImpl p = reg.loadCapellaFile(instances_path + p_name, "capella");
 		SystemEngineeringImpl se = (SystemEngineeringImpl) p.getOwnedModelRoots().get(0);

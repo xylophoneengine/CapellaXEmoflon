@@ -208,7 +208,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__oa_arch() {
+	public EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__src_abstract_capability_pkg() {
 		return (EReference)operationalAnalysis2SystemAnalysis__MarkerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -217,8 +217,26 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__TRG__ctx_arch() {
+	public EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__src_oa_arch() {
 		return (EReference)operationalAnalysis2SystemAnalysis__MarkerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__TRG__trg_ctx_arch() {
+		return (EReference)operationalAnalysis2SystemAnalysis__MarkerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__CORR__oa2ctx() {
+		return (EReference)operationalAnalysis2SystemAnalysis__MarkerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -254,8 +272,10 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 		createEReference(operationalAnalysis2SystemAnalysisEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS__TARGET);
 
 		operationalAnalysis2SystemAnalysis__MarkerEClass = createEClass(OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER);
-		createEReference(operationalAnalysis2SystemAnalysis__MarkerEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_OA_ARCH);
-		createEReference(operationalAnalysis2SystemAnalysis__MarkerEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_TRG_CTX_ARCH);
+		createEReference(operationalAnalysis2SystemAnalysis__MarkerEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG);
+		createEReference(operationalAnalysis2SystemAnalysis__MarkerEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_SRC_OA_ARCH);
+		createEReference(operationalAnalysis2SystemAnalysis__MarkerEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_TRG_TRG_CTX_ARCH);
+		createEReference(operationalAnalysis2SystemAnalysis__MarkerEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_CORR_OA2CTX);
 	}
 
 	/**
@@ -299,8 +319,10 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 		initEReference(getOperationalAnalysis2SystemAnalysis_Target(), theCtxPackage.getSystemAnalysis(), null, "target", null, 0, 1, OperationalAnalysis2SystemAnalysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationalAnalysis2SystemAnalysis__MarkerEClass, OperationalAnalysis2SystemAnalysis__Marker.class, "OperationalAnalysis2SystemAnalysis__Marker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__oa_arch(), theOaPackage.getOperationalAnalysis(), null, "CREATE__SRC__oa_arch", null, 1, 1, OperationalAnalysis2SystemAnalysis__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOperationalAnalysis2SystemAnalysis__Marker_CREATE__TRG__ctx_arch(), theCtxPackage.getSystemAnalysis(), null, "CREATE__TRG__ctx_arch", null, 1, 1, OperationalAnalysis2SystemAnalysis__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__src_abstract_capability_pkg(), theOaPackage.getOperationalCapabilityPkg(), null, "CREATE__SRC__src_abstract_capability_pkg", null, 1, 1, OperationalAnalysis2SystemAnalysis__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__src_oa_arch(), theOaPackage.getOperationalAnalysis(), null, "CREATE__SRC__src_oa_arch", null, 1, 1, OperationalAnalysis2SystemAnalysis__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationalAnalysis2SystemAnalysis__Marker_CREATE__TRG__trg_ctx_arch(), theCtxPackage.getSystemAnalysis(), null, "CREATE__TRG__trg_ctx_arch", null, 1, 1, OperationalAnalysis2SystemAnalysis__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationalAnalysis2SystemAnalysis__Marker_CREATE__CORR__oa2ctx(), this.getOperationalAnalysis2SystemAnalysis(), null, "CREATE__CORR__oa2ctx", null, 1, 1, OperationalAnalysis2SystemAnalysis__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

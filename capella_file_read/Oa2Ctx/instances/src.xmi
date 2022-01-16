@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/5.0.0">
-  <org.polarsys.capella.core.data.oa:OperationalAnalysis id="506dd055-6ea4-4a0f-aa0b-160d5aa1bb5b"/>
-  <org.polarsys.capella.core.data.oa:OperationalAnalysis id="a89bb949-ef40-45a9-b4ba-ddc98f1af83c"/>
-  <org.polarsys.capella.core.data.oa:OperationalAnalysis id="abe3fb7f-770e-42f2-a2fc-db87ccae7254"/>
-  <org.polarsys.capella.core.data.oa:OperationalAnalysis id="e1f0db1d-5abe-4709-b53a-e006843aa4b2"/>
-</xmi:XMI>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"/>

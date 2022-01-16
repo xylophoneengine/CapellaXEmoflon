@@ -12,5 +12,7 @@ Package Oa2Ctx <platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore>
     Reference target : SystemAnalysis
 
   Class OperationalAnalysis2SystemAnalysis__Marker -> TGGRuleApplication
-    Reference CREATE__SRC__oa_arch : OperationalAnalysis<<1..1>>
-    Reference CREATE__TRG__ctx_arch : SystemAnalysis<<1..1>>
+    Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
+    Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>
+    Reference CREATE__TRG__trg_ctx_arch : SystemAnalysis<<1..1>>
+    Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>

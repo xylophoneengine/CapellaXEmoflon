@@ -4,17 +4,27 @@
 #rule OperationalAnalysis2SystemAnalysis #with Oa2Ctx
 
 #source { 
-	++ oa_arch : OperationalAnalysis
+	++ src_oa_arch : OperationalAnalysis{
+		++ -ownedAbstractCapabilityPkg -> src_abstract_capability_pkg
+	}
+	
+	++ src_abstract_capability_pkg : OperationalCapabilityPkg{
+	}
 }
 
 #target {
-	++ ctx_arch : SystemAnalysis
+	++ trg_ctx_arch : SystemAnalysis
 }
 
 #correspondence {
-	
+	++oa2ctx : OperationalAnalysis2SystemAnalysis{
+		#src->src_oa_arch
+		#trg->trg_ctx_arch
+	}
 }
 
 #attributeConditions {
-	
+//	set_string_to_value_if_not_bound(src_abstract_capability_pkg.name, "Operational Capabilities")
+//	eq_string(src_abstract_capability_pkg.name, "Operational Capabilities")
+	setRandomString(src_abstract_capability_pkg.name)
 }

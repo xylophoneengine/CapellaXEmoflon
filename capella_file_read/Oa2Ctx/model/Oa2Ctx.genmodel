@@ -12,8 +12,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
     </genClasses>
     <genClasses ecoreClass="Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis__Marker">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis__Marker/CREATE__SRC__oa_arch"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis__Marker/CREATE__TRG__ctx_arch"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis__Marker/CREATE__SRC__src_abstract_capability_pkg"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis__Marker/CREATE__SRC__src_oa_arch"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis__Marker/CREATE__TRG__trg_ctx_arch"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis__Marker/CREATE__CORR__oa2ctx"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
