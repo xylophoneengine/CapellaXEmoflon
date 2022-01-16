@@ -26,18 +26,13 @@ import org.polarsys.capella.core.data.cs.impl.CsPackageImpl;
 import org.polarsys.capella.core.data.ctx.impl.CtxPackageImpl;
 import org.polarsys.capella.core.data.epbs.impl.EpbsPackageImpl;
 import org.polarsys.capella.core.data.fa.impl.FaPackageImpl;
-import org.polarsys.capella.core.data.information.communication.impl.CommunicationPackageImpl;
-import org.polarsys.capella.core.data.information.datatype.impl.DatatypePackageImpl;
-import org.polarsys.capella.core.data.information.datavalue.impl.DatavaluePackageImpl;
 import org.polarsys.capella.core.data.information.impl.InformationPackageImpl;
 import org.polarsys.capella.core.data.interaction.impl.InteractionPackageImpl;
 import org.polarsys.capella.core.data.la.impl.LaPackageImpl;
 import org.polarsys.capella.core.data.oa.impl.OaPackageImpl;
-import org.polarsys.capella.core.data.pa.deployment.impl.DeploymentPackageImpl;
 import org.polarsys.capella.core.data.pa.impl.PaPackageImpl;
 import org.polarsys.capella.core.data.requirement.impl.RequirementPackageImpl;
 import org.polarsys.capella.core.data.sharedmodel.impl.SharedmodelPackageImpl;
-import org.polarsys.kitalpha.emde.model.EmdePackage;
 import org.polarsys.kitalpha.emde.model.impl.EmdePackageImpl;
 
 import Oa2Ctx.Oa2CtxPackage;
@@ -113,13 +108,13 @@ public class HiPERegistrationHelper implements IRegistrationHelper {
 				"org.polarsys.capella.core.data.gen/model/CapellaCore.ecore",
 				"org.polarsys.capella.core.data.gen/model/CapellaModeller.ecore",
 				"org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore",
-				"org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore",
+				//"org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore",
 				"org.polarsys.capella.core.data.gen/model/EPBSArchitecture.ecore",
 				"org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore",
 				"org.polarsys.capella.core.data.gen/model/Information.ecore",
 				"org.polarsys.capella.core.data.gen/model/Interaction.ecore",
 				"org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore",
-				"org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore",
+				//"org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore",
 				"org.polarsys.capella.core.data.gen/model/PhysicalArchitecture.ecore",
 				"org.polarsys.capella.core.data.gen/model/Requirement.ecore",
 				"org.polarsys.capella.core.data.gen/model/SharedModel.ecore",
@@ -135,13 +130,13 @@ public class HiPERegistrationHelper implements IRegistrationHelper {
 				CapellacorePackageImpl.init(),
 				CapellamodellerPackageImpl.init(),
 				CsPackageImpl.init(),
-				CtxPackageImpl.init(),
+				//CtxPackageImpl.init(),
 				EpbsPackageImpl.init(),
 				FaPackageImpl.init(),
 				InformationPackageImpl.init(),
 				InteractionPackageImpl.init(),
 				LaPackageImpl.init(),
-				OaPackageImpl.init(),
+				//OaPackageImpl.init(),
 				PaPackageImpl.init(),
 				RequirementPackageImpl.init(),
 				SharedmodelPackageImpl.init(),
