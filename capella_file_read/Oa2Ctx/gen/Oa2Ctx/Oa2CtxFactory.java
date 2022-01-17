@@ -31,6 +31,51 @@ public interface Oa2CtxFactory extends EFactory {
 	OperationalAnalysis2SystemAnalysis createOperationalAnalysis2SystemAnalysis();
 
 	/**
+	 * Returns a new object of class '<em>Initial Model Creation Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Initial Model Creation Marker</em>'.
+	 * @generated
+	 */
+	InitialModelCreation__Marker createInitialModelCreation__Marker();
+
+	/**
+	 * Returns a new object of class '<em>Oa2 Sa create nodes and try to set reference Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Oa2 Sa create nodes and try to set reference Marker</em>'.
+	 * @generated
+	 */
+	Oa2Sa_create_nodes_and_try_to_set_reference__Marker createOa2Sa_create_nodes_and_try_to_set_reference__Marker();
+
+	/**
+	 * Returns a new object of class '<em>Oa2 Sa create nodes only Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Oa2 Sa create nodes only Marker</em>'.
+	 * @generated
+	 */
+	Oa2Sa_create_nodes_only__Marker createOa2Sa_create_nodes_only__Marker();
+
+	/**
+	 * Returns a new object of class '<em>Oa2 Sa nodes and set name Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Oa2 Sa nodes and set name Marker</em>'.
+	 * @generated
+	 */
+	Oa2Sa_nodes_and_set_name__Marker createOa2Sa_nodes_and_set_name__Marker();
+
+	/**
+	 * Returns a new object of class '<em>Oa2 Sa nodes and set specific name Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Oa2 Sa nodes and set specific name Marker</em>'.
+	 * @generated
+	 */
+	Oa2Sa_nodes_and_set_specific_name__Marker createOa2Sa_nodes_and_set_specific_name__Marker();
+
+	/**
 	 * Returns a new object of class '<em>Operational Analysis2 System Analysis Marker</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

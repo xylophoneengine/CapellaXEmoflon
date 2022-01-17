@@ -74,6 +74,26 @@ public class Oa2CtxAdapterFactory extends AdapterFactoryImpl {
 				return createOperationalAnalysis2SystemAnalysisAdapter();
 			}
 			@Override
+			public Adapter caseInitialModelCreation__Marker(InitialModelCreation__Marker object) {
+				return createInitialModelCreation__MarkerAdapter();
+			}
+			@Override
+			public Adapter caseOa2Sa_create_nodes_and_try_to_set_reference__Marker(Oa2Sa_create_nodes_and_try_to_set_reference__Marker object) {
+				return createOa2Sa_create_nodes_and_try_to_set_reference__MarkerAdapter();
+			}
+			@Override
+			public Adapter caseOa2Sa_create_nodes_only__Marker(Oa2Sa_create_nodes_only__Marker object) {
+				return createOa2Sa_create_nodes_only__MarkerAdapter();
+			}
+			@Override
+			public Adapter caseOa2Sa_nodes_and_set_name__Marker(Oa2Sa_nodes_and_set_name__Marker object) {
+				return createOa2Sa_nodes_and_set_name__MarkerAdapter();
+			}
+			@Override
+			public Adapter caseOa2Sa_nodes_and_set_specific_name__Marker(Oa2Sa_nodes_and_set_specific_name__Marker object) {
+				return createOa2Sa_nodes_and_set_specific_name__MarkerAdapter();
+			}
+			@Override
 			public Adapter caseOperationalAnalysis2SystemAnalysis__Marker(OperationalAnalysis2SystemAnalysis__Marker object) {
 				return createOperationalAnalysis2SystemAnalysis__MarkerAdapter();
 			}
@@ -112,6 +132,76 @@ public class Oa2CtxAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOperationalAnalysis2SystemAnalysisAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Oa2Ctx.InitialModelCreation__Marker <em>Initial Model Creation Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Oa2Ctx.InitialModelCreation__Marker
+	 * @generated
+	 */
+	public Adapter createInitialModelCreation__MarkerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker <em>Oa2 Sa create nodes and try to set reference Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker
+	 * @generated
+	 */
+	public Adapter createOa2Sa_create_nodes_and_try_to_set_reference__MarkerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Oa2Ctx.Oa2Sa_create_nodes_only__Marker <em>Oa2 Sa create nodes only Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_only__Marker
+	 * @generated
+	 */
+	public Adapter createOa2Sa_create_nodes_only__MarkerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker <em>Oa2 Sa nodes and set name Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker
+	 * @generated
+	 */
+	public Adapter createOa2Sa_nodes_and_set_name__MarkerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker <em>Oa2 Sa nodes and set specific name Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker
+	 * @generated
+	 */
+	public Adapter createOa2Sa_nodes_and_set_specific_name__MarkerAdapter() {
 		return null;
 	}
 

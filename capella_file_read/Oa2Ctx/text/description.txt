@@ -11,6 +11,36 @@ Package Oa2Ctx <platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore>
     Reference source : OperationalAnalysis
     Reference target : SystemAnalysis
 
+  Class InitialModelCreation__Marker -> TGGRuleApplication
+    Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
+    Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>
+    Reference CREATE__TRG__trg_ctx_arch : SystemAnalysis<<1..1>>
+    Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>
+
+  Class Oa2Sa_create_nodes_and_try_to_set_reference__Marker -> TGGRuleApplication
+    Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
+    Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>
+    Reference CREATE__TRG__trg_ctx_arch : SystemAnalysis<<1..1>>
+    Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>
+
+  Class Oa2Sa_create_nodes_only__Marker -> TGGRuleApplication
+    Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
+    Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>
+    Reference CREATE__TRG__trg_ctx_arch : SystemAnalysis<<1..1>>
+    Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>
+
+  Class Oa2Sa_nodes_and_set_name__Marker -> TGGRuleApplication
+    Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
+    Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>
+    Reference CREATE__TRG__trg_ctx_arch : SystemAnalysis<<1..1>>
+    Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>
+
+  Class Oa2Sa_nodes_and_set_specific_name__Marker -> TGGRuleApplication
+    Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
+    Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>
+    Reference CREATE__TRG__trg_ctx_arch : SystemAnalysis<<1..1>>
+    Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>
+
   Class OperationalAnalysis2SystemAnalysis__Marker -> TGGRuleApplication
     Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
     Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>

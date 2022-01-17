@@ -2,8 +2,13 @@
  */
 package Oa2Ctx.impl;
 
+import Oa2Ctx.InitialModelCreation__Marker;
 import Oa2Ctx.Oa2CtxFactory;
 import Oa2Ctx.Oa2CtxPackage;
+import Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker;
+import Oa2Ctx.Oa2Sa_create_nodes_only__Marker;
+import Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker;
+import Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker;
 import Oa2Ctx.OperationalAnalysis2SystemAnalysis;
 import Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker;
 
@@ -72,6 +77,41 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * @generated
 	 */
 	private EClass operationalAnalysis2SystemAnalysisEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass initialModelCreation__MarkerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass oa2Sa_create_nodes_only__MarkerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass oa2Sa_nodes_and_set_name__MarkerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass oa2Sa_nodes_and_set_specific_name__MarkerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -199,6 +239,231 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getInitialModelCreation__Marker() {
+		return initialModelCreation__MarkerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation__Marker_CREATE__SRC__src_abstract_capability_pkg() {
+		return (EReference)initialModelCreation__MarkerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation__Marker_CREATE__SRC__src_oa_arch() {
+		return (EReference)initialModelCreation__MarkerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation__Marker_CREATE__TRG__trg_ctx_arch() {
+		return (EReference)initialModelCreation__MarkerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation__Marker_CREATE__CORR__oa2ctx() {
+		return (EReference)initialModelCreation__MarkerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOa2Sa_create_nodes_and_try_to_set_reference__Marker() {
+		return oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__SRC__src_abstract_capability_pkg() {
+		return (EReference)oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__SRC__src_oa_arch() {
+		return (EReference)oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__TRG__trg_ctx_arch() {
+		return (EReference)oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__CORR__oa2ctx() {
+		return (EReference)oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOa2Sa_create_nodes_only__Marker() {
+		return oa2Sa_create_nodes_only__MarkerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_create_nodes_only__Marker_CREATE__SRC__src_abstract_capability_pkg() {
+		return (EReference)oa2Sa_create_nodes_only__MarkerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_create_nodes_only__Marker_CREATE__SRC__src_oa_arch() {
+		return (EReference)oa2Sa_create_nodes_only__MarkerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_create_nodes_only__Marker_CREATE__TRG__trg_ctx_arch() {
+		return (EReference)oa2Sa_create_nodes_only__MarkerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_create_nodes_only__Marker_CREATE__CORR__oa2ctx() {
+		return (EReference)oa2Sa_create_nodes_only__MarkerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOa2Sa_nodes_and_set_name__Marker() {
+		return oa2Sa_nodes_and_set_name__MarkerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_nodes_and_set_name__Marker_CREATE__SRC__src_abstract_capability_pkg() {
+		return (EReference)oa2Sa_nodes_and_set_name__MarkerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_nodes_and_set_name__Marker_CREATE__SRC__src_oa_arch() {
+		return (EReference)oa2Sa_nodes_and_set_name__MarkerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_nodes_and_set_name__Marker_CREATE__TRG__trg_ctx_arch() {
+		return (EReference)oa2Sa_nodes_and_set_name__MarkerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_nodes_and_set_name__Marker_CREATE__CORR__oa2ctx() {
+		return (EReference)oa2Sa_nodes_and_set_name__MarkerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOa2Sa_nodes_and_set_specific_name__Marker() {
+		return oa2Sa_nodes_and_set_specific_name__MarkerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__SRC__src_abstract_capability_pkg() {
+		return (EReference)oa2Sa_nodes_and_set_specific_name__MarkerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__SRC__src_oa_arch() {
+		return (EReference)oa2Sa_nodes_and_set_specific_name__MarkerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__TRG__trg_ctx_arch() {
+		return (EReference)oa2Sa_nodes_and_set_specific_name__MarkerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__CORR__oa2ctx() {
+		return (EReference)oa2Sa_nodes_and_set_specific_name__MarkerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOperationalAnalysis2SystemAnalysis__Marker() {
 		return operationalAnalysis2SystemAnalysis__MarkerEClass;
 	}
@@ -271,6 +536,36 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 		createEReference(operationalAnalysis2SystemAnalysisEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS__SOURCE);
 		createEReference(operationalAnalysis2SystemAnalysisEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS__TARGET);
 
+		initialModelCreation__MarkerEClass = createEClass(INITIAL_MODEL_CREATION_MARKER);
+		createEReference(initialModelCreation__MarkerEClass, INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG);
+		createEReference(initialModelCreation__MarkerEClass, INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_OA_ARCH);
+		createEReference(initialModelCreation__MarkerEClass, INITIAL_MODEL_CREATION_MARKER__CREATE_TRG_TRG_CTX_ARCH);
+		createEReference(initialModelCreation__MarkerEClass, INITIAL_MODEL_CREATION_MARKER__CREATE_CORR_OA2CTX);
+
+		oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass = createEClass(OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER);
+		createEReference(oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass, OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG);
+		createEReference(oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass, OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_SRC_SRC_OA_ARCH);
+		createEReference(oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass, OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_TRG_TRG_CTX_ARCH);
+		createEReference(oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass, OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_CORR_OA2CTX);
+
+		oa2Sa_create_nodes_only__MarkerEClass = createEClass(OA2_SA_CREATE_NODES_ONLY_MARKER);
+		createEReference(oa2Sa_create_nodes_only__MarkerEClass, OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG);
+		createEReference(oa2Sa_create_nodes_only__MarkerEClass, OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_SRC_SRC_OA_ARCH);
+		createEReference(oa2Sa_create_nodes_only__MarkerEClass, OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_TRG_TRG_CTX_ARCH);
+		createEReference(oa2Sa_create_nodes_only__MarkerEClass, OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_CORR_OA2CTX);
+
+		oa2Sa_nodes_and_set_name__MarkerEClass = createEClass(OA2_SA_NODES_AND_SET_NAME_MARKER);
+		createEReference(oa2Sa_nodes_and_set_name__MarkerEClass, OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG);
+		createEReference(oa2Sa_nodes_and_set_name__MarkerEClass, OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_SRC_SRC_OA_ARCH);
+		createEReference(oa2Sa_nodes_and_set_name__MarkerEClass, OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_TRG_TRG_CTX_ARCH);
+		createEReference(oa2Sa_nodes_and_set_name__MarkerEClass, OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_CORR_OA2CTX);
+
+		oa2Sa_nodes_and_set_specific_name__MarkerEClass = createEClass(OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER);
+		createEReference(oa2Sa_nodes_and_set_specific_name__MarkerEClass, OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG);
+		createEReference(oa2Sa_nodes_and_set_specific_name__MarkerEClass, OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_SRC_SRC_OA_ARCH);
+		createEReference(oa2Sa_nodes_and_set_specific_name__MarkerEClass, OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_TRG_TRG_CTX_ARCH);
+		createEReference(oa2Sa_nodes_and_set_specific_name__MarkerEClass, OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_CORR_OA2CTX);
+
 		operationalAnalysis2SystemAnalysis__MarkerEClass = createEClass(OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER);
 		createEReference(operationalAnalysis2SystemAnalysis__MarkerEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG);
 		createEReference(operationalAnalysis2SystemAnalysis__MarkerEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_SRC_SRC_OA_ARCH);
@@ -311,12 +606,47 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		initialModelCreation__MarkerEClass.getESuperTypes().add(theRuntimePackage.getTGGRuleApplication());
+		oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass.getESuperTypes().add(theRuntimePackage.getTGGRuleApplication());
+		oa2Sa_create_nodes_only__MarkerEClass.getESuperTypes().add(theRuntimePackage.getTGGRuleApplication());
+		oa2Sa_nodes_and_set_name__MarkerEClass.getESuperTypes().add(theRuntimePackage.getTGGRuleApplication());
+		oa2Sa_nodes_and_set_specific_name__MarkerEClass.getESuperTypes().add(theRuntimePackage.getTGGRuleApplication());
 		operationalAnalysis2SystemAnalysis__MarkerEClass.getESuperTypes().add(theRuntimePackage.getTGGRuleApplication());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(operationalAnalysis2SystemAnalysisEClass, OperationalAnalysis2SystemAnalysis.class, "OperationalAnalysis2SystemAnalysis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationalAnalysis2SystemAnalysis_Source(), theOaPackage.getOperationalAnalysis(), null, "source", null, 0, 1, OperationalAnalysis2SystemAnalysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOperationalAnalysis2SystemAnalysis_Target(), theCtxPackage.getSystemAnalysis(), null, "target", null, 0, 1, OperationalAnalysis2SystemAnalysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(initialModelCreation__MarkerEClass, InitialModelCreation__Marker.class, "InitialModelCreation__Marker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInitialModelCreation__Marker_CREATE__SRC__src_abstract_capability_pkg(), theOaPackage.getOperationalCapabilityPkg(), null, "CREATE__SRC__src_abstract_capability_pkg", null, 1, 1, InitialModelCreation__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation__Marker_CREATE__SRC__src_oa_arch(), theOaPackage.getOperationalAnalysis(), null, "CREATE__SRC__src_oa_arch", null, 1, 1, InitialModelCreation__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation__Marker_CREATE__TRG__trg_ctx_arch(), theCtxPackage.getSystemAnalysis(), null, "CREATE__TRG__trg_ctx_arch", null, 1, 1, InitialModelCreation__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation__Marker_CREATE__CORR__oa2ctx(), this.getOperationalAnalysis2SystemAnalysis(), null, "CREATE__CORR__oa2ctx", null, 1, 1, InitialModelCreation__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass, Oa2Sa_create_nodes_and_try_to_set_reference__Marker.class, "Oa2Sa_create_nodes_and_try_to_set_reference__Marker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__SRC__src_abstract_capability_pkg(), theOaPackage.getOperationalCapabilityPkg(), null, "CREATE__SRC__src_abstract_capability_pkg", null, 1, 1, Oa2Sa_create_nodes_and_try_to_set_reference__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__SRC__src_oa_arch(), theOaPackage.getOperationalAnalysis(), null, "CREATE__SRC__src_oa_arch", null, 1, 1, Oa2Sa_create_nodes_and_try_to_set_reference__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__TRG__trg_ctx_arch(), theCtxPackage.getSystemAnalysis(), null, "CREATE__TRG__trg_ctx_arch", null, 1, 1, Oa2Sa_create_nodes_and_try_to_set_reference__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__CORR__oa2ctx(), this.getOperationalAnalysis2SystemAnalysis(), null, "CREATE__CORR__oa2ctx", null, 1, 1, Oa2Sa_create_nodes_and_try_to_set_reference__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(oa2Sa_create_nodes_only__MarkerEClass, Oa2Sa_create_nodes_only__Marker.class, "Oa2Sa_create_nodes_only__Marker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOa2Sa_create_nodes_only__Marker_CREATE__SRC__src_abstract_capability_pkg(), theOaPackage.getOperationalCapabilityPkg(), null, "CREATE__SRC__src_abstract_capability_pkg", null, 1, 1, Oa2Sa_create_nodes_only__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_create_nodes_only__Marker_CREATE__SRC__src_oa_arch(), theOaPackage.getOperationalAnalysis(), null, "CREATE__SRC__src_oa_arch", null, 1, 1, Oa2Sa_create_nodes_only__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_create_nodes_only__Marker_CREATE__TRG__trg_ctx_arch(), theCtxPackage.getSystemAnalysis(), null, "CREATE__TRG__trg_ctx_arch", null, 1, 1, Oa2Sa_create_nodes_only__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_create_nodes_only__Marker_CREATE__CORR__oa2ctx(), this.getOperationalAnalysis2SystemAnalysis(), null, "CREATE__CORR__oa2ctx", null, 1, 1, Oa2Sa_create_nodes_only__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(oa2Sa_nodes_and_set_name__MarkerEClass, Oa2Sa_nodes_and_set_name__Marker.class, "Oa2Sa_nodes_and_set_name__Marker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOa2Sa_nodes_and_set_name__Marker_CREATE__SRC__src_abstract_capability_pkg(), theOaPackage.getOperationalCapabilityPkg(), null, "CREATE__SRC__src_abstract_capability_pkg", null, 1, 1, Oa2Sa_nodes_and_set_name__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_nodes_and_set_name__Marker_CREATE__SRC__src_oa_arch(), theOaPackage.getOperationalAnalysis(), null, "CREATE__SRC__src_oa_arch", null, 1, 1, Oa2Sa_nodes_and_set_name__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_nodes_and_set_name__Marker_CREATE__TRG__trg_ctx_arch(), theCtxPackage.getSystemAnalysis(), null, "CREATE__TRG__trg_ctx_arch", null, 1, 1, Oa2Sa_nodes_and_set_name__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_nodes_and_set_name__Marker_CREATE__CORR__oa2ctx(), this.getOperationalAnalysis2SystemAnalysis(), null, "CREATE__CORR__oa2ctx", null, 1, 1, Oa2Sa_nodes_and_set_name__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(oa2Sa_nodes_and_set_specific_name__MarkerEClass, Oa2Sa_nodes_and_set_specific_name__Marker.class, "Oa2Sa_nodes_and_set_specific_name__Marker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__SRC__src_abstract_capability_pkg(), theOaPackage.getOperationalCapabilityPkg(), null, "CREATE__SRC__src_abstract_capability_pkg", null, 1, 1, Oa2Sa_nodes_and_set_specific_name__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__SRC__src_oa_arch(), theOaPackage.getOperationalAnalysis(), null, "CREATE__SRC__src_oa_arch", null, 1, 1, Oa2Sa_nodes_and_set_specific_name__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__TRG__trg_ctx_arch(), theCtxPackage.getSystemAnalysis(), null, "CREATE__TRG__trg_ctx_arch", null, 1, 1, Oa2Sa_nodes_and_set_specific_name__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__CORR__oa2ctx(), this.getOperationalAnalysis2SystemAnalysis(), null, "CREATE__CORR__oa2ctx", null, 1, 1, Oa2Sa_nodes_and_set_specific_name__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationalAnalysis2SystemAnalysis__MarkerEClass, OperationalAnalysis2SystemAnalysis__Marker.class, "OperationalAnalysis2SystemAnalysis__Marker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationalAnalysis2SystemAnalysis__Marker_CREATE__SRC__src_abstract_capability_pkg(), theOaPackage.getOperationalCapabilityPkg(), null, "CREATE__SRC__src_abstract_capability_pkg", null, 1, 1, OperationalAnalysis2SystemAnalysis__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

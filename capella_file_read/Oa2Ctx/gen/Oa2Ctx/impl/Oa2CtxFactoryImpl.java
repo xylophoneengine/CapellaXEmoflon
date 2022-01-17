@@ -57,6 +57,11 @@ public class Oa2CtxFactoryImpl extends EFactoryImpl implements Oa2CtxFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case Oa2CtxPackage.OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS: return createOperationalAnalysis2SystemAnalysis();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_MARKER: return createInitialModelCreation__Marker();
+			case Oa2CtxPackage.OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER: return createOa2Sa_create_nodes_and_try_to_set_reference__Marker();
+			case Oa2CtxPackage.OA2_SA_CREATE_NODES_ONLY_MARKER: return createOa2Sa_create_nodes_only__Marker();
+			case Oa2CtxPackage.OA2_SA_NODES_AND_SET_NAME_MARKER: return createOa2Sa_nodes_and_set_name__Marker();
+			case Oa2CtxPackage.OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER: return createOa2Sa_nodes_and_set_specific_name__Marker();
 			case Oa2CtxPackage.OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER: return createOperationalAnalysis2SystemAnalysis__Marker();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -71,6 +76,56 @@ public class Oa2CtxFactoryImpl extends EFactoryImpl implements Oa2CtxFactory {
 	public OperationalAnalysis2SystemAnalysis createOperationalAnalysis2SystemAnalysis() {
 		OperationalAnalysis2SystemAnalysisImpl operationalAnalysis2SystemAnalysis = new OperationalAnalysis2SystemAnalysisImpl();
 		return operationalAnalysis2SystemAnalysis;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InitialModelCreation__Marker createInitialModelCreation__Marker() {
+		InitialModelCreation__MarkerImpl initialModelCreation__Marker = new InitialModelCreation__MarkerImpl();
+		return initialModelCreation__Marker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Oa2Sa_create_nodes_and_try_to_set_reference__Marker createOa2Sa_create_nodes_and_try_to_set_reference__Marker() {
+		Oa2Sa_create_nodes_and_try_to_set_reference__MarkerImpl oa2Sa_create_nodes_and_try_to_set_reference__Marker = new Oa2Sa_create_nodes_and_try_to_set_reference__MarkerImpl();
+		return oa2Sa_create_nodes_and_try_to_set_reference__Marker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Oa2Sa_create_nodes_only__Marker createOa2Sa_create_nodes_only__Marker() {
+		Oa2Sa_create_nodes_only__MarkerImpl oa2Sa_create_nodes_only__Marker = new Oa2Sa_create_nodes_only__MarkerImpl();
+		return oa2Sa_create_nodes_only__Marker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Oa2Sa_nodes_and_set_name__Marker createOa2Sa_nodes_and_set_name__Marker() {
+		Oa2Sa_nodes_and_set_name__MarkerImpl oa2Sa_nodes_and_set_name__Marker = new Oa2Sa_nodes_and_set_name__MarkerImpl();
+		return oa2Sa_nodes_and_set_name__Marker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Oa2Sa_nodes_and_set_specific_name__Marker createOa2Sa_nodes_and_set_specific_name__Marker() {
+		Oa2Sa_nodes_and_set_specific_name__MarkerImpl oa2Sa_nodes_and_set_specific_name__Marker = new Oa2Sa_nodes_and_set_specific_name__MarkerImpl();
+		return oa2Sa_nodes_and_set_specific_name__Marker;
 	}
 
 	/**

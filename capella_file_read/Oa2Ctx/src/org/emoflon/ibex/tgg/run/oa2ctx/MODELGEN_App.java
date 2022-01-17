@@ -60,8 +60,45 @@ public class MODELGEN_App extends MODELGEN {
 		MODELGENStopCriterion stop = new MODELGENStopCriterion(generator.getTGG());
 		stop.setTimeOutInMS(1000);
 		
-		stop.setMaxRuleCount("OperationalAnalysis2SystemAnalysis", 4);
+		stop.setMaxRuleCount("OperationalAnalysis2SystemAnalysis", 0); // what i want to do
 		
+		// rules to find out what i am doing wrong
+		stop.setMaxRuleCount("Oa2Sa_create_nodes_only", 0);
+		// runs without errors
+		
+		
+		stop.setMaxRuleCount("Oa2Sa_create_nodes_and_try_to_set_reference", 0); //most confusing
+		//says that the reference is not changeable. However, that is not the case.
+		// The metamodel does define the reference as changeable
+//		Exception in thread "main" java.lang.IllegalArgumentException: The feature 'ownedAbstractCapabilityPkg' is not a valid changeable feature
+//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eOpenSet(BasicEObjectImpl.java:1188)
+//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSet(BasicEObjectImpl.java:1114)
+//		at org.emoflon.ibex.common.emf.EMFManipulationUtils.createEdge(EMFManipulationUtils.java:65)
+//		at org.emoflon.ibex.tgg.operational.defaults.IbexGreenInterpreter.createEdges(IbexGreenInterpreter.java:78)
+//		at org.emoflon.ibex.tgg.operational.defaults.IbexGreenInterpreter.apply(IbexGreenInterpreter.java:214)
+//		at org.emoflon.ibex.tgg.operational.strategies.OperationalStrategy.processOperationalRuleMatch(OperationalStrategy.java:277)
+//		at org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN.processOneOperationalRuleMatch(MODELGEN.java:116)
+//		at org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN.run(MODELGEN.java:79)
+//		at org.emoflon.ibex.tgg.run.oa2ctx.MODELGEN_App.main(MODELGEN_App.java:83)
+		
+		// somehow cannot find the name attribute
+		stop.setMaxRuleCount("Oa2Sa_nodes_and_set_name", 0);
+		//Exception in thread "main" java.lang.IllegalArgumentException: The feature 'name' is not a valid feature
+//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eOpenGet(BasicEObjectImpl.java:1101)
+//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1054)
+//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1042)
+//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1037)
+//		at org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintContainer.applyCSPValues(RuntimeTGGAttributeConstraintContainer.java:147)
+//		at org.emoflon.ibex.tgg.operational.defaults.IbexGreenInterpreter.apply(IbexGreenInterpreter.java:203)
+//		at org.emoflon.ibex.tgg.operational.strategies.OperationalStrategy.processOperationalRuleMatch(OperationalStrategy.java:277)
+//		at org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN.processOneOperationalRuleMatch(MODELGEN.java:116)
+//		at org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN.run(MODELGEN.java:79)
+//		at org.emoflon.ibex.tgg.run.oa2ctx.MODELGEN_App.main(MODELGEN_App.java:93)
+
+		stop.setMaxRuleCount("Oa2Sa_nodes_and_set_specific_name", 1);
+		
+		stop.setMaxRuleCount("InitialModelCreation", 0);
+
 		generator.setStopCriterion(stop);
 		
 		tic = System.currentTimeMillis();

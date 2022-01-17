@@ -104,6 +104,371 @@ public interface Oa2CtxPackage extends EPackage {
 	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link Oa2Ctx.impl.InitialModelCreation__MarkerImpl <em>Initial Model Creation Marker</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Oa2Ctx.impl.InitialModelCreation__MarkerImpl
+	 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getInitialModelCreation__Marker()
+	 * @generated
+	 */
+	int INITIAL_MODEL_CREATION_MARKER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src oa arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>CREATE CORR oa2ctx</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Initial Model Creation Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Initial Model Creation Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_MARKER_OPERATION_COUNT = RuntimePackage.TGG_RULE_APPLICATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Oa2Ctx.impl.Oa2Sa_create_nodes_and_try_to_set_reference__MarkerImpl <em>Oa2 Sa create nodes and try to set reference Marker</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Oa2Ctx.impl.Oa2Sa_create_nodes_and_try_to_set_reference__MarkerImpl
+	 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getOa2Sa_create_nodes_and_try_to_set_reference__Marker()
+	 * @generated
+	 */
+	int OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src oa arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>CREATE CORR oa2ctx</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Oa2 Sa create nodes and try to set reference Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Oa2 Sa create nodes and try to set reference Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER_OPERATION_COUNT = RuntimePackage.TGG_RULE_APPLICATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Oa2Ctx.impl.Oa2Sa_create_nodes_only__MarkerImpl <em>Oa2 Sa create nodes only Marker</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Oa2Ctx.impl.Oa2Sa_create_nodes_only__MarkerImpl
+	 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getOa2Sa_create_nodes_only__Marker()
+	 * @generated
+	 */
+	int OA2_SA_CREATE_NODES_ONLY_MARKER = 3;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_ONLY_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src oa arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>CREATE CORR oa2ctx</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Oa2 Sa create nodes only Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_ONLY_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Oa2 Sa create nodes only Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_CREATE_NODES_ONLY_MARKER_OPERATION_COUNT = RuntimePackage.TGG_RULE_APPLICATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Oa2Ctx.impl.Oa2Sa_nodes_and_set_name__MarkerImpl <em>Oa2 Sa nodes and set name Marker</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Oa2Ctx.impl.Oa2Sa_nodes_and_set_name__MarkerImpl
+	 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getOa2Sa_nodes_and_set_name__Marker()
+	 * @generated
+	 */
+	int OA2_SA_NODES_AND_SET_NAME_MARKER = 4;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_NAME_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src oa arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>CREATE CORR oa2ctx</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Oa2 Sa nodes and set name Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_NAME_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Oa2 Sa nodes and set name Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_NAME_MARKER_OPERATION_COUNT = RuntimePackage.TGG_RULE_APPLICATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Oa2Ctx.impl.Oa2Sa_nodes_and_set_specific_name__MarkerImpl <em>Oa2 Sa nodes and set specific name Marker</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Oa2Ctx.impl.Oa2Sa_nodes_and_set_specific_name__MarkerImpl
+	 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getOa2Sa_nodes_and_set_specific_name__Marker()
+	 * @generated
+	 */
+	int OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER = 5;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src oa arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>CREATE CORR oa2ctx</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Oa2 Sa nodes and set specific name Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Oa2 Sa nodes and set specific name Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER_OPERATION_COUNT = RuntimePackage.TGG_RULE_APPLICATION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link Oa2Ctx.impl.OperationalAnalysis2SystemAnalysis__MarkerImpl <em>Operational Analysis2 System Analysis Marker</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,7 +476,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getOperationalAnalysis2SystemAnalysis__Marker()
 	 * @generated
 	 */
-	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER = 1;
+	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER = 6;
 
 	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' container reference.
@@ -208,6 +573,276 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOperationalAnalysis2SystemAnalysis_Target();
+
+	/**
+	 * Returns the meta object for class '{@link Oa2Ctx.InitialModelCreation__Marker <em>Initial Model Creation Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Initial Model Creation Marker</em>'.
+	 * @see Oa2Ctx.InitialModelCreation__Marker
+	 * @generated
+	 */
+	EClass getInitialModelCreation__Marker();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src abstract capability pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_abstract_capability_pkg()
+	 * @see #getInitialModelCreation__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src oa arch</em>'.
+	 * @see Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_oa_arch()
+	 * @see #getInitialModelCreation__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation__Marker_CREATE__SRC__src_oa_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg ctx arch</em>'.
+	 * @see Oa2Ctx.InitialModelCreation__Marker#getCREATE__TRG__trg_ctx_arch()
+	 * @see #getInitialModelCreation__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation__Marker_CREATE__TRG__trg_ctx_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE CORR oa2ctx</em>'.
+	 * @see Oa2Ctx.InitialModelCreation__Marker#getCREATE__CORR__oa2ctx()
+	 * @see #getInitialModelCreation__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation__Marker_CREATE__CORR__oa2ctx();
+
+	/**
+	 * Returns the meta object for class '{@link Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker <em>Oa2 Sa create nodes and try to set reference Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Oa2 Sa create nodes and try to set reference Marker</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker
+	 * @generated
+	 */
+	EClass getOa2Sa_create_nodes_and_try_to_set_reference__Marker();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src abstract capability pkg</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker#getCREATE__SRC__src_abstract_capability_pkg()
+	 * @see #getOa2Sa_create_nodes_and_try_to_set_reference__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src oa arch</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker#getCREATE__SRC__src_oa_arch()
+	 * @see #getOa2Sa_create_nodes_and_try_to_set_reference__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__SRC__src_oa_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg ctx arch</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker#getCREATE__TRG__trg_ctx_arch()
+	 * @see #getOa2Sa_create_nodes_and_try_to_set_reference__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__TRG__trg_ctx_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE CORR oa2ctx</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker#getCREATE__CORR__oa2ctx()
+	 * @see #getOa2Sa_create_nodes_and_try_to_set_reference__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__CORR__oa2ctx();
+
+	/**
+	 * Returns the meta object for class '{@link Oa2Ctx.Oa2Sa_create_nodes_only__Marker <em>Oa2 Sa create nodes only Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Oa2 Sa create nodes only Marker</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_only__Marker
+	 * @generated
+	 */
+	EClass getOa2Sa_create_nodes_only__Marker();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_create_nodes_only__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src abstract capability pkg</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_only__Marker#getCREATE__SRC__src_abstract_capability_pkg()
+	 * @see #getOa2Sa_create_nodes_only__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_create_nodes_only__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_create_nodes_only__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src oa arch</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_only__Marker#getCREATE__SRC__src_oa_arch()
+	 * @see #getOa2Sa_create_nodes_only__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_create_nodes_only__Marker_CREATE__SRC__src_oa_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_create_nodes_only__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg ctx arch</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_only__Marker#getCREATE__TRG__trg_ctx_arch()
+	 * @see #getOa2Sa_create_nodes_only__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_create_nodes_only__Marker_CREATE__TRG__trg_ctx_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_create_nodes_only__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE CORR oa2ctx</em>'.
+	 * @see Oa2Ctx.Oa2Sa_create_nodes_only__Marker#getCREATE__CORR__oa2ctx()
+	 * @see #getOa2Sa_create_nodes_only__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_create_nodes_only__Marker_CREATE__CORR__oa2ctx();
+
+	/**
+	 * Returns the meta object for class '{@link Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker <em>Oa2 Sa nodes and set name Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Oa2 Sa nodes and set name Marker</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker
+	 * @generated
+	 */
+	EClass getOa2Sa_nodes_and_set_name__Marker();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src abstract capability pkg</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker#getCREATE__SRC__src_abstract_capability_pkg()
+	 * @see #getOa2Sa_nodes_and_set_name__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_nodes_and_set_name__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src oa arch</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker#getCREATE__SRC__src_oa_arch()
+	 * @see #getOa2Sa_nodes_and_set_name__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_nodes_and_set_name__Marker_CREATE__SRC__src_oa_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg ctx arch</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker#getCREATE__TRG__trg_ctx_arch()
+	 * @see #getOa2Sa_nodes_and_set_name__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_nodes_and_set_name__Marker_CREATE__TRG__trg_ctx_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE CORR oa2ctx</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_name__Marker#getCREATE__CORR__oa2ctx()
+	 * @see #getOa2Sa_nodes_and_set_name__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_nodes_and_set_name__Marker_CREATE__CORR__oa2ctx();
+
+	/**
+	 * Returns the meta object for class '{@link Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker <em>Oa2 Sa nodes and set specific name Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Oa2 Sa nodes and set specific name Marker</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker
+	 * @generated
+	 */
+	EClass getOa2Sa_nodes_and_set_specific_name__Marker();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src abstract capability pkg</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker#getCREATE__SRC__src_abstract_capability_pkg()
+	 * @see #getOa2Sa_nodes_and_set_specific_name__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src oa arch</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker#getCREATE__SRC__src_oa_arch()
+	 * @see #getOa2Sa_nodes_and_set_specific_name__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__SRC__src_oa_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg ctx arch</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker#getCREATE__TRG__trg_ctx_arch()
+	 * @see #getOa2Sa_nodes_and_set_specific_name__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__TRG__trg_ctx_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE CORR oa2ctx</em>'.
+	 * @see Oa2Ctx.Oa2Sa_nodes_and_set_specific_name__Marker#getCREATE__CORR__oa2ctx()
+	 * @see #getOa2Sa_nodes_and_set_specific_name__Marker()
+	 * @generated
+	 */
+	EReference getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__CORR__oa2ctx();
 
 	/**
 	 * Returns the meta object for class '{@link Oa2Ctx.OperationalAnalysis2SystemAnalysis__Marker <em>Operational Analysis2 System Analysis Marker</em>}'.
@@ -311,6 +946,216 @@ public interface Oa2CtxPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS__TARGET = eINSTANCE.getOperationalAnalysis2SystemAnalysis_Target();
+
+		/**
+		 * The meta object literal for the '{@link Oa2Ctx.impl.InitialModelCreation__MarkerImpl <em>Initial Model Creation Marker</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Oa2Ctx.impl.InitialModelCreation__MarkerImpl
+		 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getInitialModelCreation__Marker()
+		 * @generated
+		 */
+		EClass INITIAL_MODEL_CREATION_MARKER = eINSTANCE.getInitialModelCreation__Marker();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = eINSTANCE.getInitialModelCreation__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src oa arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_OA_ARCH = eINSTANCE.getInitialModelCreation__Marker_CREATE__SRC__src_oa_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_MARKER__CREATE_TRG_TRG_CTX_ARCH = eINSTANCE.getInitialModelCreation__Marker_CREATE__TRG__trg_ctx_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE CORR oa2ctx</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getInitialModelCreation__Marker_CREATE__CORR__oa2ctx();
+
+		/**
+		 * The meta object literal for the '{@link Oa2Ctx.impl.Oa2Sa_create_nodes_and_try_to_set_reference__MarkerImpl <em>Oa2 Sa create nodes and try to set reference Marker</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Oa2Ctx.impl.Oa2Sa_create_nodes_and_try_to_set_reference__MarkerImpl
+		 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getOa2Sa_create_nodes_and_try_to_set_reference__Marker()
+		 * @generated
+		 */
+		EClass OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER = eINSTANCE.getOa2Sa_create_nodes_and_try_to_set_reference__Marker();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = eINSTANCE.getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src oa arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_SRC_SRC_OA_ARCH = eINSTANCE.getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__SRC__src_oa_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_TRG_TRG_CTX_ARCH = eINSTANCE.getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__TRG__trg_ctx_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE CORR oa2ctx</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getOa2Sa_create_nodes_and_try_to_set_reference__Marker_CREATE__CORR__oa2ctx();
+
+		/**
+		 * The meta object literal for the '{@link Oa2Ctx.impl.Oa2Sa_create_nodes_only__MarkerImpl <em>Oa2 Sa create nodes only Marker</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Oa2Ctx.impl.Oa2Sa_create_nodes_only__MarkerImpl
+		 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getOa2Sa_create_nodes_only__Marker()
+		 * @generated
+		 */
+		EClass OA2_SA_CREATE_NODES_ONLY_MARKER = eINSTANCE.getOa2Sa_create_nodes_only__Marker();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = eINSTANCE.getOa2Sa_create_nodes_only__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src oa arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_SRC_SRC_OA_ARCH = eINSTANCE.getOa2Sa_create_nodes_only__Marker_CREATE__SRC__src_oa_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_TRG_TRG_CTX_ARCH = eINSTANCE.getOa2Sa_create_nodes_only__Marker_CREATE__TRG__trg_ctx_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE CORR oa2ctx</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_CREATE_NODES_ONLY_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getOa2Sa_create_nodes_only__Marker_CREATE__CORR__oa2ctx();
+
+		/**
+		 * The meta object literal for the '{@link Oa2Ctx.impl.Oa2Sa_nodes_and_set_name__MarkerImpl <em>Oa2 Sa nodes and set name Marker</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Oa2Ctx.impl.Oa2Sa_nodes_and_set_name__MarkerImpl
+		 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getOa2Sa_nodes_and_set_name__Marker()
+		 * @generated
+		 */
+		EClass OA2_SA_NODES_AND_SET_NAME_MARKER = eINSTANCE.getOa2Sa_nodes_and_set_name__Marker();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = eINSTANCE.getOa2Sa_nodes_and_set_name__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src oa arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_SRC_SRC_OA_ARCH = eINSTANCE.getOa2Sa_nodes_and_set_name__Marker_CREATE__SRC__src_oa_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_TRG_TRG_CTX_ARCH = eINSTANCE.getOa2Sa_nodes_and_set_name__Marker_CREATE__TRG__trg_ctx_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE CORR oa2ctx</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_NODES_AND_SET_NAME_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getOa2Sa_nodes_and_set_name__Marker_CREATE__CORR__oa2ctx();
+
+		/**
+		 * The meta object literal for the '{@link Oa2Ctx.impl.Oa2Sa_nodes_and_set_specific_name__MarkerImpl <em>Oa2 Sa nodes and set specific name Marker</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Oa2Ctx.impl.Oa2Sa_nodes_and_set_specific_name__MarkerImpl
+		 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getOa2Sa_nodes_and_set_specific_name__Marker()
+		 * @generated
+		 */
+		EClass OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER = eINSTANCE.getOa2Sa_nodes_and_set_specific_name__Marker();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = eINSTANCE.getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src oa arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_SRC_SRC_OA_ARCH = eINSTANCE.getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__SRC__src_oa_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_TRG_TRG_CTX_ARCH = eINSTANCE.getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__TRG__trg_ctx_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE CORR oa2ctx</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getOa2Sa_nodes_and_set_specific_name__Marker_CREATE__CORR__oa2ctx();
 
 		/**
 		 * The meta object literal for the '{@link Oa2Ctx.impl.OperationalAnalysis2SystemAnalysis__MarkerImpl <em>Operational Analysis2 System Analysis Marker</em>}' class.

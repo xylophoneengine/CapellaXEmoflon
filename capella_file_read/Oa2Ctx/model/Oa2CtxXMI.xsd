@@ -16,6 +16,91 @@
     <xsd:attribute name="target" type="xsd:string"/>
   </xsd:complexType>
   <xsd:element name="OperationalAnalysis2SystemAnalysis" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
+  <xsd:complexType name="InitialModelCreation__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__src_abstract_capability_pkg" type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"/>
+          <xsd:element name="CREATE__SRC__src_oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__TRG__trg_ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__CORR__oa2ctx" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__src_abstract_capability_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_ctx_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__oa2ctx" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="InitialModelCreation__Marker" type="Oa2Ctx:InitialModelCreation__Marker"/>
+  <xsd:complexType name="Oa2Sa_create_nodes_and_try_to_set_reference__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__src_abstract_capability_pkg" type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"/>
+          <xsd:element name="CREATE__SRC__src_oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__TRG__trg_ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__CORR__oa2ctx" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__src_abstract_capability_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_ctx_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__oa2ctx" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Oa2Sa_create_nodes_and_try_to_set_reference__Marker" type="Oa2Ctx:Oa2Sa_create_nodes_and_try_to_set_reference__Marker"/>
+  <xsd:complexType name="Oa2Sa_create_nodes_only__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__src_abstract_capability_pkg" type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"/>
+          <xsd:element name="CREATE__SRC__src_oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__TRG__trg_ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__CORR__oa2ctx" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__src_abstract_capability_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_ctx_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__oa2ctx" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Oa2Sa_create_nodes_only__Marker" type="Oa2Ctx:Oa2Sa_create_nodes_only__Marker"/>
+  <xsd:complexType name="Oa2Sa_nodes_and_set_name__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__src_abstract_capability_pkg" type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"/>
+          <xsd:element name="CREATE__SRC__src_oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__TRG__trg_ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__CORR__oa2ctx" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__src_abstract_capability_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_ctx_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__oa2ctx" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Oa2Sa_nodes_and_set_name__Marker" type="Oa2Ctx:Oa2Sa_nodes_and_set_name__Marker"/>
+  <xsd:complexType name="Oa2Sa_nodes_and_set_specific_name__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__src_abstract_capability_pkg" type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"/>
+          <xsd:element name="CREATE__SRC__src_oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__TRG__trg_ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__CORR__oa2ctx" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__src_abstract_capability_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_ctx_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__oa2ctx" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Oa2Sa_nodes_and_set_specific_name__Marker" type="Oa2Ctx:Oa2Sa_nodes_and_set_specific_name__Marker"/>
   <xsd:complexType name="OperationalAnalysis2SystemAnalysis__Marker">
     <xsd:complexContent>
       <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">

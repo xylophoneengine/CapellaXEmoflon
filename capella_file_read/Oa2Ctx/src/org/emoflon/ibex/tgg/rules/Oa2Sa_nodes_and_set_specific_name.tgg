@@ -1,0 +1,26 @@
+#using Oa2Ctx.*
+#using AttrCondDefLibrary.*
+
+#rule Oa2Sa_nodes_and_set_specific_name #with Oa2Ctx
+
+#source { 
+	++ src_oa_arch : OperationalAnalysis
+	
+	++ src_abstract_capability_pkg : OperationalCapabilityPkg{
+	}
+}
+
+#target {
+	++ trg_ctx_arch : SystemAnalysis
+}
+
+#correspondence {
+	++oa2ctx : OperationalAnalysis2SystemAnalysis{
+		#src->src_oa_arch
+		#trg->trg_ctx_arch
+	}
+}
+
+#attributeConditions {
+	eq_string(src_abstract_capability_pkg.name, "My Custom String")
+}

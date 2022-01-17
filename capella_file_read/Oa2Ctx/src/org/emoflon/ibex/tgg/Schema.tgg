@@ -1,5 +1,6 @@
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore"
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore"
 
 #schema Oa2Ctx
 	
@@ -20,6 +21,10 @@
 
 #attributeConditions {
 	#userDefined set_string_to_value_if_not_bound(field:EString, string:EString){
+		#sync: [B B], [F B], [B F]
+		#gen: [B B], [F B], [B F]
+	}
+	#userDefined set_boolean_to_value_if_not_bound(field:EBoolean, bool:EBoolean){
 		#sync: [B B], [F B], [B F]
 		#gen: [B B], [F B], [B F]
 	}

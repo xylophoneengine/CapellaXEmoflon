@@ -2,9 +2,12 @@
 #using AttrCondDefLibrary.*
 
 #rule OperationalAnalysis2SystemAnalysis #with Oa2Ctx
-
+// the goal of this rule is to describe the initial layout
+// of the operationalAnylysis and ContextAnalysis models when
+// creating/generating a new Capella project 
 #source { 
-	++ src_oa_arch : OperationalAnalysis{
+	++ src_oa_arch : OperationalAnalysis
+	{
 		++ -ownedAbstractCapabilityPkg -> src_abstract_capability_pkg
 	}
 	
@@ -24,7 +27,5 @@
 }
 
 #attributeConditions {
-//	set_string_to_value_if_not_bound(src_abstract_capability_pkg.name, "Operational Capabilities")
-//	eq_string(src_abstract_capability_pkg.name, "Operational Capabilities")
-	setRandomString(src_abstract_capability_pkg.name)
+	set_string_to_value_if_not_bound(src_abstract_capability_pkg.name, "Operational Capabilities")
 }

@@ -17,11 +17,15 @@ import org.polarsys.capella.core.data.information.datavalue.DatavaluePackage;
 import org.polarsys.capella.core.data.interaction.InteractionPackage;
 import org.polarsys.capella.core.data.la.LaPackage;
 import org.polarsys.capella.core.data.oa.OaPackage;
+import org.polarsys.capella.core.data.oa.impl.OaFactoryImpl;
+import org.polarsys.capella.core.data.oa.impl.OaPackageImpl;
+import org.polarsys.capella.core.data.oa.impl.OperationalAnalysisImpl;
 import org.polarsys.capella.core.data.oa.impl.OperationalCapabilityPkgImpl;
 import org.polarsys.capella.core.data.pa.PaPackage;
 import org.polarsys.capella.core.data.pa.deployment.DeploymentPackage;
 import org.polarsys.capella.core.data.requirement.RequirementPackage;
 import org.polarsys.capella.core.data.sharedmodel.SharedmodelPackage;
+import org.polarsys.kitalpha.emde.model.EmdePackage;
 
 public class SetEAttributeTest {
 	public static void init_Epackages() {
@@ -46,17 +50,43 @@ public class SetEAttributeTest {
 		SharedmodelPackage.eINSTANCE.eClass();
 		LibrariesPackage.eINSTANCE.eClass();
 		RePackage.eINSTANCE.eClass();
+		EmdePackage.eINSTANCE.eClass();
 	}
 	
 	public static void main(String[] args) {
 		init_Epackages();
-		OperationalCapabilityPkgImpl oac = (OperationalCapabilityPkgImpl) OaPackage.eINSTANCE.getEFactoryInstance().create(OaPackage.eINSTANCE.getOperationalCapabilityPkg());
-//		EAttribute ea = OaPackage.eINSTANCE.getOperationalCapabilityPkg()
+
+		OaPackageImpl oa_pack = (OaPackageImpl) OaPackage.eINSTANCE;
+		OaFactoryImpl factory = (OaFactoryImpl) oa_pack.getEFactoryInstance();
+
+		System.out.println("Creating an OperationalCapabilityPkg");
+		OperationalCapabilityPkgImpl oac = (OperationalCapabilityPkgImpl) factory.create(oa_pack.getOperationalCapabilityPkg());
 		
+		// get EClass of "name" EAttribute
 		EAttribute name_attr = null;
-		System.out.println(name_attr);
+		for(EAttribute e: oac.eClass().getEAllAttributes()) {
+			if(e.getName().equals(new String("name"))) name_attr = e;
+		}
+
+		// set the attribute
 		String new_name = new String("wabba");
+		System.out.println("Setting its name to: " + new_name);
 		oac.eSet(name_attr, new_name);
 		System.out.println("attribute set: " + oac.getName().equals(new_name));
+
+		Object attr_of_interest = oac.eGet(name_attr);
+		System.out.println("DEBUGGING: " + attr_of_interest);
+		
+		
+
+		// create an OperationalAnalysis object
+		OperationalAnalysisImpl oa = (OperationalAnalysisImpl) factory.create(oa_pack.getOperationalAnalysis());
+		
+		OperationalCapabilityPkgImpl ocpi = (OperationalCapabilityPkgImpl)
+				factory.create(oa_pack.getOperationalCapabilityPkg());
+		
+		oa.setOwnedAbstractCapabilityPkg(ocpi);
+
+		System.out.println(oa.getOwnedAbstractCapabilityPkg());
 	}
 }

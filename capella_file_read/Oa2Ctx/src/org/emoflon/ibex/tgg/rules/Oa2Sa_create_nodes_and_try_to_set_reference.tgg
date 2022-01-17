@@ -1,0 +1,30 @@
+#using Oa2Ctx.*
+#using AttrCondDefLibrary.*
+
+#rule Oa2Sa_create_nodes_and_try_to_set_reference #with Oa2Ctx
+
+// ownedAbstractCapabilityPkg is changeable in ecore and can be manually set.
+// However, emoflon fails to do so and claims, that it isn't changeable.
+
+#source { 
+	++ src_oa_arch : OperationalAnalysis{
+		++ -ownedAbstractCapabilityPkg -> src_abstract_capability_pkg
+	}
+	
+	++ src_abstract_capability_pkg : OperationalCapabilityPkg
+}
+
+#target {
+	++ trg_ctx_arch : SystemAnalysis
+}
+
+#correspondence {
+	++oa2ctx : OperationalAnalysis2SystemAnalysis{
+		#src->src_oa_arch
+		#trg->trg_ctx_arch
+	}
+}
+
+#attributeConditions {
+
+}

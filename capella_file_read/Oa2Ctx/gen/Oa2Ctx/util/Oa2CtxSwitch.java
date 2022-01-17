@@ -74,6 +74,41 @@ public class Oa2CtxSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_MARKER: {
+				InitialModelCreation__Marker initialModelCreation__Marker = (InitialModelCreation__Marker)theEObject;
+				T result = caseInitialModelCreation__Marker(initialModelCreation__Marker);
+				if (result == null) result = caseTGGRuleApplication(initialModelCreation__Marker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Oa2CtxPackage.OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER: {
+				Oa2Sa_create_nodes_and_try_to_set_reference__Marker oa2Sa_create_nodes_and_try_to_set_reference__Marker = (Oa2Sa_create_nodes_and_try_to_set_reference__Marker)theEObject;
+				T result = caseOa2Sa_create_nodes_and_try_to_set_reference__Marker(oa2Sa_create_nodes_and_try_to_set_reference__Marker);
+				if (result == null) result = caseTGGRuleApplication(oa2Sa_create_nodes_and_try_to_set_reference__Marker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Oa2CtxPackage.OA2_SA_CREATE_NODES_ONLY_MARKER: {
+				Oa2Sa_create_nodes_only__Marker oa2Sa_create_nodes_only__Marker = (Oa2Sa_create_nodes_only__Marker)theEObject;
+				T result = caseOa2Sa_create_nodes_only__Marker(oa2Sa_create_nodes_only__Marker);
+				if (result == null) result = caseTGGRuleApplication(oa2Sa_create_nodes_only__Marker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Oa2CtxPackage.OA2_SA_NODES_AND_SET_NAME_MARKER: {
+				Oa2Sa_nodes_and_set_name__Marker oa2Sa_nodes_and_set_name__Marker = (Oa2Sa_nodes_and_set_name__Marker)theEObject;
+				T result = caseOa2Sa_nodes_and_set_name__Marker(oa2Sa_nodes_and_set_name__Marker);
+				if (result == null) result = caseTGGRuleApplication(oa2Sa_nodes_and_set_name__Marker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Oa2CtxPackage.OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER: {
+				Oa2Sa_nodes_and_set_specific_name__Marker oa2Sa_nodes_and_set_specific_name__Marker = (Oa2Sa_nodes_and_set_specific_name__Marker)theEObject;
+				T result = caseOa2Sa_nodes_and_set_specific_name__Marker(oa2Sa_nodes_and_set_specific_name__Marker);
+				if (result == null) result = caseTGGRuleApplication(oa2Sa_nodes_and_set_specific_name__Marker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Oa2CtxPackage.OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER: {
 				OperationalAnalysis2SystemAnalysis__Marker operationalAnalysis2SystemAnalysis__Marker = (OperationalAnalysis2SystemAnalysis__Marker)theEObject;
 				T result = caseOperationalAnalysis2SystemAnalysis__Marker(operationalAnalysis2SystemAnalysis__Marker);
@@ -97,6 +132,81 @@ public class Oa2CtxSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOperationalAnalysis2SystemAnalysis(OperationalAnalysis2SystemAnalysis object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Initial Model Creation Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Initial Model Creation Marker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInitialModelCreation__Marker(InitialModelCreation__Marker object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oa2 Sa create nodes and try to set reference Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oa2 Sa create nodes and try to set reference Marker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOa2Sa_create_nodes_and_try_to_set_reference__Marker(Oa2Sa_create_nodes_and_try_to_set_reference__Marker object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oa2 Sa create nodes only Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oa2 Sa create nodes only Marker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOa2Sa_create_nodes_only__Marker(Oa2Sa_create_nodes_only__Marker object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oa2 Sa nodes and set name Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oa2 Sa nodes and set name Marker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOa2Sa_nodes_and_set_name__Marker(Oa2Sa_nodes_and_set_name__Marker object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oa2 Sa nodes and set specific name Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oa2 Sa nodes and set specific name Marker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOa2Sa_nodes_and_set_specific_name__Marker(Oa2Sa_nodes_and_set_specific_name__Marker object) {
 		return null;
 	}
 
