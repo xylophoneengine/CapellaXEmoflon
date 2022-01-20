@@ -1,26 +1,90 @@
 #using Oa2Ctx.*
 #using AttrCondDefLibrary.*
-
-#rule InitialModelCreation #with Oa2Ctx
+#abstract #rule InitialModelCreation #with Oa2Ctx
 // the goal of this rule is to describe the initial layout
 // of the operationalAnylysis and ContextAnalysis models when
 // creating/generating a new Capella project 
 #source { 
-	++ src_oa_arch : OperationalAnalysis
+	++ src_oa_arch : oa.OperationalAnalysis
 	{
+		name := "Operational Analysis"
 		++ -ownedAbstractCapabilityPkg -> src_abstract_capability_pkg
-		//++ -ownedDataPkg -> src_data_pkg
-		
+		++ -ownedDataPkg -> src_data_pkg
+		++ -ownedEntityPkg -> src_entity_pkg
+		++ -ownedFunctionPkg -> src_function_pkg
+		++ -ownedInterfacePkg -> src_interface_pkg
+		++ -ownedRolePkg -> src_role_pkg
 	}
 	
-	++ src_abstract_capability_pkg : OperationalCapabilityPkg
+	++ src_abstract_capability_pkg : oa.OperationalCapabilityPkg{
+		name := "Operational Capabilities"
+	}
 
-	// commented out as DataPkg "cannot be found"
-	//++ src_data_pkg : org.polarsys.capella.core.data.cs.DataPkg
+	++ src_data_pkg : information.DataPkg{
+		name := "Data"
+	}
+	
+	++ src_entity_pkg : oa.EntityPkg{
+		name := "Operational Entities"
+	}
+
+	++ src_function_pkg : oa.OperationalActivityPkg{
+		name := "Operational Activities"
+	}
+	
+	++ src_interface_pkg : cs.InterfacePkg{
+		name := "Interfaces"
+	}
+	
+	++ src_role_pkg : oa.RolePkg{
+		name := "Roles"
+	}
 }
 
 #target {
 	++ trg_ctx_arch : SystemAnalysis
+	{
+		name := "System Analysis"
+		++ -ownedAbstractCapabilityPkg -> trg_abstract_capability_pkg
+		++ -ownedDataPkg -> trg_data_pkg
+		++ -ownedFunctionPkg -> trg_function_pkg
+		++ -ownedInterfacePkg -> trg_interface_pkg
+		++ -ownedMissionPkg -> trg_mission_pkg
+		++ -ownedOperationalAnalysisRealizations -> trg_oa_realization
+		++ -ownedSystemComponentPkg -> trg_system_comp_pkg
+	}
+	
+	++ trg_abstract_capability_pkg : ctx.CapabilityPkg{
+		name := "Capabilities"
+	}
+	
+	++ trg_data_pkg : information.DataPkg{
+		name := "Data"
+	}
+
+	++ trg_function_pkg : ctx.SystemFunctionPkg{
+		name := "System Functions"
+	}
+	
+	++ trg_interface_pkg : cs.InterfacePkg{
+		name := "Interfaces"
+	}
+	
+	++ trg_mission_pkg : ctx.MissionPkg{
+		name := "Missions"
+	}
+	
+	++ trg_oa_realization : ctx.OperationalAnalysisRealization
+	{
+		// holds references to elements on OA side which are implemented
+		// cannot be synchronised/generated with TGG
+	}
+	
+	++ trg_system_comp_pkg : ctx.SystemComponentPkg{
+		name := "Structure"
+	}
+	
+	
 }
 
 #correspondence {
@@ -31,12 +95,5 @@
 }
 
 #attributeConditions {
-	// OA attributes
-	set_string_to_value_if_not_bound(src_oa_arch.name, "Operational Analysis")
-	set_boolean_to_value_if_not_bound(src_oa_arch.visibleInDoc, true)
-	set_boolean_to_value_if_not_bound(src_oa_arch.visibleInLM, true)
 
-	set_string_to_value_if_not_bound(src_abstract_capability_pkg.name, "Operational Capabilities")
-	set_boolean_to_value_if_not_bound(src_abstract_capability_pkg.visibleInDoc, true)
-	set_boolean_to_value_if_not_bound(src_abstract_capability_pkg.visibleInLM, true)
 }

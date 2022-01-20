@@ -104,14 +104,14 @@ public interface Oa2CtxPackage extends EPackage {
 	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link Oa2Ctx.impl.InitialModelCreation__MarkerImpl <em>Initial Model Creation Marker</em>}' class.
+	 * The meta object id for the '{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl <em>Initial Model Creation owned Data Pkg Marker</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Oa2Ctx.impl.InitialModelCreation__MarkerImpl
-	 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getInitialModelCreation__Marker()
+	 * @see Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl
+	 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getInitialModelCreation_ownedDataPkg__Marker()
 	 * @generated
 	 */
-	int INITIAL_MODEL_CREATION_MARKER = 1;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' container reference.
@@ -120,7 +120,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
 
 	/**
 	 * The feature id for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
@@ -129,7 +129,43 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src data pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_DATA_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src entity pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ENTITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src function pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_FUNCTION_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src interface pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_INTERFACE_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>CREATE SRC src oa arch</b></em>' reference.
@@ -138,7 +174,133 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src role pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ROLE_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG bool literal false</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BOOL_LITERAL_FALSE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG bool literal true</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BOOL_LITERAL_TRUE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG byte literal max val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BYTE_LITERAL_MAX_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG byte literal min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BYTE_LITERAL_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG char literal max length</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_CHAR_LITERAL_MAX_LENGTH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG char literal min length</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_CHAR_LITERAL_MIN_LENGTH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG hex literal max val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG hex literal max val left operand</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG hex literal max val left operand left operand</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND_LEFT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 15;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG hex literal max val left operand right operand</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND_RIGHT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 16;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG hex literal max val right operand</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_RIGHT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 17;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG hex literal min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 18;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg abstract capability pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference.
@@ -147,7 +309,124 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 20;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg data pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DATA_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 21;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt boolean</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_BOOLEAN = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 22;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt byte</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_BYTE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 23;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt char</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_CHAR = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 24;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt data pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_DATA_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 25;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt double</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_DOUBLE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 26;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt float</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_FLOAT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 27;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt hex</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 28;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg function pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_FUNCTION_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 29;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg interface pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_INTERFACE_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 30;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg mission pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_MISSION_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 31;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg oa realization</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_OA_REALIZATION = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 32;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg system comp pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 33;
 
 	/**
 	 * The feature id for the '<em><b>CREATE CORR oa2ctx</b></em>' reference.
@@ -156,25 +435,25 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 34;
 
 	/**
-	 * The number of structural features of the '<em>Initial Model Creation Marker</em>' class.
+	 * The number of structural features of the '<em>Initial Model Creation owned Data Pkg Marker</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 35;
 
 	/**
-	 * The number of operations of the '<em>Initial Model Creation Marker</em>' class.
+	 * The number of operations of the '<em>Initial Model Creation owned Data Pkg Marker</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_MARKER_OPERATION_COUNT = RuntimePackage.TGG_RULE_APPLICATION_OPERATION_COUNT + 0;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER_OPERATION_COUNT = RuntimePackage.TGG_RULE_APPLICATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link Oa2Ctx.impl.Oa2Sa_create_nodes_and_try_to_set_reference__MarkerImpl <em>Oa2 Sa create nodes and try to set reference Marker</em>}' class.
@@ -541,6 +820,79 @@ public interface Oa2CtxPackage extends EPackage {
 	 */
 	int OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER_OPERATION_COUNT = RuntimePackage.TGG_RULE_APPLICATION_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link Oa2Ctx.impl.debugrule_create_oa_and_entitypkg__MarkerImpl <em>debugrule create oa and entitypkg Marker</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Oa2Ctx.impl.debugrule_create_oa_and_entitypkg__MarkerImpl
+	 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getdebugrule_create_oa_and_entitypkg__Marker()
+	 * @generated
+	 */
+	int DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER = 7;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src entity pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER__CREATE_SRC_SRC_ENTITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>CREATE SRC src oa arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>CREATE CORR oa2ctx</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>debugrule create oa and entitypkg Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>debugrule create oa and entitypkg Marker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER_OPERATION_COUNT = RuntimePackage.TGG_RULE_APPLICATION_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link Oa2Ctx.OperationalAnalysis2SystemAnalysis <em>Operational Analysis2 System Analysis</em>}'.
@@ -575,58 +927,399 @@ public interface Oa2CtxPackage extends EPackage {
 	EReference getOperationalAnalysis2SystemAnalysis_Target();
 
 	/**
-	 * Returns the meta object for class '{@link Oa2Ctx.InitialModelCreation__Marker <em>Initial Model Creation Marker</em>}'.
+	 * Returns the meta object for class '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker <em>Initial Model Creation owned Data Pkg Marker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Initial Model Creation Marker</em>'.
-	 * @see Oa2Ctx.InitialModelCreation__Marker
+	 * @return the meta object for class '<em>Initial Model Creation owned Data Pkg Marker</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker
 	 * @generated
 	 */
-	EClass getInitialModelCreation__Marker();
+	EClass getInitialModelCreation_ownedDataPkg__Marker();
 
 	/**
-	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}'.
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>CREATE SRC src abstract capability pkg</em>'.
-	 * @see Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_abstract_capability_pkg()
-	 * @see #getInitialModelCreation__Marker()
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_abstract_capability_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
 	 * @generated
 	 */
-	EReference getInitialModelCreation__Marker_CREATE__SRC__src_abstract_capability_pkg();
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_abstract_capability_pkg();
 
 	/**
-	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}'.
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_data_pkg <em>CREATE SRC src data pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src data pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_data_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_data_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_entity_pkg <em>CREATE SRC src entity pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src entity pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_entity_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_entity_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_function_pkg <em>CREATE SRC src function pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src function pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_function_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_function_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_interface_pkg <em>CREATE SRC src interface pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src interface pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_interface_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_interface_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>CREATE SRC src oa arch</em>'.
-	 * @see Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_oa_arch()
-	 * @see #getInitialModelCreation__Marker()
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_oa_arch()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
 	 * @generated
 	 */
-	EReference getInitialModelCreation__Marker_CREATE__SRC__src_oa_arch();
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_oa_arch();
 
 	/**
-	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}'.
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_role_pkg <em>CREATE SRC src role pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src role pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_role_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_role_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__bool_literal_false <em>CREATE TRG bool literal false</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG bool literal false</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__bool_literal_false()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__bool_literal_false();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__bool_literal_true <em>CREATE TRG bool literal true</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG bool literal true</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__bool_literal_true()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__bool_literal_true();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__byte_literal_max_val <em>CREATE TRG byte literal max val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG byte literal max val</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__byte_literal_max_val()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__byte_literal_max_val();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__byte_literal_min_val <em>CREATE TRG byte literal min val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG byte literal min val</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__byte_literal_min_val()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__byte_literal_min_val();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__char_literal_max_length <em>CREATE TRG char literal max length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG char literal max length</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__char_literal_max_length()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__char_literal_max_length();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__char_literal_min_length <em>CREATE TRG char literal min length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG char literal min length</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__char_literal_min_length()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__char_literal_min_length();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val <em>CREATE TRG hex literal max val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG hex literal max val</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val_left_operand <em>CREATE TRG hex literal max val left operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG hex literal max val left operand</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val_left_operand()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val_left_operand_left_operand <em>CREATE TRG hex literal max val left operand left operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG hex literal max val left operand left operand</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val_left_operand_left_operand()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand_left_operand();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val_left_operand_right_operand <em>CREATE TRG hex literal max val left operand right operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG hex literal max val left operand right operand</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val_left_operand_right_operand()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand_right_operand();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val_right_operand <em>CREATE TRG hex literal max val right operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG hex literal max val right operand</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_max_val_right_operand()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_right_operand();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_min_val <em>CREATE TRG hex literal min val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG hex literal min val</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__hex_literal_min_val()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_min_val();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_abstract_capability_pkg <em>CREATE TRG trg abstract capability pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg abstract capability pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_abstract_capability_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_abstract_capability_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>CREATE TRG trg ctx arch</em>'.
-	 * @see Oa2Ctx.InitialModelCreation__Marker#getCREATE__TRG__trg_ctx_arch()
-	 * @see #getInitialModelCreation__Marker()
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_ctx_arch()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
 	 * @generated
 	 */
-	EReference getInitialModelCreation__Marker_CREATE__TRG__trg_ctx_arch();
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_ctx_arch();
 
 	/**
-	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_data_pkg <em>CREATE TRG trg data pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg data pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_data_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_data_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_boolean <em>CREATE TRG trg dt boolean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt boolean</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_boolean()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_boolean();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_byte <em>CREATE TRG trg dt byte</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt byte</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_byte()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_byte();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_char <em>CREATE TRG trg dt char</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt char</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_char()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_char();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_data_pkg <em>CREATE TRG trg dt data pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt data pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_data_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_data_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_double <em>CREATE TRG trg dt double</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt double</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_double()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_double();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_float <em>CREATE TRG trg dt float</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt float</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_float()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_float();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_hex <em>CREATE TRG trg dt hex</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt hex</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_hex()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_hex();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_function_pkg <em>CREATE TRG trg function pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg function pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_function_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_function_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_interface_pkg <em>CREATE TRG trg interface pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg interface pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_interface_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_interface_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_mission_pkg <em>CREATE TRG trg mission pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg mission pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_mission_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_mission_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_oa_realization <em>CREATE TRG trg oa realization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg oa realization</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_oa_realization()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_oa_realization();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_system_comp_pkg <em>CREATE TRG trg system comp pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg system comp pkg</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_system_comp_pkg()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_system_comp_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>CREATE CORR oa2ctx</em>'.
-	 * @see Oa2Ctx.InitialModelCreation__Marker#getCREATE__CORR__oa2ctx()
-	 * @see #getInitialModelCreation__Marker()
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__CORR__oa2ctx()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
 	 * @generated
 	 */
-	EReference getInitialModelCreation__Marker_CREATE__CORR__oa2ctx();
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__CORR__oa2ctx();
 
 	/**
 	 * Returns the meta object for class '{@link Oa2Ctx.Oa2Sa_create_nodes_and_try_to_set_reference__Marker <em>Oa2 Sa create nodes and try to set reference Marker</em>}'.
@@ -899,6 +1592,60 @@ public interface Oa2CtxPackage extends EPackage {
 	EReference getOperationalAnalysis2SystemAnalysis__Marker_CREATE__CORR__oa2ctx();
 
 	/**
+	 * Returns the meta object for class '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker <em>debugrule create oa and entitypkg Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>debugrule create oa and entitypkg Marker</em>'.
+	 * @see Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker
+	 * @generated
+	 */
+	EClass getdebugrule_create_oa_and_entitypkg__Marker();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__SRC__src_entity_pkg <em>CREATE SRC src entity pkg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src entity pkg</em>'.
+	 * @see Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__SRC__src_entity_pkg()
+	 * @see #getdebugrule_create_oa_and_entitypkg__Marker()
+	 * @generated
+	 */
+	EReference getdebugrule_create_oa_and_entitypkg__Marker_CREATE__SRC__src_entity_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src oa arch</em>'.
+	 * @see Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__SRC__src_oa_arch()
+	 * @see #getdebugrule_create_oa_and_entitypkg__Marker()
+	 * @generated
+	 */
+	EReference getdebugrule_create_oa_and_entitypkg__Marker_CREATE__SRC__src_oa_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg ctx arch</em>'.
+	 * @see Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__TRG__trg_ctx_arch()
+	 * @see #getdebugrule_create_oa_and_entitypkg__Marker()
+	 * @generated
+	 */
+	EReference getdebugrule_create_oa_and_entitypkg__Marker_CREATE__TRG__trg_ctx_arch();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE CORR oa2ctx</em>'.
+	 * @see Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__CORR__oa2ctx()
+	 * @see #getdebugrule_create_oa_and_entitypkg__Marker()
+	 * @generated
+	 */
+	EReference getdebugrule_create_oa_and_entitypkg__Marker_CREATE__CORR__oa2ctx();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -948,14 +1695,14 @@ public interface Oa2CtxPackage extends EPackage {
 		EReference OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS__TARGET = eINSTANCE.getOperationalAnalysis2SystemAnalysis_Target();
 
 		/**
-		 * The meta object literal for the '{@link Oa2Ctx.impl.InitialModelCreation__MarkerImpl <em>Initial Model Creation Marker</em>}' class.
+		 * The meta object literal for the '{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl <em>Initial Model Creation owned Data Pkg Marker</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see Oa2Ctx.impl.InitialModelCreation__MarkerImpl
-		 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getInitialModelCreation__Marker()
+		 * @see Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl
+		 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getInitialModelCreation_ownedDataPkg__Marker()
 		 * @generated
 		 */
-		EClass INITIAL_MODEL_CREATION_MARKER = eINSTANCE.getInitialModelCreation__Marker();
+		EClass INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker();
 
 		/**
 		 * The meta object literal for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference feature.
@@ -963,7 +1710,39 @@ public interface Oa2CtxPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = eINSTANCE.getInitialModelCreation__Marker_CREATE__SRC__src_abstract_capability_pkg();
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_abstract_capability_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src data pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_DATA_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_data_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src entity pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ENTITY_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_entity_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src function pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_FUNCTION_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_function_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src interface pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_INTERFACE_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_interface_pkg();
 
 		/**
 		 * The meta object literal for the '<em><b>CREATE SRC src oa arch</b></em>' reference feature.
@@ -971,7 +1750,119 @@ public interface Oa2CtxPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INITIAL_MODEL_CREATION_MARKER__CREATE_SRC_SRC_OA_ARCH = eINSTANCE.getInitialModelCreation__Marker_CREATE__SRC__src_oa_arch();
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OA_ARCH = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_oa_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src role pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ROLE_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_role_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG bool literal false</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BOOL_LITERAL_FALSE = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__bool_literal_false();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG bool literal true</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BOOL_LITERAL_TRUE = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__bool_literal_true();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG byte literal max val</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BYTE_LITERAL_MAX_VAL = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__byte_literal_max_val();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG byte literal min val</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BYTE_LITERAL_MIN_VAL = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__byte_literal_min_val();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG char literal max length</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_CHAR_LITERAL_MAX_LENGTH = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__char_literal_max_length();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG char literal min length</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_CHAR_LITERAL_MIN_LENGTH = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__char_literal_min_length();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG hex literal max val</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG hex literal max val left operand</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG hex literal max val left operand left operand</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND_LEFT_OPERAND = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand_left_operand();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG hex literal max val left operand right operand</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND_RIGHT_OPERAND = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand_right_operand();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG hex literal max val right operand</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_RIGHT_OPERAND = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_right_operand();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG hex literal min val</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MIN_VAL = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_min_val();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg abstract capability pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_ABSTRACT_CAPABILITY_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_abstract_capability_pkg();
 
 		/**
 		 * The meta object literal for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference feature.
@@ -979,7 +1870,111 @@ public interface Oa2CtxPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INITIAL_MODEL_CREATION_MARKER__CREATE_TRG_TRG_CTX_ARCH = eINSTANCE.getInitialModelCreation__Marker_CREATE__TRG__trg_ctx_arch();
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_CTX_ARCH = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_ctx_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg data pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DATA_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_data_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt boolean</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_BOOLEAN = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_boolean();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt byte</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_BYTE = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_byte();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt char</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_CHAR = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_char();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt data pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_DATA_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_data_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt double</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_DOUBLE = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_double();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt float</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_FLOAT = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_float();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt hex</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_hex();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg function pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_FUNCTION_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_function_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg interface pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_INTERFACE_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_interface_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg mission pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_MISSION_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_mission_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg oa realization</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_OA_REALIZATION = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_oa_realization();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg system comp pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_system_comp_pkg();
 
 		/**
 		 * The meta object literal for the '<em><b>CREATE CORR oa2ctx</b></em>' reference feature.
@@ -987,7 +1982,7 @@ public interface Oa2CtxPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INITIAL_MODEL_CREATION_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getInitialModelCreation__Marker_CREATE__CORR__oa2ctx();
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__CORR__oa2ctx();
 
 		/**
 		 * The meta object literal for the '{@link Oa2Ctx.impl.Oa2Sa_create_nodes_and_try_to_set_reference__MarkerImpl <em>Oa2 Sa create nodes and try to set reference Marker</em>}' class.
@@ -1198,6 +2193,48 @@ public interface Oa2CtxPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getOperationalAnalysis2SystemAnalysis__Marker_CREATE__CORR__oa2ctx();
+
+		/**
+		 * The meta object literal for the '{@link Oa2Ctx.impl.debugrule_create_oa_and_entitypkg__MarkerImpl <em>debugrule create oa and entitypkg Marker</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Oa2Ctx.impl.debugrule_create_oa_and_entitypkg__MarkerImpl
+		 * @see Oa2Ctx.impl.Oa2CtxPackageImpl#getdebugrule_create_oa_and_entitypkg__Marker()
+		 * @generated
+		 */
+		EClass DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER = eINSTANCE.getdebugrule_create_oa_and_entitypkg__Marker();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src entity pkg</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER__CREATE_SRC_SRC_ENTITY_PKG = eINSTANCE.getdebugrule_create_oa_and_entitypkg__Marker_CREATE__SRC__src_entity_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src oa arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER__CREATE_SRC_SRC_OA_ARCH = eINSTANCE.getdebugrule_create_oa_and_entitypkg__Marker_CREATE__SRC__src_oa_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER__CREATE_TRG_TRG_CTX_ARCH = eINSTANCE.getdebugrule_create_oa_and_entitypkg__Marker_CREATE__TRG__trg_ctx_arch();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE CORR oa2ctx</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER__CREATE_CORR_OA2CTX = eINSTANCE.getdebugrule_create_oa_and_entitypkg__Marker_CREATE__CORR__oa2ctx();
 
 	}
 

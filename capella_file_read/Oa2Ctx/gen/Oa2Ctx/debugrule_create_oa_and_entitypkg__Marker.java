@@ -6,52 +6,52 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.polarsys.capella.core.data.ctx.SystemAnalysis;
 
+import org.polarsys.capella.core.data.oa.EntityPkg;
 import org.polarsys.capella.core.data.oa.OperationalAnalysis;
-import org.polarsys.capella.core.data.oa.OperationalCapabilityPkg;
 
 import runtime.TGGRuleApplication;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Initial Model Creation Marker</b></em>'.
+ * A representation of the model object '<em><b>debugrule create oa and entitypkg Marker</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}</li>
- *   <li>{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}</li>
- *   <li>{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}</li>
- *   <li>{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}</li>
+ *   <li>{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__SRC__src_entity_pkg <em>CREATE SRC src entity pkg</em>}</li>
+ *   <li>{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}</li>
+ *   <li>{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}</li>
+ *   <li>{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}</li>
  * </ul>
  *
- * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation__Marker()
+ * @see Oa2Ctx.Oa2CtxPackage#getdebugrule_create_oa_and_entitypkg__Marker()
  * @model
  * @generated
  */
-public interface InitialModelCreation__Marker extends EObject, TGGRuleApplication {
+public interface debugrule_create_oa_and_entitypkg__Marker extends EObject, TGGRuleApplication {
 	/**
-	 * Returns the value of the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
+	 * Returns the value of the '<em><b>CREATE SRC src entity pkg</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>CREATE SRC src abstract capability pkg</em>' reference.
-	 * @see #setCREATE__SRC__src_abstract_capability_pkg(OperationalCapabilityPkg)
-	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation__Marker_CREATE__SRC__src_abstract_capability_pkg()
+	 * @return the value of the '<em>CREATE SRC src entity pkg</em>' reference.
+	 * @see #setCREATE__SRC__src_entity_pkg(EntityPkg)
+	 * @see Oa2Ctx.Oa2CtxPackage#getdebugrule_create_oa_and_entitypkg__Marker_CREATE__SRC__src_entity_pkg()
 	 * @model required="true"
 	 * @generated
 	 */
-	OperationalCapabilityPkg getCREATE__SRC__src_abstract_capability_pkg();
+	EntityPkg getCREATE__SRC__src_entity_pkg();
 
 	/**
-	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}' reference.
+	 * Sets the value of the '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__SRC__src_entity_pkg <em>CREATE SRC src entity pkg</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>CREATE SRC src abstract capability pkg</em>' reference.
-	 * @see #getCREATE__SRC__src_abstract_capability_pkg()
+	 * @param value the new value of the '<em>CREATE SRC src entity pkg</em>' reference.
+	 * @see #getCREATE__SRC__src_entity_pkg()
 	 * @generated
 	 */
-	void setCREATE__SRC__src_abstract_capability_pkg(OperationalCapabilityPkg value);
+	void setCREATE__SRC__src_entity_pkg(EntityPkg value);
 
 	/**
 	 * Returns the value of the '<em><b>CREATE SRC src oa arch</b></em>' reference.
@@ -59,14 +59,14 @@ public interface InitialModelCreation__Marker extends EObject, TGGRuleApplicatio
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>CREATE SRC src oa arch</em>' reference.
 	 * @see #setCREATE__SRC__src_oa_arch(OperationalAnalysis)
-	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation__Marker_CREATE__SRC__src_oa_arch()
+	 * @see Oa2Ctx.Oa2CtxPackage#getdebugrule_create_oa_and_entitypkg__Marker_CREATE__SRC__src_oa_arch()
 	 * @model required="true"
 	 * @generated
 	 */
 	OperationalAnalysis getCREATE__SRC__src_oa_arch();
 
 	/**
-	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}' reference.
+	 * Sets the value of the '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>CREATE SRC src oa arch</em>' reference.
@@ -81,14 +81,14 @@ public interface InitialModelCreation__Marker extends EObject, TGGRuleApplicatio
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>CREATE TRG trg ctx arch</em>' reference.
 	 * @see #setCREATE__TRG__trg_ctx_arch(SystemAnalysis)
-	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation__Marker_CREATE__TRG__trg_ctx_arch()
+	 * @see Oa2Ctx.Oa2CtxPackage#getdebugrule_create_oa_and_entitypkg__Marker_CREATE__TRG__trg_ctx_arch()
 	 * @model required="true"
 	 * @generated
 	 */
 	SystemAnalysis getCREATE__TRG__trg_ctx_arch();
 
 	/**
-	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}' reference.
+	 * Sets the value of the '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__TRG__trg_ctx_arch <em>CREATE TRG trg ctx arch</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>CREATE TRG trg ctx arch</em>' reference.
@@ -103,14 +103,14 @@ public interface InitialModelCreation__Marker extends EObject, TGGRuleApplicatio
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>CREATE CORR oa2ctx</em>' reference.
 	 * @see #setCREATE__CORR__oa2ctx(OperationalAnalysis2SystemAnalysis)
-	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation__Marker_CREATE__CORR__oa2ctx()
+	 * @see Oa2Ctx.Oa2CtxPackage#getdebugrule_create_oa_and_entitypkg__Marker_CREATE__CORR__oa2ctx()
 	 * @model required="true"
 	 * @generated
 	 */
 	OperationalAnalysis2SystemAnalysis getCREATE__CORR__oa2ctx();
 
 	/**
-	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}' reference.
+	 * Sets the value of the '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>CREATE CORR oa2ctx</em>' reference.
@@ -119,4 +119,4 @@ public interface InitialModelCreation__Marker extends EObject, TGGRuleApplicatio
 	 */
 	void setCREATE__CORR__oa2ctx(OperationalAnalysis2SystemAnalysis value);
 
-} // InitialModelCreation__Marker
+} // debugrule_create_oa_and_entitypkg__Marker

@@ -1,9 +1,17 @@
 package org.emoflon.ibex.tgg.run.oa2ctx;
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.apache.log4j.BasicConfigurator;
 
 import org.emoflon.ibex.tgg.compiler.defaults.IRegistrationHelper;
@@ -12,6 +20,12 @@ import org.emoflon.ibex.tgg.operational.strategies.modules.TGGResourceHandler;
 import org.emoflon.ibex.tgg.run.oa2ctx.config.*;
 import org.polarsys.capella.core.data.ctx.CtxPackage;
 import org.polarsys.capella.core.data.oa.OaPackage;
+
+import language.TGG;
+import language.TGGRule;
+import language.TGGRuleEdge;
+import language.TGGRuleNode;
+
 import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN;
 import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGENStopCriterion;
 
@@ -44,6 +58,99 @@ public class MODELGEN_App extends MODELGEN {
 				
 				super.loadModels();
 			}
+			
+			/**
+			 * method to fix capella metmodel loading
+			 * @author Lars Fritsche
+			 * @param pkg
+			 * @return
+			 */
+			@Override
+			protected Resource loadTGGResource(String workspaceRelativePath) throws IOException {
+				Resource tggResource = super.loadTGGResource(workspaceRelativePath);
+				if(tggResource.getContents().isEmpty())
+					return tggResource;
+				
+				if(tggResource.getContents().get(0) instanceof TGG tgg) {
+					Collection<EPackage> srcPackages = tgg.getSrc().stream().map(this::resolveEPackage).collect(Collectors.toList());
+					Collection<EPackage> trgPackages = tgg.getTrg().stream().map(this::resolveEPackage).collect(Collectors.toList());
+					tgg.getSrc().clear();
+					tgg.getTrg().clear();
+					tgg.getSrc().addAll(srcPackages);
+					tgg.getTrg().addAll(trgPackages);
+					
+					for(TGGRule rule : tgg.getRules()) {
+						System.out.println("Resolving for rule: " + rule.getName());
+						for(TGGRuleNode node : rule.getNodes()) {
+							node.setType(resolveType(node.getType()));
+						}
+						for(TGGRuleEdge edge : rule.getEdges()) {
+							edge.setType(resolveReference(edge.getType()));
+						}
+					}
+				}
+				return tggResource;
+			}
+			
+			/**
+			 * method to fix capella metmodel loading
+			 * @author Lars Fritsche
+			 * @param pkg
+			 * @return
+			 */
+			private EPackage resolveEPackage(EPackage pkg) {
+				if(rs.getPackageRegistry().get(pkg.getNsURI()) instanceof EPackage regPkg) {
+					return regPkg;
+				}
+				return pkg;
+			}
+			
+			/**
+			 * method to fix capella metmodel loading
+			 * @author Lars Fritsche
+			 * @param pkg
+			 * @return
+			 */
+			private EClass resolveType(EClass ec) {
+				EPackage pkg = resolveEPackage(ec.getEPackage());
+				Optional<EClassifier> resolvedEC = pkg.getEClassifiers().stream().filter(cl -> cl.getName().equals(ec.getName())).findFirst();
+				if(!resolvedEC.isPresent()) {
+					throw new RuntimeException("Could not resolve eClass " + ec.getName());
+				}
+				return (EClass) resolvedEC.get();
+			}
+			
+			/**
+			 * method to fix capella metmodel loading
+			 * @author Lars Fritsche, AZ
+			 * @param pkg
+			 * @return
+			 */
+			private EReference resolveReference(EReference ref) {
+				EClass containingClass = ref.getEContainingClass();
+				EClass the_classifier = resolveType(containingClass);
+				Optional<EReference> resolvedRef = the_classifier.getEAllReferences().stream().filter(r -> r.getName().equals(ref.getName())).findFirst();
+				if(!resolvedRef.isPresent()) {
+					throw new RuntimeException("Could not resolve EReference " + ref.getName());
+				}
+				return (EReference) resolvedRef.get();
+			}
+			
+			/**
+			 * method to fix capella metmodel loading, does not work as intended somehow
+			 * @author Lars Fritsche
+			 * @param pkg
+			 * @return
+			 */
+			private EReference resolveReference_backup(EReference ref) {
+				EClass containingClass = ref.getEContainingClass();
+				Optional<EReference> resolvedRef = containingClass.getEAllReferences().stream().filter(r -> r.getName().equals(ref.getName())).findFirst();
+				if(!resolvedRef.isPresent()) {
+					throw new RuntimeException("Could not resolve EReference " + ref.getName());
+				}
+				return (EReference) resolvedRef.get();
+			}
+			
 		}));
 	}
 
@@ -60,45 +167,29 @@ public class MODELGEN_App extends MODELGEN {
 		MODELGENStopCriterion stop = new MODELGENStopCriterion(generator.getTGG());
 		stop.setTimeOutInMS(1000);
 		
+		/**
+		 * DEBUG RULES
+		 */
 		stop.setMaxRuleCount("OperationalAnalysis2SystemAnalysis", 0); // what i want to do
 		
-		// rules to find out what i am doing wrong
 		stop.setMaxRuleCount("Oa2Sa_create_nodes_only", 0);
-		// runs without errors
-		
 		
 		stop.setMaxRuleCount("Oa2Sa_create_nodes_and_try_to_set_reference", 0); //most confusing
-		//says that the reference is not changeable. However, that is not the case.
-		// The metamodel does define the reference as changeable
-//		Exception in thread "main" java.lang.IllegalArgumentException: The feature 'ownedAbstractCapabilityPkg' is not a valid changeable feature
-//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eOpenSet(BasicEObjectImpl.java:1188)
-//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSet(BasicEObjectImpl.java:1114)
-//		at org.emoflon.ibex.common.emf.EMFManipulationUtils.createEdge(EMFManipulationUtils.java:65)
-//		at org.emoflon.ibex.tgg.operational.defaults.IbexGreenInterpreter.createEdges(IbexGreenInterpreter.java:78)
-//		at org.emoflon.ibex.tgg.operational.defaults.IbexGreenInterpreter.apply(IbexGreenInterpreter.java:214)
-//		at org.emoflon.ibex.tgg.operational.strategies.OperationalStrategy.processOperationalRuleMatch(OperationalStrategy.java:277)
-//		at org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN.processOneOperationalRuleMatch(MODELGEN.java:116)
-//		at org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN.run(MODELGEN.java:79)
-//		at org.emoflon.ibex.tgg.run.oa2ctx.MODELGEN_App.main(MODELGEN_App.java:83)
 		
-		// somehow cannot find the name attribute
 		stop.setMaxRuleCount("Oa2Sa_nodes_and_set_name", 0);
-		//Exception in thread "main" java.lang.IllegalArgumentException: The feature 'name' is not a valid feature
-//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eOpenGet(BasicEObjectImpl.java:1101)
-//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1054)
-//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1042)
-//		at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1037)
-//		at org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintContainer.applyCSPValues(RuntimeTGGAttributeConstraintContainer.java:147)
-//		at org.emoflon.ibex.tgg.operational.defaults.IbexGreenInterpreter.apply(IbexGreenInterpreter.java:203)
-//		at org.emoflon.ibex.tgg.operational.strategies.OperationalStrategy.processOperationalRuleMatch(OperationalStrategy.java:277)
-//		at org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN.processOneOperationalRuleMatch(MODELGEN.java:116)
-//		at org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN.run(MODELGEN.java:79)
-//		at org.emoflon.ibex.tgg.run.oa2ctx.MODELGEN_App.main(MODELGEN_App.java:93)
 
-		stop.setMaxRuleCount("Oa2Sa_nodes_and_set_specific_name", 1);
+		stop.setMaxRuleCount("Oa2Sa_nodes_and_set_specific_name", 0);
 		
-		stop.setMaxRuleCount("InitialModelCreation", 0);
+		stop.setMaxRuleCount("debugrule_create_oa_and_entitypkg", 0);
+		
 
+		/**
+		 * ACTUAL RULES (Work in progress)
+		 */
+		
+		//stop.setMaxRuleCount("InitialModelCreation", 0);
+		//stop.setMaxElementCount(6);
+		stop.setMaxSrcCount(1);
 		generator.setStopCriterion(stop);
 		
 		tic = System.currentTimeMillis();

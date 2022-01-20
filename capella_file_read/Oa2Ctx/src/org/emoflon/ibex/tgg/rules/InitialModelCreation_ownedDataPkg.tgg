@@ -1,0 +1,170 @@
+#using Oa2Ctx.*
+#using AttrCondDefLibrary.*
+
+#rule InitialModelCreation_ownedDataPkg  #extends InitialModelCreation #with Oa2Ctx
+
+#source { 
+	++src_oa_arch : oa.OperationalAnalysis
+}
+
+#target {
+	++trg_ctx_arch : SystemAnalysis
+	{
+		++ -ownedDataPkg -> trg_data_pkg
+	}
+	
+	++ trg_data_pkg : information.DataPkg{
+		++ -ownedDataPkgs -> trg_dt_data_pkg
+	}
+	
+	++ trg_dt_data_pkg : information.DataPkg{
+		name := "Predefined"
+		++ -ownedDataTypes -> trg_dt_boolean
+		++ -ownedDataTypes -> trg_dt_byte
+		++ -ownedDataTypes -> trg_dt_char
+		++ -ownedDataTypes -> trg_dt_double
+		++ -ownedDataTypes -> trg_dt_float
+		++ -ownedDataTypes -> trg_dt_hex
+	}
+
+/*
+ * Boolean predefined type
+ */
+ 
+	++ trg_dt_boolean : information.datatype.BooleanType{
+		name := "Boolean"
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+		++ -ownedLiterals -> bool_literal_false
+		++ -ownedLiterals -> bool_literal_true
+	}
+	++ bool_literal_true : information.datavalue.LiteralBooleanValue{
+		name := "True"
+		++ -abstractType -> trg_dt_boolean
+	}
+	++ bool_literal_false : information.datavalue.LiteralBooleanValue{
+		name := "False"
+		++ -abstractType -> trg_dt_boolean
+	}
+
+/*
+ * Byte predefined type
+ */
+
+	++ trg_dt_byte : information.datatype.NumericType{
+		name := "Byte"
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+		++ -ownedMaxValue -> byte_literal_max_val
+		++ -ownedMinValue -> byte_literal_min_val
+	}
+	++ byte_literal_max_val : information.datavalue.LiteralNumericValue{
+		name := ""
+		value := 255
+		++ -abstractType -> trg_dt_byte
+	}
+	++ byte_literal_min_val : information.datavalue.LiteralNumericValue{
+		name := ""
+		value := 0
+		++ -abstractType -> trg_dt_byte
+	}
+	
+/*
+ * Char predefined type
+ */
+
+	++ trg_dt_char : information.datatype.StringType{
+		name := "Char"
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+		++ -ownedMinLength -> char_literal_min_length
+		++ -ownedMaxLength -> char_literal_max_length
+	}
+
+	++ char_literal_min_length : information.datavalue.LiteralNumericValue{
+		name := ""
+		value := 1
+		//TODO add abstracttype which is "UnsignedShort"
+	}
+	
+	++ char_literal_max_length : information.datavalue.LiteralNumericValue{
+		name := ""
+		value := 1
+		//TODO add abstracttype which is "UnsignedShort"
+	}
+	
+/*
+ * Double predefined type
+ */
+
+	++ trg_dt_double : information.datatype.NumericType{
+		name := "Double"
+		kind := enum::information.datatype.NumericTypeKind::FLOAT
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+	}
+
+/*
+ * Float predefined type
+ */
+ 
+	++ trg_dt_float : information.datatype.NumericType{
+		name := "Float"
+		kind := enum::information.datatype.NumericTypeKind::FLOAT
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+	}
+
+/*
+ * Hex predefined type
+ */
+
+	++ trg_dt_hex : information.datatype.NumericType{
+		name := "Hexadecimal"
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+		++ - ownedMaxValue -> hex_literal_max_val
+		++ - ownedMinValue -> hex_literal_min_val
+	}
+	
+	// max value
+	
+	++ hex_literal_max_val : information.datavalue.BinaryExpression{
+		// name is null in version 5.2 when creating empty capella project and the inspecting
+		// predefined datatypes during runtime
+		operator := enum::information.datavalue.BinaryOperator::SUB
+		++ -abstractType -> trg_dt_hex
+		++ -ownedLeftOperand -> hex_literal_max_val_left_operand
+		++ -ownedRightOperand -> hex_literal_max_val_right_operand
+	}
+	++hex_literal_max_val_left_operand : information.datavalue.BinaryExpression{
+		operator := enum::information.datavalue.BinaryOperator::POW
+		++ -ownedLeftOperand -> hex_literal_max_val_left_operand_left_operand
+		++ -ownedRightOperand -> hex_literal_max_val_left_operand_right_operand
+	}
+	++hex_literal_max_val_left_operand_left_operand : information.datavalue.LiteralNumericValue{
+		value := 2
+	}
+	++hex_literal_max_val_left_operand_right_operand : information.datavalue.LiteralNumericValue{
+		value := 64
+	}
+	++hex_literal_max_val_right_operand : information.datavalue.LiteralNumericValue{
+		value := 1
+	}
+	
+	//min value
+
+	++ hex_literal_min_val : information.datavalue.LiteralNumericValue{
+		name := ""
+		value := 0
+		++ -abstractType -> trg_dt_hex
+	}
+	
+}
+
+#correspondence {
+	++ oa2ctx : OperationalAnalysis2SystemAnalysis{
+		#src->src_oa_arch
+		#trg->trg_ctx_arch
+	}
+}
+
+#attributeConditions {
+
+}

@@ -1,2 +1,24 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"/>
+<Oa2Ctx:InitialModelCreation_ownedDataPkg__Marker xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Oa2Ctx="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore">
+  <CREATE__SRC__src_abstract_capability_pkg href="src.xmi#b9a68566-81b8-42a5-9f2e-25ed87b889e1"/>
+  <CREATE__SRC__src_data_pkg href="src.xmi#6c3592fc-f245-4ed9-9b02-2c62d8997431"/>
+  <CREATE__SRC__src_entity_pkg href="src.xmi#2e840050-1374-4d66-b5c4-3d5ed482d0d7"/>
+  <CREATE__SRC__src_function_pkg href="src.xmi#eefe15d5-65f6-4457-a963-07aef7f80ca0"/>
+  <CREATE__SRC__src_interface_pkg href="src.xmi#882b081e-003b-4f5a-88f0-95c76aeeaf6f"/>
+  <CREATE__SRC__src_oa_arch href="src.xmi#4c38818e-2dc0-44b2-a538-e2e285babae4"/>
+  <CREATE__SRC__src_role_pkg href="src.xmi#73d742be-7b09-4241-b09b-f0600ecc73d1"/>
+  <CREATE__TRG__bool_literal_abstractType href="trg.xmi#ba958ecb-724e-4e4d-8bff-869f634df549"/>
+  <CREATE__TRG__bool_literal_false href="trg.xmi#537608e0-39d3-4d76-aeed-de91a44c0806"/>
+  <CREATE__TRG__bool_literal_true href="trg.xmi#e57422ae-ef88-4a22-9f06-549eb9ff44dc"/>
+  <CREATE__TRG__trg_abstract_capability_pkg href="trg.xmi#ac13da51-6fda-4f08-bf9b-aef3f8516f9d"/>
+  <CREATE__TRG__trg_ctx_arch href="trg.xmi#699cb014-06b4-43e5-94e1-5845946a0310"/>
+  <CREATE__TRG__trg_data_pkg href="trg.xmi#561dfd95-152f-42b4-a06f-d9f7d4b4d0b2"/>
+  <CREATE__TRG__trg_dt_boolean href="trg.xmi#0c7d42f2-eda4-4412-ad14-c50a97b08fa7"/>
+  <CREATE__TRG__trg_dt_data_pkg href="trg.xmi#b70ebf48-bd43-4ea5-b210-557e5c452a8f"/>
+  <CREATE__TRG__trg_function_pkg href="trg.xmi#d96c4eec-0444-4c24-af12-4e80d37b601e"/>
+  <CREATE__TRG__trg_interface_pkg href="trg.xmi#f9945e9c-1476-4e49-802f-219995036fda"/>
+  <CREATE__TRG__trg_mission_pkg href="trg.xmi#e11e0066-fe7e-40ce-a86f-60a0d292c8d5"/>
+  <CREATE__TRG__trg_oa_realization href="trg.xmi#662ab101-b201-4074-a6b0-aef34ad09474"/>
+  <CREATE__TRG__trg_system_comp_pkg href="trg.xmi#44c3f723-84af-46f9-9f2f-6ccc3e545d84"/>
+  <CREATE__CORR__oa2ctx href="corr.xmi#/"/>
+</Oa2Ctx:InitialModelCreation_ownedDataPkg__Marker>

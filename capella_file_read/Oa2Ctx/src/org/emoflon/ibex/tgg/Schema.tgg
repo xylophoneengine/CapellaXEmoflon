@@ -1,15 +1,50 @@
+//#import "http://www.polarsys.org/capella/core/oa/5.0.0"
+//#import "http://www.polarsys.org/capella/core/ctx/5.0.0"
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore"
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore"
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore"
-
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore"
 #schema Oa2Ctx
 	
 #source {
 	oa
+	/* oa - OperationalAnalysis
+	 * Metamodel of the OA Arcadia step.
+	 * Docstring:
+	 * Value OperationalAnalysis aims at defining the system's ecosystem operational analysis
+	 * modelling language (close to the OVs from NAF/MoDAF)....
+	 */
+	information
+	/* The Information metamodel is needed for:
+	 * 		+ DataPkg
+	 * 
+	 * Docstring:
+	 * Value Information aims at defining the data transmission language
+	 * (named Information due to the namespacing strange effects if it would have been named Data).
+	 * It includes the notion of data as well as the different data communication means....
+	 */
+	cs
+	/* The CompositeStructure is needed for:
+	 * 		+ InterfacePkg
+	 * 
+	 * Docstring:
+	 * Value CompositeStructure aims at defining the common component approach composite structure
+	 * pattern language (close to the UML Composite structure)....
+	 */
+	 capellacore
+	 /* The CapellaCore is needed for:
+	  * 	+ VisibilityKind (enum)	; Needed to set the visibility enum
+	  * Docstring:
+	  * Value CapellaCore aims at defining the core concepts of the other languages...
+	  */
 }
 
 #target { 
 	ctx
+	information
+	cs
+	capellacore
 } 
 
 #correspondence {

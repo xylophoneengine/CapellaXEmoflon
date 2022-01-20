@@ -31,13 +31,13 @@ public interface Oa2CtxFactory extends EFactory {
 	OperationalAnalysis2SystemAnalysis createOperationalAnalysis2SystemAnalysis();
 
 	/**
-	 * Returns a new object of class '<em>Initial Model Creation Marker</em>'.
+	 * Returns a new object of class '<em>Initial Model Creation owned Data Pkg Marker</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Initial Model Creation Marker</em>'.
+	 * @return a new object of class '<em>Initial Model Creation owned Data Pkg Marker</em>'.
 	 * @generated
 	 */
-	InitialModelCreation__Marker createInitialModelCreation__Marker();
+	InitialModelCreation_ownedDataPkg__Marker createInitialModelCreation_ownedDataPkg__Marker();
 
 	/**
 	 * Returns a new object of class '<em>Oa2 Sa create nodes and try to set reference Marker</em>'.
@@ -83,6 +83,15 @@ public interface Oa2CtxFactory extends EFactory {
 	 * @generated
 	 */
 	OperationalAnalysis2SystemAnalysis__Marker createOperationalAnalysis2SystemAnalysis__Marker();
+
+	/**
+	 * Returns a new object of class '<em>debugrule create oa and entitypkg Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>debugrule create oa and entitypkg Marker</em>'.
+	 * @generated
+	 */
+	debugrule_create_oa_and_entitypkg__Marker createdebugrule_create_oa_and_entitypkg__Marker();
 
 	/**
 	 * Returns the package supported by this factory.

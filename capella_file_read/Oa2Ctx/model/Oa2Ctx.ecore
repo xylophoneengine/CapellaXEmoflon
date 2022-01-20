@@ -6,13 +6,76 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InitialModelCreation__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+  <eClassifiers xsi:type="ecore:EClass" name="InitialModelCreation_ownedDataPkg__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_abstract_capability_pkg"
         lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_data_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_entity_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//EntityPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_function_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalActivityPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_interface_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//InterfacePkg"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_oa_arch"
         lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_role_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//RolePkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__bool_literal_false"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralBooleanValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__bool_literal_true"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralBooleanValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__byte_literal_max_val"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__byte_literal_min_val"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__char_literal_max_length"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__char_literal_min_length"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__hex_literal_max_val"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__hex_literal_max_val_left_operand"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__hex_literal_max_val_left_operand_left_operand"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__hex_literal_max_val_left_operand_right_operand"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__hex_literal_max_val_right_operand"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__hex_literal_min_val"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_abstract_capability_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//CapabilityPkg"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_ctx_arch"
         lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_data_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_dt_boolean"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/BooleanType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_dt_byte"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_dt_char"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/StringType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_dt_data_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_dt_double"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_dt_float"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_dt_hex"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_function_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemFunctionPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_interface_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//InterfacePkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_mission_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//MissionPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_oa_realization"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//OperationalAnalysisRealization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_system_comp_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponentPkg"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__oa2ctx" lowerBound="1"
         eType="ecore:EClass platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis"/>
   </eClassifiers>
@@ -62,6 +125,17 @@
       eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_abstract_capability_pkg"
         lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_oa_arch"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_ctx_arch"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__oa2ctx" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="debugrule_create_oa_and_entitypkg__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_entity_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//EntityPkg"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_oa_arch"
         lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_ctx_arch"

@@ -11,10 +11,41 @@ Package Oa2Ctx <platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore>
     Reference source : OperationalAnalysis
     Reference target : SystemAnalysis
 
-  Class InitialModelCreation__Marker -> TGGRuleApplication
+  Class InitialModelCreation_ownedDataPkg__Marker -> TGGRuleApplication
     Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
+    Reference CREATE__SRC__src_data_pkg : DataPkg<<1..1>>
+    Reference CREATE__SRC__src_entity_pkg : EntityPkg<<1..1>>
+    Reference CREATE__SRC__src_function_pkg : OperationalActivityPkg<<1..1>>
+    Reference CREATE__SRC__src_interface_pkg : InterfacePkg<<1..1>>
     Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>
+    Reference CREATE__SRC__src_role_pkg : RolePkg<<1..1>>
+    Reference CREATE__TRG__bool_literal_false : LiteralBooleanValue<<1..1>>
+    Reference CREATE__TRG__bool_literal_true : LiteralBooleanValue<<1..1>>
+    Reference CREATE__TRG__byte_literal_max_val : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__byte_literal_min_val : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__char_literal_max_length : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__char_literal_min_length : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__hex_literal_max_val : BinaryExpression<<1..1>>
+    Reference CREATE__TRG__hex_literal_max_val_left_operand : BinaryExpression<<1..1>>
+    Reference CREATE__TRG__hex_literal_max_val_left_operand_left_operand : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__hex_literal_max_val_left_operand_right_operand : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__hex_literal_max_val_right_operand : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__hex_literal_min_val : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__trg_abstract_capability_pkg : CapabilityPkg<<1..1>>
     Reference CREATE__TRG__trg_ctx_arch : SystemAnalysis<<1..1>>
+    Reference CREATE__TRG__trg_data_pkg : DataPkg<<1..1>>
+    Reference CREATE__TRG__trg_dt_boolean : BooleanType<<1..1>>
+    Reference CREATE__TRG__trg_dt_byte : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_char : StringType<<1..1>>
+    Reference CREATE__TRG__trg_dt_data_pkg : DataPkg<<1..1>>
+    Reference CREATE__TRG__trg_dt_double : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_float : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_hex : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_function_pkg : SystemFunctionPkg<<1..1>>
+    Reference CREATE__TRG__trg_interface_pkg : InterfacePkg<<1..1>>
+    Reference CREATE__TRG__trg_mission_pkg : MissionPkg<<1..1>>
+    Reference CREATE__TRG__trg_oa_realization : OperationalAnalysisRealization<<1..1>>
+    Reference CREATE__TRG__trg_system_comp_pkg : SystemComponentPkg<<1..1>>
     Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>
 
   Class Oa2Sa_create_nodes_and_try_to_set_reference__Marker -> TGGRuleApplication
@@ -43,6 +74,12 @@ Package Oa2Ctx <platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore>
 
   Class OperationalAnalysis2SystemAnalysis__Marker -> TGGRuleApplication
     Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
+    Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>
+    Reference CREATE__TRG__trg_ctx_arch : SystemAnalysis<<1..1>>
+    Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>
+
+  Class debugrule_create_oa_and_entitypkg__Marker -> TGGRuleApplication
+    Reference CREATE__SRC__src_entity_pkg : EntityPkg<<1..1>>
     Reference CREATE__SRC__src_oa_arch : OperationalAnalysis<<1..1>>
     Reference CREATE__TRG__trg_ctx_arch : SystemAnalysis<<1..1>>
     Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>

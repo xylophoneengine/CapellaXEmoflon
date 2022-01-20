@@ -74,8 +74,8 @@ public class Oa2CtxAdapterFactory extends AdapterFactoryImpl {
 				return createOperationalAnalysis2SystemAnalysisAdapter();
 			}
 			@Override
-			public Adapter caseInitialModelCreation__Marker(InitialModelCreation__Marker object) {
-				return createInitialModelCreation__MarkerAdapter();
+			public Adapter caseInitialModelCreation_ownedDataPkg__Marker(InitialModelCreation_ownedDataPkg__Marker object) {
+				return createInitialModelCreation_ownedDataPkg__MarkerAdapter();
 			}
 			@Override
 			public Adapter caseOa2Sa_create_nodes_and_try_to_set_reference__Marker(Oa2Sa_create_nodes_and_try_to_set_reference__Marker object) {
@@ -96,6 +96,10 @@ public class Oa2CtxAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseOperationalAnalysis2SystemAnalysis__Marker(OperationalAnalysis2SystemAnalysis__Marker object) {
 				return createOperationalAnalysis2SystemAnalysis__MarkerAdapter();
+			}
+			@Override
+			public Adapter casedebugrule_create_oa_and_entitypkg__Marker(debugrule_create_oa_and_entitypkg__Marker object) {
+				return createdebugrule_create_oa_and_entitypkg__MarkerAdapter();
 			}
 			@Override
 			public Adapter caseTGGRuleApplication(TGGRuleApplication object) {
@@ -136,16 +140,16 @@ public class Oa2CtxAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Oa2Ctx.InitialModelCreation__Marker <em>Initial Model Creation Marker</em>}'.
+	 * Creates a new adapter for an object of class '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker <em>Initial Model Creation owned Data Pkg Marker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Oa2Ctx.InitialModelCreation__Marker
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker
 	 * @generated
 	 */
-	public Adapter createInitialModelCreation__MarkerAdapter() {
+	public Adapter createInitialModelCreation_ownedDataPkg__MarkerAdapter() {
 		return null;
 	}
 
@@ -216,6 +220,20 @@ public class Oa2CtxAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOperationalAnalysis2SystemAnalysis__MarkerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker <em>debugrule create oa and entitypkg Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Oa2Ctx.debugrule_create_oa_and_entitypkg__Marker
+	 * @generated
+	 */
+	public Adapter createdebugrule_create_oa_and_entitypkg__MarkerAdapter() {
 		return null;
 	}
 

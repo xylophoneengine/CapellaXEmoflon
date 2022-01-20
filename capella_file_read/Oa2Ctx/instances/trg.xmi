@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"/>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/5.0.0" xmlns:org.polarsys.capella.core.data.information.datatype="http://www.polarsys.org/capella/core/information/datatype/5.0.0">
+  <org.polarsys.capella.core.data.information.datatype:BooleanType id="ba958ecb-724e-4e4d-8bff-869f634df549" name="Boolean"/>
+  <org.polarsys.capella.core.data.ctx:SystemAnalysis id="699cb014-06b4-43e5-94e1-5845946a0310" name="System Analysis">
+    <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemFunctionPkg" id="d96c4eec-0444-4c24-af12-4e80d37b601e" name="System Functions"/>
+    <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg" id="ac13da51-6fda-4f08-bf9b-aef3f8516f9d" name="Capabilities"/>
+    <ownedInterfacePkg id="f9945e9c-1476-4e49-802f-219995036fda" name="Interfaces"/>
+    <ownedDataPkg id="561dfd95-152f-42b4-a06f-d9f7d4b4d0b2" name="Data">
+      <ownedDataPkgs id="b70ebf48-bd43-4ea5-b210-557e5c452a8f" name="Predefined">
+        <ownedDataTypes xsi:type="org.polarsys.capella.core.data.information.datatype:BooleanType" id="0c7d42f2-eda4-4412-ad14-c50a97b08fa7">
+          <ownedLiterals id="537608e0-39d3-4d76-aeed-de91a44c0806" name="False" abstractType="ba958ecb-724e-4e4d-8bff-869f634df549"/>
+          <ownedLiterals id="e57422ae-ef88-4a22-9f06-549eb9ff44dc" name="True" abstractType="ba958ecb-724e-4e4d-8bff-869f634df549"/>
+        </ownedDataTypes>
+      </ownedDataPkgs>
+    </ownedDataPkg>
+    <ownedSystemComponentPkg id="44c3f723-84af-46f9-9f2f-6ccc3e545d84" name="Structure"/>
+    <ownedMissionPkg id="e11e0066-fe7e-40ce-a86f-60a0d292c8d5" name="Missions"/>
+    <ownedOperationalAnalysisRealizations id="662ab101-b201-4074-a6b0-aef34ad09474"/>
+  </org.polarsys.capella.core.data.ctx:SystemAnalysis>
+</xmi:XMI>

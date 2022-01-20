@@ -74,10 +74,10 @@ public class Oa2CtxSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Oa2CtxPackage.INITIAL_MODEL_CREATION_MARKER: {
-				InitialModelCreation__Marker initialModelCreation__Marker = (InitialModelCreation__Marker)theEObject;
-				T result = caseInitialModelCreation__Marker(initialModelCreation__Marker);
-				if (result == null) result = caseTGGRuleApplication(initialModelCreation__Marker);
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER: {
+				InitialModelCreation_ownedDataPkg__Marker initialModelCreation_ownedDataPkg__Marker = (InitialModelCreation_ownedDataPkg__Marker)theEObject;
+				T result = caseInitialModelCreation_ownedDataPkg__Marker(initialModelCreation_ownedDataPkg__Marker);
+				if (result == null) result = caseTGGRuleApplication(initialModelCreation_ownedDataPkg__Marker);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -116,6 +116,13 @@ public class Oa2CtxSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Oa2CtxPackage.DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER: {
+				debugrule_create_oa_and_entitypkg__Marker debugrule_create_oa_and_entitypkg__Marker = (debugrule_create_oa_and_entitypkg__Marker)theEObject;
+				T result = casedebugrule_create_oa_and_entitypkg__Marker(debugrule_create_oa_and_entitypkg__Marker);
+				if (result == null) result = caseTGGRuleApplication(debugrule_create_oa_and_entitypkg__Marker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -136,17 +143,17 @@ public class Oa2CtxSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Initial Model Creation Marker</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Initial Model Creation owned Data Pkg Marker</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Initial Model Creation Marker</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Initial Model Creation owned Data Pkg Marker</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInitialModelCreation__Marker(InitialModelCreation__Marker object) {
+	public T caseInitialModelCreation_ownedDataPkg__Marker(InitialModelCreation_ownedDataPkg__Marker object) {
 		return null;
 	}
 
@@ -222,6 +229,21 @@ public class Oa2CtxSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOperationalAnalysis2SystemAnalysis__Marker(OperationalAnalysis2SystemAnalysis__Marker object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>debugrule create oa and entitypkg Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>debugrule create oa and entitypkg Marker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casedebugrule_create_oa_and_entitypkg__Marker(debugrule_create_oa_and_entitypkg__Marker object) {
 		return null;
 	}
 

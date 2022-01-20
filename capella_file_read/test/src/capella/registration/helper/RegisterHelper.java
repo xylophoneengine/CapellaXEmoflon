@@ -67,6 +67,7 @@ public class RegisterHelper {
 	
 	public static void main(String[] args) {
 		RegisterHelper reg = new RegisterHelper();
+//		String p_name = "oa_with_different_diagrams/oa_with_different_diagrams.capella";
 		String p_name = "empty_project/empty_project.capella";
 //		String p_name = "user_through_stages/user_through_stages.capella";
 
@@ -77,7 +78,7 @@ public class RegisterHelper {
 
 		// save xmi for architectures
 		for(ModellingArchitecture struct : se.getOwnedArchitectures()) {
-			reg.saveModellingArchitecture(struct);
+			//reg.saveModellingArchitecture(struct);
 		}
 		
 		// save capella project

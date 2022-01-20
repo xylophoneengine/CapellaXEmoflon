@@ -57,12 +57,13 @@ public class Oa2CtxFactoryImpl extends EFactoryImpl implements Oa2CtxFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case Oa2CtxPackage.OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS: return createOperationalAnalysis2SystemAnalysis();
-			case Oa2CtxPackage.INITIAL_MODEL_CREATION_MARKER: return createInitialModelCreation__Marker();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER: return createInitialModelCreation_ownedDataPkg__Marker();
 			case Oa2CtxPackage.OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER: return createOa2Sa_create_nodes_and_try_to_set_reference__Marker();
 			case Oa2CtxPackage.OA2_SA_CREATE_NODES_ONLY_MARKER: return createOa2Sa_create_nodes_only__Marker();
 			case Oa2CtxPackage.OA2_SA_NODES_AND_SET_NAME_MARKER: return createOa2Sa_nodes_and_set_name__Marker();
 			case Oa2CtxPackage.OA2_SA_NODES_AND_SET_SPECIFIC_NAME_MARKER: return createOa2Sa_nodes_and_set_specific_name__Marker();
 			case Oa2CtxPackage.OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS_MARKER: return createOperationalAnalysis2SystemAnalysis__Marker();
+			case Oa2CtxPackage.DEBUGRULE_CREATE_OA_AND_ENTITYPKG_MARKER: return createdebugrule_create_oa_and_entitypkg__Marker();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,9 +84,9 @@ public class Oa2CtxFactoryImpl extends EFactoryImpl implements Oa2CtxFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InitialModelCreation__Marker createInitialModelCreation__Marker() {
-		InitialModelCreation__MarkerImpl initialModelCreation__Marker = new InitialModelCreation__MarkerImpl();
-		return initialModelCreation__Marker;
+	public InitialModelCreation_ownedDataPkg__Marker createInitialModelCreation_ownedDataPkg__Marker() {
+		InitialModelCreation_ownedDataPkg__MarkerImpl initialModelCreation_ownedDataPkg__Marker = new InitialModelCreation_ownedDataPkg__MarkerImpl();
+		return initialModelCreation_ownedDataPkg__Marker;
 	}
 
 	/**
@@ -136,6 +137,16 @@ public class Oa2CtxFactoryImpl extends EFactoryImpl implements Oa2CtxFactory {
 	public OperationalAnalysis2SystemAnalysis__Marker createOperationalAnalysis2SystemAnalysis__Marker() {
 		OperationalAnalysis2SystemAnalysis__MarkerImpl operationalAnalysis2SystemAnalysis__Marker = new OperationalAnalysis2SystemAnalysis__MarkerImpl();
 		return operationalAnalysis2SystemAnalysis__Marker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public debugrule_create_oa_and_entitypkg__Marker createdebugrule_create_oa_and_entitypkg__Marker() {
+		debugrule_create_oa_and_entitypkg__MarkerImpl debugrule_create_oa_and_entitypkg__Marker = new debugrule_create_oa_and_entitypkg__MarkerImpl();
+		return debugrule_create_oa_and_entitypkg__Marker;
 	}
 
 	/**

@@ -2,42 +2,33 @@ package org.emoflon.ibex.tgg.run.oa2ctx.config;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.Ref;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EPackage.Registry;
-import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.emoflon.ibex.tgg.compiler.defaults.IRegistrationHelper;
 import org.emoflon.ibex.tgg.operational.csp.constraints.factories.oa2ctx.UserDefinedRuntimeTGGAttrConstraintFactory;
 import org.emoflon.ibex.tgg.operational.defaults.IbexOptions;
 import org.emoflon.ibex.tgg.operational.strategies.modules.IbexExecutable;
-import org.emoflon.ibex.tgg.operational.strategies.modules.TGGResourceHandler;
 import org.emoflon.ibex.tgg.operational.strategies.opt.BWD_OPT;
 import org.emoflon.ibex.tgg.operational.strategies.opt.FWD_OPT;
 import org.emoflon.ibex.tgg.runtime.hipe.HiPETGGEngine;
-import org.polarsys.capella.common.data.activity.ActivityPackage;
 import org.polarsys.capella.common.data.activity.impl.ActivityPackageImpl;
-import org.polarsys.capella.common.data.behavior.BehaviorPackage;
 import org.polarsys.capella.common.data.behavior.impl.BehaviorPackageImpl;
 import org.polarsys.capella.common.data.modellingcore.ModellingcorePackage;
 import org.polarsys.capella.common.data.modellingcore.impl.ModellingcorePackageImpl;
+import org.polarsys.capella.common.libraries.LibrariesPackage;
 import org.polarsys.capella.common.libraries.impl.LibrariesPackageImpl;
+import org.polarsys.capella.common.re.RePackage;
 import org.polarsys.capella.common.re.impl.RePackageImpl;
 import org.polarsys.capella.core.data.capellacommon.CapellacommonPackage;
 import org.polarsys.capella.core.data.capellacommon.impl.CapellacommonPackageImpl;
 import org.polarsys.capella.core.data.capellacore.CapellacorePackage;
 import org.polarsys.capella.core.data.capellacore.impl.CapellacorePackageImpl;
+import org.polarsys.capella.core.data.capellamodeller.CapellamodellerPackage;
 import org.polarsys.capella.core.data.capellamodeller.impl.CapellamodellerPackageImpl;
 import org.polarsys.capella.core.data.cs.CsPackage;
 import org.polarsys.capella.core.data.cs.impl.CsPackageImpl;
@@ -48,6 +39,9 @@ import org.polarsys.capella.core.data.epbs.impl.EpbsPackageImpl;
 import org.polarsys.capella.core.data.fa.FaPackage;
 import org.polarsys.capella.core.data.fa.impl.FaPackageImpl;
 import org.polarsys.capella.core.data.information.InformationPackage;
+import org.polarsys.capella.core.data.information.communication.CommunicationPackage;
+import org.polarsys.capella.core.data.information.datatype.DatatypePackage;
+import org.polarsys.capella.core.data.information.datavalue.DatavaluePackage;
 import org.polarsys.capella.core.data.information.impl.InformationPackageImpl;
 import org.polarsys.capella.core.data.interaction.InteractionPackage;
 import org.polarsys.capella.core.data.interaction.impl.InteractionPackageImpl;
@@ -58,21 +52,19 @@ import org.polarsys.capella.core.data.oa.impl.OaFactoryImpl;
 import org.polarsys.capella.core.data.oa.impl.OaPackageImpl;
 import org.polarsys.capella.core.data.oa.impl.OperationalCapabilityPkgImpl;
 import org.polarsys.capella.core.data.pa.PaPackage;
+import org.polarsys.capella.core.data.pa.deployment.DeploymentPackage;
 import org.polarsys.capella.core.data.pa.impl.PaPackageImpl;
 import org.polarsys.capella.core.data.requirement.RequirementPackage;
 import org.polarsys.capella.core.data.requirement.impl.RequirementPackageImpl;
+import org.polarsys.capella.core.data.sharedmodel.SharedmodelPackage;
 import org.polarsys.capella.core.data.sharedmodel.impl.SharedmodelPackageImpl;
 import org.polarsys.kitalpha.emde.model.EmdePackage;
 import org.polarsys.kitalpha.emde.model.impl.EmdePackageImpl;
 
 import Oa2Ctx.Oa2CtxPackage;
 import Oa2Ctx.impl.Oa2CtxPackageImpl;
-import language.TGG;
-import language.TGGRule;
-import language.TGGRuleEdge;
-import language.TGGRuleNode;
 
-public class HiPERegistrationHelper implements IRegistrationHelper {
+public class HiPERegistrationHelper_backup implements IRegistrationHelper {
 	
 	/** Create default options **/
 	public final void setWorkspaceRootDirectory(ResourceSet resourceSet) throws IOException {
@@ -85,14 +77,14 @@ public class HiPERegistrationHelper implements IRegistrationHelper {
 	/** Load and register source and target metamodels */
 	public void registerMetamodels(ResourceSet rs, IbexExecutable executable) throws IOException {
 
-//		rs.getPackageRegistry().put("http://www.polarsys.org/capella/core/oa/5.0.0", OaPackage.eINSTANCE);
+		rs.getPackageRegistry().put("http://www.polarsys.org/capella/core/oa/5.0.0", OaPackage.eINSTANCE);
 		//getURIConverter().getURIMap().put(URI.createURI("http://www.polarsys.org/capella/core/oa/5.0.0"),
 			//	URI.createURI("platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"));
 
 		// Set correct workspace root
 		setWorkspaceRootDirectory(rs);
 		
-//		init_Epackages(rs, executable);
+		init_Epackages(rs, executable);
 		
 		Registry reg = rs.getPackageRegistry();
 		
@@ -132,67 +124,7 @@ public class HiPERegistrationHelper implements IRegistrationHelper {
 			rs.getPackageRegistry().put("platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore", Oa2CtxPackage.eINSTANCE);
 			rs.getPackageRegistry().put("platform:/plugin/Oa2Ctx/model/Oa2Ctx.ecore", Oa2CtxPackage.eINSTANCE);
 		}
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore", OaPackageImpl.init());
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore", OaPackageImpl.init());
-		rs.getPackageRegistry().put("http://www.polarsys.org/capella/core/oa/5.0.0", OaPackageImpl.init());
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore", CtxPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore", CtxPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore", CsPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore", CsPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore", CapellacorePackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore", CapellacorePackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore", FaPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore", FaPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.common.data.activity.gen/model/Activity.ecore", ActivityPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.common.data.activity.gen/model/Activity.ecore", ActivityPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCommon.ecore", CapellacommonPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/CapellaCommon.ecore", CapellacommonPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/Interaction.ecore", InteractionPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/Interaction.ecore", InteractionPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore", InformationPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/Information.ecore", InformationPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore", ModellingcorePackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore", ModellingcorePackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.common.data.behavior.gen/model/Behavior.ecore", BehaviorPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.common.data.behavior.gen/model/Behavior.ecore", BehaviorPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/Requirement.ecore", RequirementPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/Requirement.ecore", RequirementPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/EPBSArchitecture.ecore", EpbsPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/EPBSArchitecture.ecore", EpbsPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore", LaPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/LogicalArchitecture.ecore", LaPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/PhysicalArchitecture.ecore", PaPackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/PhysicalArchitecture.ecore", PaPackage.eINSTANCE);
-		
-		rs.getPackageRegistry().put("platform:/resource/org.polarsys.kitalpha.emde/mode/eMDE.ecore", EmdePackage.eINSTANCE);
-		rs.getPackageRegistry().put("platform:/plugin/org.polarsys.kitalpha.emde/mode/eMDE.ecore", EmdePackage.eINSTANCE);
-
-		rs.getURIConverter().getURIMap().put(URI.createURI("http://www.polarsys.org/capella/core/oa/5.0.0"), URI.createURI("platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"));
-		
-		Resource test1 = rs.createResource(URI.createURI("platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"));
-//		Resource test2 = rs.createResource(URI.createURI("platform:/plugin/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"));
-		Resource test3 = rs.createResource(URI.createURI("http://www.polarsys.org/capella/core/oa/5.0.0"));
-		
-		test1.load(null);
-//		test2.load(null);
-		test3.load(null);
-		
-		
+			
 //		rs.getPackageRegistry().put("platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore", oaPack);
 //	    rs.getPackageRegistry().put("platform:/plugin/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore", oaPack);	
 //			
@@ -338,15 +270,6 @@ public class HiPERegistrationHelper implements IRegistrationHelper {
 		options.debug.ibexDebug(false);
 		options.csp.userDefinedConstraints(new UserDefinedRuntimeTGGAttrConstraintFactory());
 		options.registrationHelper(this);
-		try {
-			options.resourceHandler(new TGGResourceHandler() {
-				
-				
-			});
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		return options;
 	}
 }

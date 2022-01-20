@@ -2,10 +2,18 @@
 <tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tgg="http://www.moflon.org/ide/tgg/mosl/TGG">
   <imports name="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"/>
   <imports name="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore"/>
+  <imports name="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore"/>
   <imports name="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore"/>
+  <imports name="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore"/>
   <schema name="Oa2Ctx">
     <sourceTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#/"/>
+    <sourceTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#/"/>
+    <sourceTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#/"/>
+    <sourceTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#/"/>
     <targetTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#/"/>
+    <targetTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#/"/>
+    <targetTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#/"/>
+    <targetTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#/"/>
     <correspondenceTypes name="OperationalAnalysis2SystemAnalysis">
       <source href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
       <target href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
@@ -125,62 +133,699 @@
       </allowedGenAdornments>
     </attributeCondDefs>
   </schema>
-  <rules name="InitialModelCreation" schema="//@schema">
+  <rules name="InitialModelCreation" abstractRule="true" schema="//@schema">
     <sourcePatterns name="src_abstract_capability_pkg">
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Operational Capabilities&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="src_data_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Data&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="src_entity_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//EntityPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Operational Entities&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="src_function_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalActivityPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Operational Activities&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="src_interface_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//InterfacePkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Interfaces&quot;"/>
+      </attributeAssignments>
     </sourcePatterns>
     <sourcePatterns name="src_oa_arch">
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Operational Analysis&quot;"/>
+      </attributeAssignments>
       <linkVariablePatterns target="//@rules.0/@sourcePatterns.0">
         <op value="++"/>
         <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
       </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedDataPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis/ownedEntityPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//AbstractFunctionalArchitecture/ownedFunctionPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.4">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedInterfacePkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.6">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis/ownedRolePkg"/>
+      </linkVariablePatterns>
     </sourcePatterns>
+    <sourcePatterns name="src_role_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//RolePkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Roles&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <targetPatterns name="trg_abstract_capability_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//CapabilityPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Capabilities&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
     <targetPatterns name="trg_ctx_arch">
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;System Analysis&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedDataPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//AbstractFunctionalArchitecture/ownedFunctionPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedInterfacePkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis/ownedMissionPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.6">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis/ownedOperationalAnalysisRealizations"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.7">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis/ownedSystemComponentPkg"/>
+      </linkVariablePatterns>
     </targetPatterns>
-    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.0/@sourcePatterns.1" target="//@rules.0/@targetPatterns.0">
+    <targetPatterns name="trg_data_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Data&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_function_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemFunctionPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;System Functions&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_interface_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//InterfacePkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Interfaces&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_mission_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//MissionPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Missions&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_oa_realization">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//OperationalAnalysisRealization"/>
+    </targetPatterns>
+    <targetPatterns name="trg_system_comp_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponentPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Structure&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.0/@sourcePatterns.5" target="//@rules.0/@targetPatterns.1">
       <op value="++"/>
     </correspondencePatterns>
-    <attrConditions name="//@schema/@attributeCondDefs.1">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.1">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//PublishableElement/visibleInDoc"/>
-      </values>
-      <values xsi:type="tgg:LiteralExpression" value="true"/>
-    </attrConditions>
-    <attrConditions name="//@schema/@attributeCondDefs.1">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.1">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//PublishableElement/visibleInLM"/>
-      </values>
-      <values xsi:type="tgg:LiteralExpression" value="true"/>
-    </attrConditions>
-    <attrConditions name="//@schema/@attributeCondDefs.1">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//PublishableElement/visibleInDoc"/>
-      </values>
-      <values xsi:type="tgg:LiteralExpression" value="true"/>
-    </attrConditions>
-    <attrConditions name="//@schema/@attributeCondDefs.1">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//PublishableElement/visibleInLM"/>
-      </values>
-      <values xsi:type="tgg:LiteralExpression" value="true"/>
-    </attrConditions>
-    <attrConditions name="//@schema/@attributeCondDefs.0">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.1">
+  </rules>
+  <rules name="InitialModelCreation_ownedDataPkg" schema="//@schema">
+    <sourcePatterns name="src_abstract_capability_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
+      <attributeAssignments op=":=">
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
-      </values>
-      <values xsi:type="tgg:LiteralExpression" value="&quot;Operational Analysis&quot;"/>
-    </attrConditions>
-    <attrConditions name="//@schema/@attributeCondDefs.0">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Operational Capabilities&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="src_data_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+      <attributeAssignments op=":=">
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
-      </values>
-      <values xsi:type="tgg:LiteralExpression" value="&quot;Operational Capabilities&quot;"/>
-    </attrConditions>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Data&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="src_entity_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//EntityPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Operational Entities&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="src_function_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalActivityPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Operational Activities&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="src_interface_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//InterfacePkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Interfaces&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="src_oa_arch">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Operational Analysis&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedDataPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis/ownedEntityPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//AbstractFunctionalArchitecture/ownedFunctionPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.4">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedInterfacePkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.6">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis/ownedRolePkg"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="src_role_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//RolePkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Roles&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <targetPatterns name="bool_literal_false">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralBooleanValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;False&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.15">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="bool_literal_true">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralBooleanValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;True&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.15">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="byte_literal_max_val">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="255"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.16">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="byte_literal_min_val">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="0"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.16">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="char_literal_max_length">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="1"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="char_literal_min_length">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="1"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="hex_literal_max_val">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/operator"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryOperator"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryOperator/SUB"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.21">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.7">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/ownedLeftOperand"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.10">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/ownedRightOperand"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="hex_literal_max_val_left_operand">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/operator"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryOperator"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryOperator/POW"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.8">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/ownedLeftOperand"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.9">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/ownedRightOperand"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="hex_literal_max_val_left_operand_left_operand">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="2"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="hex_literal_max_val_left_operand_right_operand">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="64"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="hex_literal_max_val_right_operand">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="1"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="hex_literal_min_val">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="0"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.21">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="trg_abstract_capability_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//CapabilityPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Capabilities&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_ctx_arch">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;System Analysis&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.12">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.14">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedDataPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.22">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//AbstractFunctionalArchitecture/ownedFunctionPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.23">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedInterfacePkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.24">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis/ownedMissionPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.25">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis/ownedOperationalAnalysisRealizations"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.26">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis/ownedSystemComponentPkg"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="trg_data_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Data&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.18">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataPkgs"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="trg_dt_boolean">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/BooleanType"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Boolean&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/BooleanType/ownedLiterals"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/BooleanType/ownedLiterals"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="trg_dt_byte">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Byte&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind/INTEGER"/>
+        </valueExp>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/ownedMaxValue"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/ownedMinValue"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="trg_dt_char">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/StringType"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Char&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/StringType/ownedMinLength"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/StringType/ownedMaxLength"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="trg_dt_data_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Predefined&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.15">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.16">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.17">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.19">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.20">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.21">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="trg_dt_double">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Double&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind/FLOAT"/>
+        </valueExp>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_dt_float">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Float&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind/FLOAT"/>
+        </valueExp>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExp>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_dt_hex">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Hexadecimal&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/kind"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind/INTEGER"/>
+        </valueExp>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExp xsi:type="tgg:EnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExp>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.6">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/ownedMaxValue"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.11">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/ownedMinValue"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="trg_function_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemFunctionPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;System Functions&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_interface_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//InterfacePkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Interfaces&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_mission_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//MissionPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Missions&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="trg_oa_realization">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//OperationalAnalysisRealization"/>
+    </targetPatterns>
+    <targetPatterns name="trg_system_comp_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponentPkg"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Structure&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.1/@sourcePatterns.5" target="//@rules.1/@targetPatterns.13">
+      <op value="++"/>
+    </correspondencePatterns>
   </rules>
   <rules name="Oa2Sa_create_nodes_and_try_to_set_reference" schema="//@schema">
     <sourcePatterns name="src_abstract_capability_pkg">
@@ -190,7 +835,7 @@
     <sourcePatterns name="src_oa_arch">
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
-      <linkVariablePatterns target="//@rules.1/@sourcePatterns.0">
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.0">
         <op value="++"/>
         <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
       </linkVariablePatterns>
@@ -199,7 +844,7 @@
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
     </targetPatterns>
-    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.1/@sourcePatterns.1" target="//@rules.1/@targetPatterns.0">
+    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.2/@sourcePatterns.1" target="//@rules.2/@targetPatterns.0">
       <op value="++"/>
     </correspondencePatterns>
   </rules>
@@ -216,7 +861,7 @@
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
     </targetPatterns>
-    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.2/@sourcePatterns.1" target="//@rules.2/@targetPatterns.0">
+    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.3/@sourcePatterns.1" target="//@rules.3/@targetPatterns.0">
       <op value="++"/>
     </correspondencePatterns>
   </rules>
@@ -233,11 +878,11 @@
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
     </targetPatterns>
-    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.3/@sourcePatterns.1" target="//@rules.3/@targetPatterns.0">
+    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.4/@sourcePatterns.1" target="//@rules.4/@targetPatterns.0">
       <op value="++"/>
     </correspondencePatterns>
     <attrConditions name="//@schema/@attributeCondDefs.2">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@sourcePatterns.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.4/@sourcePatterns.0">
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
       </values>
     </attrConditions>
@@ -255,11 +900,11 @@
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
     </targetPatterns>
-    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.4/@sourcePatterns.1" target="//@rules.4/@targetPatterns.0">
+    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.5/@sourcePatterns.1" target="//@rules.5/@targetPatterns.0">
       <op value="++"/>
     </correspondencePatterns>
     <attrConditions name="//@schema/@attributeCondDefs.3">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.4/@sourcePatterns.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.5/@sourcePatterns.0">
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
       </values>
       <values xsi:type="tgg:LiteralExpression" value="&quot;My Custom String&quot;"/>
@@ -273,7 +918,7 @@
     <sourcePatterns name="src_oa_arch">
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
-      <linkVariablePatterns target="//@rules.5/@sourcePatterns.0">
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.0">
         <op value="++"/>
         <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
       </linkVariablePatterns>
@@ -282,14 +927,47 @@
       <op value="++"/>
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
     </targetPatterns>
-    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.5/@sourcePatterns.1" target="//@rules.5/@targetPatterns.0">
+    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.6/@sourcePatterns.1" target="//@rules.6/@targetPatterns.0">
       <op value="++"/>
     </correspondencePatterns>
     <attrConditions name="//@schema/@attributeCondDefs.0">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.5/@sourcePatterns.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.6/@sourcePatterns.0">
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
       </values>
       <values xsi:type="tgg:LiteralExpression" value="&quot;Operational Capabilities&quot;"/>
+    </attrConditions>
+  </rules>
+  <rules name="debugrule_create_oa_and_entitypkg" schema="//@schema">
+    <sourcePatterns name="src_entity_pkg">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//EntityPkg"/>
+    </sourcePatterns>
+    <sourcePatterns name="src_oa_arch">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis/ownedEntityPkg"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="trg_ctx_arch">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    </targetPatterns>
+    <correspondencePatterns name="oa2ctx" type="//@schema/@correspondenceTypes.0" source="//@rules.7/@sourcePatterns.1" target="//@rules.7/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.3">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.1">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:LiteralExpression" value="&quot;Operational Analysis&quot;"/>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.3">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.0">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:LiteralExpression" value="&quot;Operational Entities&quot;"/>
     </attrConditions>
   </rules>
 </tgg:TripleGraphGrammarFile>

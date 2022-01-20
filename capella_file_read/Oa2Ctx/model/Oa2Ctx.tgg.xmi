@@ -1,89 +1,499 @@
 <?xml version="1.0" encoding="ASCII"?>
 <language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:language="platform:/plugin/org.emoflon.ibex.tgg.language/model/Language.ecore" name="Oa2Ctx">
   <src href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#/"/>
+  <src href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#/"/>
+  <src href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#/"/>
+  <src href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#/"/>
   <trg href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#/"/>
+  <trg href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#/"/>
+  <trg href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#/"/>
+  <trg href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#/"/>
   <corr href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#/"/>
-  <rules name="InitialModelCreation">
-    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.0/@edges.0" outgoingEdges="//@rules.0/@edges.2" incomingCorrsSource="//@rules.0/@nodes.3">
+  <rules name="InitialModelCreation" abstract="true">
+    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.0/@edges.0" outgoingEdges="//@rules.0/@edges.2 //@rules.0/@edges.3 //@rules.0/@edges.4 //@rules.0/@edges.5 //@rules.0/@edges.6 //@rules.0/@edges.7" incomingCorrsSource="//@rules.0/@nodes.15">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Operational Analysis&quot;"/>
+      </attrExpr>
     </nodes>
     <nodes name="src_abstract_capability_pkg" bindingType="CREATE" incomingEdges="//@rules.0/@edges.2">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Operational Capabilities&quot;"/>
+      </attrExpr>
     </nodes>
-    <nodes name="trg_ctx_arch" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.1" incomingCorrsTarget="//@rules.0/@nodes.3">
+    <nodes name="src_data_pkg" bindingType="CREATE" incomingEdges="//@rules.0/@edges.3">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Data&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="src_entity_pkg" bindingType="CREATE" incomingEdges="//@rules.0/@edges.4">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//EntityPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Operational Entities&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="src_function_pkg" bindingType="CREATE" incomingEdges="//@rules.0/@edges.5">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalActivityPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Operational Activities&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="src_interface_pkg" bindingType="CREATE" incomingEdges="//@rules.0/@edges.6">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//InterfacePkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Interfaces&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="src_role_pkg" bindingType="CREATE" incomingEdges="//@rules.0/@edges.7">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//RolePkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Roles&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_ctx_arch" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.1" outgoingEdges="//@rules.0/@edges.8 //@rules.0/@edges.9 //@rules.0/@edges.10 //@rules.0/@edges.11 //@rules.0/@edges.12 //@rules.0/@edges.13 //@rules.0/@edges.14" incomingCorrsTarget="//@rules.0/@nodes.15">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;System Analysis&quot;"/>
+      </attrExpr>
     </nodes>
-    <nodes xsi:type="language:TGGRuleCorr" name="oa2ctx" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.0/@edges.0 //@rules.0/@edges.1" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.2">
+    <nodes name="trg_abstract_capability_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.8">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//CapabilityPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Capabilities&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_data_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.9">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Data&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_function_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.10">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemFunctionPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;System Functions&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_interface_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.11">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//InterfacePkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Interfaces&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_mission_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.12">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//MissionPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Missions&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_oa_realization" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.13">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//OperationalAnalysisRealization"/>
+    </nodes>
+    <nodes name="trg_system_comp_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.14">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponentPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Structure&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="oa2ctx" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.0/@edges.0 //@rules.0/@edges.1" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.7">
       <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis"/>
     </nodes>
-    <edges name="oa2ctx__source__src_oa_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.0">
+    <edges name="oa2ctx__source__src_oa_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.15" trgNode="//@rules.0/@nodes.0">
       <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/source"/>
     </edges>
-    <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.2">
+    <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.15" trgNode="//@rules.0/@nodes.7">
       <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
     </edges>
     <edges name="src_oa_arch__ownedAbstractCapabilityPkg__src_abstract_capability_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.1">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
     </edges>
-    <attributeConditionLibrary>
-      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.0 //@rules.0/@attributeConditionLibrary/@parameterValues.1"/>
-      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.2 //@rules.0/@attributeConditionLibrary/@parameterValues.3"/>
-      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.4 //@rules.0/@attributeConditionLibrary/@parameterValues.3"/>
-      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.5 //@rules.0/@attributeConditionLibrary/@parameterValues.6"/>
-      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.7 //@rules.0/@attributeConditionLibrary/@parameterValues.3"/>
-      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.8 //@rules.0/@attributeConditionLibrary/@parameterValues.3"/>
-      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.0">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
-      </parameterValues>
-      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.1" value="&quot;Operational Analysis&quot;"/>
-      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.0">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//PublishableElement/visibleInDoc"/>
-      </parameterValues>
-      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.1" value="true"/>
-      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.0">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//PublishableElement/visibleInLM"/>
-      </parameterValues>
-      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.1">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
-      </parameterValues>
-      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.1" value="&quot;Operational Capabilities&quot;"/>
-      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.1">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//PublishableElement/visibleInDoc"/>
-      </parameterValues>
-      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.1">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//PublishableElement/visibleInLM"/>
-      </parameterValues>
-    </attributeConditionLibrary>
-  </rules>
-  <rules name="Oa2Sa_create_nodes_and_try_to_set_reference">
-    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.1/@edges.0" outgoingEdges="//@rules.1/@edges.2" incomingCorrsSource="//@rules.1/@nodes.3">
-      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
-    </nodes>
-    <nodes name="src_abstract_capability_pkg" bindingType="CREATE" incomingEdges="//@rules.1/@edges.2">
-      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
-    </nodes>
-    <nodes name="trg_ctx_arch" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.1" incomingCorrsTarget="//@rules.1/@nodes.3">
-      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
-    </nodes>
-    <nodes xsi:type="language:TGGRuleCorr" name="oa2ctx" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.1/@edges.0 //@rules.1/@edges.1" source="//@rules.1/@nodes.0" target="//@rules.1/@nodes.2">
-      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis"/>
-    </nodes>
-    <edges name="oa2ctx__source__src_oa_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.0">
-      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/source"/>
+    <edges name="src_oa_arch__ownedDataPkg__src_data_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedDataPkg"/>
     </edges>
-    <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.2">
-      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
+    <edges name="src_oa_arch__ownedEntityPkg__src_entity_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis/ownedEntityPkg"/>
     </edges>
-    <edges name="src_oa_arch__ownedAbstractCapabilityPkg__src_abstract_capability_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.1/@nodes.0" trgNode="//@rules.1/@nodes.1">
+    <edges name="src_oa_arch__ownedFunctionPkg__src_function_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.4">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//AbstractFunctionalArchitecture/ownedFunctionPkg"/>
+    </edges>
+    <edges name="src_oa_arch__ownedInterfacePkg__src_interface_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.5">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedInterfacePkg"/>
+    </edges>
+    <edges name="src_oa_arch__ownedRolePkg__src_role_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.6">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis/ownedRolePkg"/>
+    </edges>
+    <edges name="trg_ctx_arch__ownedAbstractCapabilityPkg__trg_abstract_capability_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.8">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
+    </edges>
+    <edges name="trg_ctx_arch__ownedDataPkg__trg_data_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.9">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedDataPkg"/>
+    </edges>
+    <edges name="trg_ctx_arch__ownedFunctionPkg__trg_function_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.10">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//AbstractFunctionalArchitecture/ownedFunctionPkg"/>
+    </edges>
+    <edges name="trg_ctx_arch__ownedInterfacePkg__trg_interface_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.11">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedInterfacePkg"/>
+    </edges>
+    <edges name="trg_ctx_arch__ownedMissionPkg__trg_mission_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.12">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis/ownedMissionPkg"/>
+    </edges>
+    <edges name="trg_ctx_arch__ownedOperationalAnalysisRealizations__trg_oa_realization_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.13">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis/ownedOperationalAnalysisRealizations"/>
+    </edges>
+    <edges name="trg_ctx_arch__ownedSystemComponentPkg__trg_system_comp_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.14">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis/ownedSystemComponentPkg"/>
     </edges>
     <attributeConditionLibrary/>
   </rules>
-  <rules name="Oa2Sa_create_nodes_only">
-    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.2/@edges.0" incomingCorrsSource="//@rules.2/@nodes.3">
+  <rules name="InitialModelCreation_ownedDataPkg" refines="//@rules.0">
+    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.1/@edges.0" incomingCorrsSource="//@rules.1/@nodes.22">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
     </nodes>
-    <nodes name="src_abstract_capability_pkg" bindingType="CREATE">
+    <nodes name="trg_ctx_arch" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.1" outgoingEdges="//@rules.1/@edges.2" incomingCorrsTarget="//@rules.1/@nodes.22">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    </nodes>
+    <nodes name="trg_data_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.2" outgoingEdges="//@rules.1/@edges.3">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+    </nodes>
+    <nodes name="trg_dt_data_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.3" outgoingEdges="//@rules.1/@edges.4 //@rules.1/@edges.5 //@rules.1/@edges.6 //@rules.1/@edges.7 //@rules.1/@edges.8 //@rules.1/@edges.9">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Predefined&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_dt_boolean" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.4 //@rules.1/@edges.12 //@rules.1/@edges.13" outgoingEdges="//@rules.1/@edges.10 //@rules.1/@edges.11">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/BooleanType"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Boolean&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExpr>
+      </attrExpr>
+    </nodes>
+    <nodes name="bool_literal_true" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.11" outgoingEdges="//@rules.1/@edges.12">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralBooleanValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;True&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="bool_literal_false" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.10" outgoingEdges="//@rules.1/@edges.13">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralBooleanValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;False&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_dt_byte" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.5 //@rules.1/@edges.16 //@rules.1/@edges.17" outgoingEdges="//@rules.1/@edges.14 //@rules.1/@edges.15">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Byte&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/kind"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind/INTEGER"/>
+        </valueExpr>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExpr>
+      </attrExpr>
+    </nodes>
+    <nodes name="byte_literal_max_val" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.14" outgoingEdges="//@rules.1/@edges.16">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="255"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="byte_literal_min_val" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.15" outgoingEdges="//@rules.1/@edges.17">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="0"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_dt_char" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.6" outgoingEdges="//@rules.1/@edges.18 //@rules.1/@edges.19">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/StringType"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Char&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExpr>
+      </attrExpr>
+    </nodes>
+    <nodes name="char_literal_min_length" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.18">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="1"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="char_literal_max_length" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.19">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="1"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_dt_double" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.7">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Double&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/kind"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind/FLOAT"/>
+        </valueExpr>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExpr>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_dt_float" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.8">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Float&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/kind"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind/FLOAT"/>
+        </valueExpr>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExpr>
+      </attrExpr>
+    </nodes>
+    <nodes name="trg_dt_hex" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.9 //@rules.1/@edges.22 //@rules.1/@edges.27" outgoingEdges="//@rules.1/@edges.20 //@rules.1/@edges.21">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;Hexadecimal&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/kind"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericTypeKind/INTEGER"/>
+        </valueExpr>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/DataType/visibility"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore#//VisibilityKind/PUBLIC"/>
+        </valueExpr>
+      </attrExpr>
+    </nodes>
+    <nodes name="hex_literal_max_val" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.20" outgoingEdges="//@rules.1/@edges.22 //@rules.1/@edges.23 //@rules.1/@edges.24">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/operator"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryOperator"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryOperator/SUB"/>
+        </valueExpr>
+      </attrExpr>
+    </nodes>
+    <nodes name="hex_literal_max_val_left_operand" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.23" outgoingEdges="//@rules.1/@edges.25 //@rules.1/@edges.26">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/operator"/>
+        <valueExpr xsi:type="language:TGGEnumExpression">
+          <eenum href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryOperator"/>
+          <literal href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryOperator/POW"/>
+        </valueExpr>
+      </attrExpr>
+    </nodes>
+    <nodes name="hex_literal_max_val_left_operand_left_operand" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.25">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="2"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="hex_literal_max_val_left_operand_right_operand" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.26">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="64"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="hex_literal_max_val_right_operand" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.24">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="1"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="hex_literal_min_val" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.21" outgoingEdges="//@rules.1/@edges.27">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue"/>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;&quot;"/>
+      </attrExpr>
+      <attrExpr>
+        <attribute href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/LiteralNumericValue/value"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="0"/>
+      </attrExpr>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="oa2ctx" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.1/@edges.0 //@rules.1/@edges.1" source="//@rules.1/@nodes.0" target="//@rules.1/@nodes.1">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis"/>
+    </nodes>
+    <edges name="oa2ctx__source__src_oa_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.1/@nodes.22" trgNode="//@rules.1/@nodes.0">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/source"/>
+    </edges>
+    <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.1/@nodes.22" trgNode="//@rules.1/@nodes.1">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
+    </edges>
+    <edges name="trg_ctx_arch__ownedDataPkg__trg_data_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.1" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedDataPkg"/>
+    </edges>
+    <edges name="trg_data_pkg__ownedDataPkgs__trg_dt_data_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.3">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataPkgs"/>
+    </edges>
+    <edges name="trg_dt_data_pkg__ownedDataTypes__trg_dt_boolean_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.4">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+    </edges>
+    <edges name="trg_dt_data_pkg__ownedDataTypes__trg_dt_byte_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.7">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+    </edges>
+    <edges name="trg_dt_data_pkg__ownedDataTypes__trg_dt_char_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.10">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+    </edges>
+    <edges name="trg_dt_data_pkg__ownedDataTypes__trg_dt_double_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.13">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+    </edges>
+    <edges name="trg_dt_data_pkg__ownedDataTypes__trg_dt_float_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.14">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+    </edges>
+    <edges name="trg_dt_data_pkg__ownedDataTypes__trg_dt_hex_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.15">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg/ownedDataTypes"/>
+    </edges>
+    <edges name="trg_dt_boolean__ownedLiterals__bool_literal_false_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.4" trgNode="//@rules.1/@nodes.6">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/BooleanType/ownedLiterals"/>
+    </edges>
+    <edges name="trg_dt_boolean__ownedLiterals__bool_literal_true_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.4" trgNode="//@rules.1/@nodes.5">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/BooleanType/ownedLiterals"/>
+    </edges>
+    <edges name="bool_literal_true__abstractType__trg_dt_boolean_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.4">
+      <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+    </edges>
+    <edges name="bool_literal_false__abstractType__trg_dt_boolean_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.6" trgNode="//@rules.1/@nodes.4">
+      <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+    </edges>
+    <edges name="trg_dt_byte__ownedMaxValue__byte_literal_max_val_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.7" trgNode="//@rules.1/@nodes.8">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/ownedMaxValue"/>
+    </edges>
+    <edges name="trg_dt_byte__ownedMinValue__byte_literal_min_val_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.7" trgNode="//@rules.1/@nodes.9">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/ownedMinValue"/>
+    </edges>
+    <edges name="byte_literal_max_val__abstractType__trg_dt_byte_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.8" trgNode="//@rules.1/@nodes.7">
+      <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+    </edges>
+    <edges name="byte_literal_min_val__abstractType__trg_dt_byte_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.9" trgNode="//@rules.1/@nodes.7">
+      <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+    </edges>
+    <edges name="trg_dt_char__ownedMinLength__char_literal_min_length_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.10" trgNode="//@rules.1/@nodes.11">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/StringType/ownedMinLength"/>
+    </edges>
+    <edges name="trg_dt_char__ownedMaxLength__char_literal_max_length_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.10" trgNode="//@rules.1/@nodes.12">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/StringType/ownedMaxLength"/>
+    </edges>
+    <edges name="trg_dt_hex__ownedMaxValue__hex_literal_max_val_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.15" trgNode="//@rules.1/@nodes.16">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/ownedMaxValue"/>
+    </edges>
+    <edges name="trg_dt_hex__ownedMinValue__hex_literal_min_val_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.15" trgNode="//@rules.1/@nodes.21">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datatype/NumericType/ownedMinValue"/>
+    </edges>
+    <edges name="hex_literal_max_val__abstractType__trg_dt_hex_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.16" trgNode="//@rules.1/@nodes.15">
+      <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+    </edges>
+    <edges name="hex_literal_max_val__ownedLeftOperand__hex_literal_max_val_left_operand_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.16" trgNode="//@rules.1/@nodes.17">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/ownedLeftOperand"/>
+    </edges>
+    <edges name="hex_literal_max_val__ownedRightOperand__hex_literal_max_val_right_operand_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.16" trgNode="//@rules.1/@nodes.20">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/ownedRightOperand"/>
+    </edges>
+    <edges name="hex_literal_max_val_left_operand__ownedLeftOperand__hex_literal_max_val_left_operand_left_operand_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.17" trgNode="//@rules.1/@nodes.18">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/ownedLeftOperand"/>
+    </edges>
+    <edges name="hex_literal_max_val_left_operand__ownedRightOperand__hex_literal_max_val_left_operand_right_operand_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.17" trgNode="//@rules.1/@nodes.19">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//datavalue/BinaryExpression/ownedRightOperand"/>
+    </edges>
+    <edges name="hex_literal_min_val__abstractType__trg_dt_hex_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.21" trgNode="//@rules.1/@nodes.15">
+      <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="Oa2Sa_create_nodes_and_try_to_set_reference">
+    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.2/@edges.0" outgoingEdges="//@rules.2/@edges.2" incomingCorrsSource="//@rules.2/@nodes.3">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    </nodes>
+    <nodes name="src_abstract_capability_pkg" bindingType="CREATE" incomingEdges="//@rules.2/@edges.2">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
     </nodes>
     <nodes name="trg_ctx_arch" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.1" incomingCorrsTarget="//@rules.2/@nodes.3">
@@ -98,9 +508,12 @@
     <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.2/@nodes.3" trgNode="//@rules.2/@nodes.2">
       <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
     </edges>
+    <edges name="src_oa_arch__ownedAbstractCapabilityPkg__src_abstract_capability_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.2/@nodes.0" trgNode="//@rules.2/@nodes.1">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
+    </edges>
     <attributeConditionLibrary/>
   </rules>
-  <rules name="Oa2Sa_nodes_and_set_name">
+  <rules name="Oa2Sa_create_nodes_only">
     <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.3/@edges.0" incomingCorrsSource="//@rules.3/@nodes.3">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
     </nodes>
@@ -119,14 +532,9 @@
     <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.3/@nodes.3" trgNode="//@rules.3/@nodes.2">
       <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
     </edges>
-    <attributeConditionLibrary>
-      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2" parameters="//@rules.3/@attributeConditionLibrary/@parameterValues.0"/>
-      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.0" objectVar="//@rules.3/@nodes.1">
-        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
-      </parameterValues>
-    </attributeConditionLibrary>
+    <attributeConditionLibrary/>
   </rules>
-  <rules name="Oa2Sa_nodes_and_set_specific_name">
+  <rules name="Oa2Sa_nodes_and_set_name">
     <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.4/@edges.0" incomingCorrsSource="//@rules.4/@nodes.3">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
     </nodes>
@@ -146,18 +554,17 @@
       <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
     </edges>
     <attributeConditionLibrary>
-      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3" parameters="//@rules.4/@attributeConditionLibrary/@parameterValues.0 //@rules.4/@attributeConditionLibrary/@parameterValues.1"/>
-      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.0" objectVar="//@rules.4/@nodes.1">
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2" parameters="//@rules.4/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.0" objectVar="//@rules.4/@nodes.1">
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
       </parameterValues>
-      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.1" value="&quot;My Custom String&quot;"/>
     </attributeConditionLibrary>
   </rules>
-  <rules name="OperationalAnalysis2SystemAnalysis">
-    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.5/@edges.0" outgoingEdges="//@rules.5/@edges.2" incomingCorrsSource="//@rules.5/@nodes.3">
+  <rules name="Oa2Sa_nodes_and_set_specific_name">
+    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.5/@edges.0" incomingCorrsSource="//@rules.5/@nodes.3">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
     </nodes>
-    <nodes name="src_abstract_capability_pkg" bindingType="CREATE" incomingEdges="//@rules.5/@edges.2">
+    <nodes name="src_abstract_capability_pkg" bindingType="CREATE">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
     </nodes>
     <nodes name="trg_ctx_arch" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.1" incomingCorrsTarget="//@rules.5/@nodes.3">
@@ -172,15 +579,77 @@
     <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.2">
       <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
     </edges>
-    <edges name="src_oa_arch__ownedAbstractCapabilityPkg__src_abstract_capability_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.5/@nodes.0" trgNode="//@rules.5/@nodes.1">
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3" parameters="//@rules.5/@attributeConditionLibrary/@parameterValues.0 //@rules.5/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.0" objectVar="//@rules.5/@nodes.1">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.1" value="&quot;My Custom String&quot;"/>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="OperationalAnalysis2SystemAnalysis">
+    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.6/@edges.0" outgoingEdges="//@rules.6/@edges.2" incomingCorrsSource="//@rules.6/@nodes.3">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    </nodes>
+    <nodes name="src_abstract_capability_pkg" bindingType="CREATE" incomingEdges="//@rules.6/@edges.2">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalCapabilityPkg"/>
+    </nodes>
+    <nodes name="trg_ctx_arch" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.6/@edges.1" incomingCorrsTarget="//@rules.6/@nodes.3">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="oa2ctx" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.6/@edges.0 //@rules.6/@edges.1" source="//@rules.6/@nodes.0" target="//@rules.6/@nodes.2">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis"/>
+    </nodes>
+    <edges name="oa2ctx__source__src_oa_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.6/@nodes.3" trgNode="//@rules.6/@nodes.0">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/source"/>
+    </edges>
+    <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.6/@nodes.3" trgNode="//@rules.6/@nodes.2">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
+    </edges>
+    <edges name="src_oa_arch__ownedAbstractCapabilityPkg__src_abstract_capability_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.6/@nodes.0" trgNode="//@rules.6/@nodes.1">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
     </edges>
     <attributeConditionLibrary>
-      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.5/@attributeConditionLibrary/@parameterValues.0 //@rules.5/@attributeConditionLibrary/@parameterValues.1"/>
-      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.5/@nodes.1">
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.6/@attributeConditionLibrary/@parameterValues.0 //@rules.6/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.6/@nodes.1">
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
       </parameterValues>
       <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.1" value="&quot;Operational Capabilities&quot;"/>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="debugrule_create_oa_and_entitypkg">
+    <nodes name="src_oa_arch" bindingType="CREATE" incomingEdges="//@rules.7/@edges.0" outgoingEdges="//@rules.7/@edges.2" incomingCorrsSource="//@rules.7/@nodes.3">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    </nodes>
+    <nodes name="src_entity_pkg" bindingType="CREATE" incomingEdges="//@rules.7/@edges.2">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//EntityPkg"/>
+    </nodes>
+    <nodes name="trg_ctx_arch" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.7/@edges.1" incomingCorrsTarget="//@rules.7/@nodes.3">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="oa2ctx" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.7/@edges.0 //@rules.7/@edges.1" source="//@rules.7/@nodes.0" target="//@rules.7/@nodes.2">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis"/>
+    </nodes>
+    <edges name="oa2ctx__source__src_oa_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.7/@nodes.3" trgNode="//@rules.7/@nodes.0">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/source"/>
+    </edges>
+    <edges name="oa2ctx__target__trg_ctx_arch_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.7/@nodes.3" trgNode="//@rules.7/@nodes.2">
+      <type href="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore#//OperationalAnalysis2SystemAnalysis/target"/>
+    </edges>
+    <edges name="src_oa_arch__ownedEntityPkg__src_entity_pkg_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.7/@nodes.0" trgNode="//@rules.7/@nodes.1">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis/ownedEntityPkg"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3" parameters="//@rules.7/@attributeConditionLibrary/@parameterValues.0 //@rules.7/@attributeConditionLibrary/@parameterValues.1"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3" parameters="//@rules.7/@attributeConditionLibrary/@parameterValues.2 //@rules.7/@attributeConditionLibrary/@parameterValues.3"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.0" objectVar="//@rules.7/@nodes.0">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.1" value="&quot;Operational Analysis&quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.0" objectVar="//@rules.7/@nodes.1">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.1" value="&quot;Operational Entities&quot;"/>
     </attributeConditionLibrary>
   </rules>
   <attributeConstraintDefinitionLibrary>

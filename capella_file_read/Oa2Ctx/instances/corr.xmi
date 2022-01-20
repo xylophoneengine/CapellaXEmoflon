@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"/>
+<Oa2Ctx:OperationalAnalysis2SystemAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Oa2Ctx="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore">
+  <source href="src.xmi#4c38818e-2dc0-44b2-a538-e2e285babae4"/>
+  <target href="trg.xmi#699cb014-06b4-43e5-94e1-5845946a0310"/>
+</Oa2Ctx:OperationalAnalysis2SystemAnalysis>

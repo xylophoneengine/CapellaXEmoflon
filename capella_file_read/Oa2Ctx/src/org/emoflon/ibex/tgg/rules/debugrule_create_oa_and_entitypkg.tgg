@@ -1,0 +1,28 @@
+#using Oa2Ctx.*
+#using AttrCondDefLibrary.*
+
+#rule debugrule_create_oa_and_entitypkg #with Oa2Ctx
+
+#source { 
+	++ src_oa_arch : oa.OperationalAnalysis{
+		++ -ownedEntityPkg -> src_entity_pkg
+	}
+	
+	++ src_entity_pkg : oa.EntityPkg
+}
+
+#target {
+	++ trg_ctx_arch : SystemAnalysis
+}
+
+#correspondence {
+	++oa2ctx : OperationalAnalysis2SystemAnalysis{
+		#src->src_oa_arch
+		#trg->trg_ctx_arch
+	}
+}
+
+#attributeConditions {
+	eq_string(src_oa_arch.name, "Operational Analysis") // set default name
+	eq_string(src_entity_pkg.name, "Operational Entities")
+}

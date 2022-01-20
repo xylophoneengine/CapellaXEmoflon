@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xsd:schema xmlns:Oa2Ctx="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore" xmlns:org.emoflon.ibex.tgg.runtime="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore" xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/5.0.0" xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/5.0.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore">
+<xsd:schema xmlns:Oa2Ctx="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore" xmlns:org.emoflon.ibex.tgg.runtime="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore" xmlns:org.polarsys.capella.core.data.cs="http://www.polarsys.org/capella/core/cs/5.0.0" xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/5.0.0" xmlns:org.polarsys.capella.core.data.information="http://www.polarsys.org/capella/core/information/5.0.0" xmlns:org.polarsys.capella.core.data.information.datatype="http://www.polarsys.org/capella/core/information/datatype/5.0.0" xmlns:org.polarsys.capella.core.data.information.datavalue="http://www.polarsys.org/capella/core/information/datavalue/5.0.0" xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/5.0.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore">
+  <xsd:import namespace="http://www.polarsys.org/capella/core/information/datatype/5.0.0" schemaLocation="datatype.xsd"/>
+  <xsd:import namespace="http://www.polarsys.org/capella/core/information/datavalue/5.0.0" schemaLocation="datavalue.xsd"/>
+  <xsd:import namespace="http://www.polarsys.org/capella/core/cs/5.0.0" schemaLocation="cs.xsd"/>
+  <xsd:import namespace="http://www.polarsys.org/capella/core/information/5.0.0" schemaLocation="information.xsd"/>
   <xsd:import namespace="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore" schemaLocation="runtime.xsd"/>
   <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
   <xsd:import namespace="http://www.polarsys.org/capella/core/ctx/5.0.0" schemaLocation="ctx.xsd"/>
@@ -16,23 +20,85 @@
     <xsd:attribute name="target" type="xsd:string"/>
   </xsd:complexType>
   <xsd:element name="OperationalAnalysis2SystemAnalysis" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
-  <xsd:complexType name="InitialModelCreation__Marker">
+  <xsd:complexType name="InitialModelCreation_ownedDataPkg__Marker">
     <xsd:complexContent>
       <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
         <xsd:choice maxOccurs="unbounded" minOccurs="0">
           <xsd:element name="CREATE__SRC__src_abstract_capability_pkg" type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"/>
+          <xsd:element name="CREATE__SRC__src_data_pkg" type="org.polarsys.capella.core.data.information:DataPkg"/>
+          <xsd:element name="CREATE__SRC__src_entity_pkg" type="org.polarsys.capella.core.data.oa:EntityPkg"/>
+          <xsd:element name="CREATE__SRC__src_function_pkg" type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"/>
+          <xsd:element name="CREATE__SRC__src_interface_pkg" type="org.polarsys.capella.core.data.cs:InterfacePkg"/>
           <xsd:element name="CREATE__SRC__src_oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__SRC__src_role_pkg" type="org.polarsys.capella.core.data.oa:RolePkg"/>
+          <xsd:element name="CREATE__TRG__bool_literal_false" type="org.polarsys.capella.core.data.information.datavalue:LiteralBooleanValue"/>
+          <xsd:element name="CREATE__TRG__bool_literal_true" type="org.polarsys.capella.core.data.information.datavalue:LiteralBooleanValue"/>
+          <xsd:element name="CREATE__TRG__byte_literal_max_val" type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"/>
+          <xsd:element name="CREATE__TRG__byte_literal_min_val" type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"/>
+          <xsd:element name="CREATE__TRG__char_literal_max_length" type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"/>
+          <xsd:element name="CREATE__TRG__char_literal_min_length" type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"/>
+          <xsd:element name="CREATE__TRG__hex_literal_max_val" type="org.polarsys.capella.core.data.information.datavalue:BinaryExpression"/>
+          <xsd:element name="CREATE__TRG__hex_literal_max_val_left_operand" type="org.polarsys.capella.core.data.information.datavalue:BinaryExpression"/>
+          <xsd:element name="CREATE__TRG__hex_literal_max_val_left_operand_left_operand" type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"/>
+          <xsd:element name="CREATE__TRG__hex_literal_max_val_left_operand_right_operand" type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"/>
+          <xsd:element name="CREATE__TRG__hex_literal_max_val_right_operand" type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"/>
+          <xsd:element name="CREATE__TRG__hex_literal_min_val" type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"/>
+          <xsd:element name="CREATE__TRG__trg_abstract_capability_pkg" type="org.polarsys.capella.core.data.ctx:CapabilityPkg"/>
           <xsd:element name="CREATE__TRG__trg_ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__TRG__trg_data_pkg" type="org.polarsys.capella.core.data.information:DataPkg"/>
+          <xsd:element name="CREATE__TRG__trg_dt_boolean" type="org.polarsys.capella.core.data.information.datatype:BooleanType"/>
+          <xsd:element name="CREATE__TRG__trg_dt_byte" type="org.polarsys.capella.core.data.information.datatype:NumericType"/>
+          <xsd:element name="CREATE__TRG__trg_dt_char" type="org.polarsys.capella.core.data.information.datatype:StringType"/>
+          <xsd:element name="CREATE__TRG__trg_dt_data_pkg" type="org.polarsys.capella.core.data.information:DataPkg"/>
+          <xsd:element name="CREATE__TRG__trg_dt_double" type="org.polarsys.capella.core.data.information.datatype:NumericType"/>
+          <xsd:element name="CREATE__TRG__trg_dt_float" type="org.polarsys.capella.core.data.information.datatype:NumericType"/>
+          <xsd:element name="CREATE__TRG__trg_dt_hex" type="org.polarsys.capella.core.data.information.datatype:NumericType"/>
+          <xsd:element name="CREATE__TRG__trg_function_pkg" type="org.polarsys.capella.core.data.ctx:SystemFunctionPkg"/>
+          <xsd:element name="CREATE__TRG__trg_interface_pkg" type="org.polarsys.capella.core.data.cs:InterfacePkg"/>
+          <xsd:element name="CREATE__TRG__trg_mission_pkg" type="org.polarsys.capella.core.data.ctx:MissionPkg"/>
+          <xsd:element name="CREATE__TRG__trg_oa_realization" type="org.polarsys.capella.core.data.ctx:OperationalAnalysisRealization"/>
+          <xsd:element name="CREATE__TRG__trg_system_comp_pkg" type="org.polarsys.capella.core.data.ctx:SystemComponentPkg"/>
           <xsd:element name="CREATE__CORR__oa2ctx" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
         </xsd:choice>
         <xsd:attribute name="CREATE__SRC__src_abstract_capability_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_data_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_entity_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_function_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_interface_pkg" type="xsd:string"/>
         <xsd:attribute name="CREATE__SRC__src_oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_role_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__bool_literal_false" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__bool_literal_true" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__byte_literal_max_val" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__byte_literal_min_val" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__char_literal_max_length" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__char_literal_min_length" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__hex_literal_max_val" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__hex_literal_max_val_left_operand" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__hex_literal_max_val_left_operand_left_operand" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__hex_literal_max_val_left_operand_right_operand" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__hex_literal_max_val_right_operand" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__hex_literal_min_val" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_abstract_capability_pkg" type="xsd:string"/>
         <xsd:attribute name="CREATE__TRG__trg_ctx_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_data_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_dt_boolean" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_dt_byte" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_dt_char" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_dt_data_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_dt_double" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_dt_float" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_dt_hex" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_function_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_interface_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_mission_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_oa_realization" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_system_comp_pkg" type="xsd:string"/>
         <xsd:attribute name="CREATE__CORR__oa2ctx" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:element name="InitialModelCreation__Marker" type="Oa2Ctx:InitialModelCreation__Marker"/>
+  <xsd:element name="InitialModelCreation_ownedDataPkg__Marker" type="Oa2Ctx:InitialModelCreation_ownedDataPkg__Marker"/>
   <xsd:complexType name="Oa2Sa_create_nodes_and_try_to_set_reference__Marker">
     <xsd:complexContent>
       <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
@@ -118,4 +184,21 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="OperationalAnalysis2SystemAnalysis__Marker" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis__Marker"/>
+  <xsd:complexType name="debugrule_create_oa_and_entitypkg__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__src_entity_pkg" type="org.polarsys.capella.core.data.oa:EntityPkg"/>
+          <xsd:element name="CREATE__SRC__src_oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__TRG__trg_ctx_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__CORR__oa2ctx" type="Oa2Ctx:OperationalAnalysis2SystemAnalysis"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__src_entity_pkg" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__src_oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_ctx_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__oa2ctx" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="debugrule_create_oa_and_entitypkg__Marker" type="Oa2Ctx:debugrule_create_oa_and_entitypkg__Marker"/>
 </xsd:schema>
