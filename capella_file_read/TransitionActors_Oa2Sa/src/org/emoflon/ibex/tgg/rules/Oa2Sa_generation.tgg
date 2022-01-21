@@ -1,0 +1,27 @@
+#using TransitionActors_Oa2Sa.*
+#using AttrCondDefLibrary.*
+
+#rule Oa2Sa_generation #with TransitionActors_Oa2Sa
+
+#source { 
+	++ src_oa_arch : oa.OperationalAnalysis{
+		name := "Operational Analysis"
+	}
+}
+
+#target {
+	++ trg_sa_arch : ctx.SystemAnalysis{
+		name:= "System Analysis"
+	}
+}
+
+#correspondence {
+	++ new_oa2sa : Oa2Sa{
+		#src-> src_oa_arch
+		#trg-> trg_sa_arch
+	}
+}
+
+#attributeConditions {
+	
+}

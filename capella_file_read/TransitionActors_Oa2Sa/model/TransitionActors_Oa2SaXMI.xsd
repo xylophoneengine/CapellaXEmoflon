@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:TransitionActors_Oa2Sa="platform:/resource/TransitionActors_Oa2Sa/model/TransitionActors_Oa2Sa.ecore" xmlns:org.emoflon.ibex.tgg.runtime="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore" xmlns:org.polarsys.capella.core.data.ctx="http://www.polarsys.org/capella/core/ctx/5.0.0" xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/5.0.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="platform:/resource/TransitionActors_Oa2Sa/model/TransitionActors_Oa2Sa.ecore">
+  <xsd:import namespace="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore" schemaLocation="runtime.xsd"/>
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:import namespace="http://www.polarsys.org/capella/core/ctx/5.0.0" schemaLocation="ctx.xsd"/>
+  <xsd:import namespace="http://www.polarsys.org/capella/core/oa/5.0.0" schemaLocation="oa.xsd"/>
+  <xsd:complexType name="Oa2Sa">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="source" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+      <xsd:element name="target" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="target" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Oa2Sa" type="TransitionActors_Oa2Sa:Oa2Sa"/>
+  <xsd:complexType name="Oa2Sa_generation__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__src_oa_arch" type="org.polarsys.capella.core.data.oa:OperationalAnalysis"/>
+          <xsd:element name="CREATE__TRG__trg_sa_arch" type="org.polarsys.capella.core.data.ctx:SystemAnalysis"/>
+          <xsd:element name="CREATE__CORR__new_oa2sa" type="TransitionActors_Oa2Sa:Oa2Sa"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__src_oa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__trg_sa_arch" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__new_oa2sa" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Oa2Sa_generation__Marker" type="TransitionActors_Oa2Sa:Oa2Sa_generation__Marker"/>
+</xsd:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="TransitionActors_Oa2Sa" nsURI="platform:/resource/TransitionActors_Oa2Sa/model/TransitionActors_Oa2Sa.ecore"
+    nsPrefix="TransitionActors_Oa2Sa">
+  <eClassifiers xsi:type="ecore:EClass" name="Oa2Sa">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Oa2Sa_generation__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_oa_arch"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_sa_arch"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__new_oa2sa"
+        lowerBound="1" eType="ecore:EClass platform:/resource/TransitionActors_Oa2Sa/model/TransitionActors_Oa2Sa.ecore#//Oa2Sa"/>
+  </eClassifiers>
+</ecore:EPackage>

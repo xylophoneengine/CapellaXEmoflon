@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tgg="http://www.moflon.org/ide/tgg/mosl/TGG">
+  <imports name="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"/>
+  <imports name="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore"/>
+  <schema name="TransitionActors_Oa2Sa">
+    <sourceTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#/"/>
+    <targetTypes href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#/"/>
+    <correspondenceTypes name="Oa2Sa">
+      <source href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+      <target href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    </correspondenceTypes>
+  </schema>
+  <rules name="Oa2Sa_generation" schema="//@schema">
+    <sourcePatterns name="src_oa_arch">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Operational Analysis&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <targetPatterns name="trg_sa_arch">
+      <op value="++"/>
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;System Analysis&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <correspondencePatterns name="new_oa2sa" type="//@schema/@correspondenceTypes.0" source="//@rules.0/@sourcePatterns.0" target="//@rules.0/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+</tgg:TripleGraphGrammarFile>
