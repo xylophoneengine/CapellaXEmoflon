@@ -5,6 +5,8 @@
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore"
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore"
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore"
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore"
+
 #schema Oa2Ctx
 	
 #source {
@@ -18,7 +20,8 @@
 	information
 	/* The Information metamodel is needed for:
 	 * 		+ DataPkg
-	 * 
+	 * 		+ DataType
+	 *		+ Literals 
 	 * Docstring:
 	 * Value Information aims at defining the data transmission language
 	 * (named Information due to the namespacing strange effects if it would have been named Data).
@@ -37,6 +40,14 @@
 	  * 	+ VisibilityKind (enum)	; Needed to set the visibility enum
 	  * Docstring:
 	  * Value CapellaCore aims at defining the core concepts of the other languages...
+	  */
+	 fa
+	 /* The FunctionalAnalysis is needed for:
+	  * 	+ ?
+	  * Docstring:
+	  * Value FunctionalAnalysis aims at defining the system engineering usual functional breakdown
+	  * and functional data flow language (close to the UML Activity machine and SysML Activity as Block,
+	  * partially)...
 	  */
 }
 

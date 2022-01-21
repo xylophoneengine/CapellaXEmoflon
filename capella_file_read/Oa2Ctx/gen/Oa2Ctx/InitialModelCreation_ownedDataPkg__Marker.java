@@ -24,6 +24,7 @@ import org.polarsys.capella.core.data.information.datavalue.LiteralBooleanValue;
 import org.polarsys.capella.core.data.information.datavalue.LiteralNumericValue;
 
 import org.polarsys.capella.core.data.oa.EntityPkg;
+import org.polarsys.capella.core.data.oa.OperationalActivity;
 import org.polarsys.capella.core.data.oa.OperationalActivityPkg;
 import org.polarsys.capella.core.data.oa.OperationalAnalysis;
 import org.polarsys.capella.core.data.oa.OperationalCapabilityPkg;
@@ -40,6 +41,7 @@ import runtime.TGGRuleApplication;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src__operational_capabilities <em>CREATE SRC src operational capabilities</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_data_pkg <em>CREATE SRC src data pkg</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_entity_pkg <em>CREATE SRC src entity pkg</em>}</li>
@@ -69,11 +71,24 @@ import runtime.TGGRuleApplication;
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_double <em>CREATE TRG trg dt double</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_float <em>CREATE TRG trg dt float</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_hex <em>CREATE TRG trg dt hex</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_integer <em>CREATE TRG trg dt integer</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_long <em>CREATE TRG trg dt long</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_longlong <em>CREATE TRG trg dt longlong</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_short <em>CREATE TRG trg dt short</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_string <em>CREATE TRG trg dt string</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_integer <em>CREATE TRG trg dt unsigned integer</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_long <em>CREATE TRG trg dt unsigned long</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_longlong <em>CREATE TRG trg dt unsigned longlong</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_short <em>CREATE TRG trg dt unsigned short</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_function_pkg <em>CREATE TRG trg function pkg</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_interface_pkg <em>CREATE TRG trg interface pkg</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_mission_pkg <em>CREATE TRG trg mission pkg</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_oa_realization <em>CREATE TRG trg oa realization</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_system_comp_pkg <em>CREATE TRG trg system comp pkg</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_int_min_val <em>CREATE TRG unsigned int min val</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_long_min_val <em>CREATE TRG unsigned long min val</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_longlong_min_val <em>CREATE TRG unsigned longlong min val</em>}</li>
+ *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_short_min_val <em>CREATE TRG unsigned short min val</em>}</li>
  *   <li>{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}</li>
  * </ul>
  *
@@ -82,6 +97,28 @@ import runtime.TGGRuleApplication;
  * @generated
  */
 public interface InitialModelCreation_ownedDataPkg__Marker extends EObject, TGGRuleApplication {
+	/**
+	 * Returns the value of the '<em><b>CREATE SRC src operational capabilities</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE SRC src operational capabilities</em>' reference.
+	 * @see #setCREATE__SRC__src__operational_capabilities(OperationalActivity)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src__operational_capabilities()
+	 * @model required="true"
+	 * @generated
+	 */
+	OperationalActivity getCREATE__SRC__src__operational_capabilities();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src__operational_capabilities <em>CREATE SRC src operational capabilities</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE SRC src operational capabilities</em>' reference.
+	 * @see #getCREATE__SRC__src__operational_capabilities()
+	 * @generated
+	 */
+	void setCREATE__SRC__src__operational_capabilities(OperationalActivity value);
+
 	/**
 	 * Returns the value of the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -721,6 +758,204 @@ public interface InitialModelCreation_ownedDataPkg__Marker extends EObject, TGGR
 	void setCREATE__TRG__trg_dt_hex(NumericType value);
 
 	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg dt integer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg dt integer</em>' reference.
+	 * @see #setCREATE__TRG__trg_dt_integer(NumericType)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_integer()
+	 * @model required="true"
+	 * @generated
+	 */
+	NumericType getCREATE__TRG__trg_dt_integer();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_integer <em>CREATE TRG trg dt integer</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg dt integer</em>' reference.
+	 * @see #getCREATE__TRG__trg_dt_integer()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_dt_integer(NumericType value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg dt long</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg dt long</em>' reference.
+	 * @see #setCREATE__TRG__trg_dt_long(NumericType)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_long()
+	 * @model required="true"
+	 * @generated
+	 */
+	NumericType getCREATE__TRG__trg_dt_long();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_long <em>CREATE TRG trg dt long</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg dt long</em>' reference.
+	 * @see #getCREATE__TRG__trg_dt_long()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_dt_long(NumericType value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg dt longlong</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg dt longlong</em>' reference.
+	 * @see #setCREATE__TRG__trg_dt_longlong(NumericType)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_longlong()
+	 * @model required="true"
+	 * @generated
+	 */
+	NumericType getCREATE__TRG__trg_dt_longlong();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_longlong <em>CREATE TRG trg dt longlong</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg dt longlong</em>' reference.
+	 * @see #getCREATE__TRG__trg_dt_longlong()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_dt_longlong(NumericType value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg dt short</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg dt short</em>' reference.
+	 * @see #setCREATE__TRG__trg_dt_short(NumericType)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_short()
+	 * @model required="true"
+	 * @generated
+	 */
+	NumericType getCREATE__TRG__trg_dt_short();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_short <em>CREATE TRG trg dt short</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg dt short</em>' reference.
+	 * @see #getCREATE__TRG__trg_dt_short()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_dt_short(NumericType value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg dt string</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg dt string</em>' reference.
+	 * @see #setCREATE__TRG__trg_dt_string(StringType)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_string()
+	 * @model required="true"
+	 * @generated
+	 */
+	StringType getCREATE__TRG__trg_dt_string();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_string <em>CREATE TRG trg dt string</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg dt string</em>' reference.
+	 * @see #getCREATE__TRG__trg_dt_string()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_dt_string(StringType value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg dt unsigned integer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg dt unsigned integer</em>' reference.
+	 * @see #setCREATE__TRG__trg_dt_unsigned_integer(NumericType)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_integer()
+	 * @model required="true"
+	 * @generated
+	 */
+	NumericType getCREATE__TRG__trg_dt_unsigned_integer();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_integer <em>CREATE TRG trg dt unsigned integer</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg dt unsigned integer</em>' reference.
+	 * @see #getCREATE__TRG__trg_dt_unsigned_integer()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_dt_unsigned_integer(NumericType value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg dt unsigned long</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg dt unsigned long</em>' reference.
+	 * @see #setCREATE__TRG__trg_dt_unsigned_long(NumericType)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_long()
+	 * @model required="true"
+	 * @generated
+	 */
+	NumericType getCREATE__TRG__trg_dt_unsigned_long();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_long <em>CREATE TRG trg dt unsigned long</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg dt unsigned long</em>' reference.
+	 * @see #getCREATE__TRG__trg_dt_unsigned_long()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_dt_unsigned_long(NumericType value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg dt unsigned longlong</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg dt unsigned longlong</em>' reference.
+	 * @see #setCREATE__TRG__trg_dt_unsigned_longlong(NumericType)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_longlong()
+	 * @model required="true"
+	 * @generated
+	 */
+	NumericType getCREATE__TRG__trg_dt_unsigned_longlong();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_longlong <em>CREATE TRG trg dt unsigned longlong</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg dt unsigned longlong</em>' reference.
+	 * @see #getCREATE__TRG__trg_dt_unsigned_longlong()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_dt_unsigned_longlong(NumericType value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg dt unsigned short</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg dt unsigned short</em>' reference.
+	 * @see #setCREATE__TRG__trg_dt_unsigned_short(NumericType)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_short()
+	 * @model required="true"
+	 * @generated
+	 */
+	NumericType getCREATE__TRG__trg_dt_unsigned_short();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_short <em>CREATE TRG trg dt unsigned short</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg dt unsigned short</em>' reference.
+	 * @see #getCREATE__TRG__trg_dt_unsigned_short()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_dt_unsigned_short(NumericType value);
+
+	/**
 	 * Returns the value of the '<em><b>CREATE TRG trg function pkg</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -829,6 +1064,94 @@ public interface InitialModelCreation_ownedDataPkg__Marker extends EObject, TGGR
 	 * @generated
 	 */
 	void setCREATE__TRG__trg_system_comp_pkg(SystemComponentPkg value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG unsigned int min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG unsigned int min val</em>' reference.
+	 * @see #setCREATE__TRG__unsigned_int_min_val(LiteralNumericValue)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_int_min_val()
+	 * @model required="true"
+	 * @generated
+	 */
+	LiteralNumericValue getCREATE__TRG__unsigned_int_min_val();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_int_min_val <em>CREATE TRG unsigned int min val</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG unsigned int min val</em>' reference.
+	 * @see #getCREATE__TRG__unsigned_int_min_val()
+	 * @generated
+	 */
+	void setCREATE__TRG__unsigned_int_min_val(LiteralNumericValue value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG unsigned long min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG unsigned long min val</em>' reference.
+	 * @see #setCREATE__TRG__unsigned_long_min_val(LiteralNumericValue)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_long_min_val()
+	 * @model required="true"
+	 * @generated
+	 */
+	LiteralNumericValue getCREATE__TRG__unsigned_long_min_val();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_long_min_val <em>CREATE TRG unsigned long min val</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG unsigned long min val</em>' reference.
+	 * @see #getCREATE__TRG__unsigned_long_min_val()
+	 * @generated
+	 */
+	void setCREATE__TRG__unsigned_long_min_val(LiteralNumericValue value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG unsigned longlong min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG unsigned longlong min val</em>' reference.
+	 * @see #setCREATE__TRG__unsigned_longlong_min_val(LiteralNumericValue)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_longlong_min_val()
+	 * @model required="true"
+	 * @generated
+	 */
+	LiteralNumericValue getCREATE__TRG__unsigned_longlong_min_val();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_longlong_min_val <em>CREATE TRG unsigned longlong min val</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG unsigned longlong min val</em>' reference.
+	 * @see #getCREATE__TRG__unsigned_longlong_min_val()
+	 * @generated
+	 */
+	void setCREATE__TRG__unsigned_longlong_min_val(LiteralNumericValue value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG unsigned short min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG unsigned short min val</em>' reference.
+	 * @see #setCREATE__TRG__unsigned_short_min_val(LiteralNumericValue)
+	 * @see Oa2Ctx.Oa2CtxPackage#getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_short_min_val()
+	 * @model required="true"
+	 * @generated
+	 */
+	LiteralNumericValue getCREATE__TRG__unsigned_short_min_val();
+
+	/**
+	 * Sets the value of the '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_short_min_val <em>CREATE TRG unsigned short min val</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG unsigned short min val</em>' reference.
+	 * @see #getCREATE__TRG__unsigned_short_min_val()
+	 * @generated
+	 */
+	void setCREATE__TRG__unsigned_short_min_val(LiteralNumericValue value);
 
 	/**
 	 * Returns the value of the '<em><b>CREATE CORR oa2ctx</b></em>' reference.

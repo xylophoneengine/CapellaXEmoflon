@@ -9,7 +9,6 @@
 	{
 		name := "Operational Analysis"
 		++ -ownedAbstractCapabilityPkg -> src_abstract_capability_pkg
-		++ -ownedDataPkg -> src_data_pkg
 		++ -ownedEntityPkg -> src_entity_pkg
 		++ -ownedFunctionPkg -> src_function_pkg
 		++ -ownedInterfacePkg -> src_interface_pkg
@@ -19,10 +18,6 @@
 	++ src_abstract_capability_pkg : oa.OperationalCapabilityPkg{
 		name := "Operational Capabilities"
 	}
-
-	++ src_data_pkg : information.DataPkg{
-		name := "Data"
-	}
 	
 	++ src_entity_pkg : oa.EntityPkg{
 		name := "Operational Entities"
@@ -30,7 +25,16 @@
 
 	++ src_function_pkg : oa.OperationalActivityPkg{
 		name := "Operational Activities"
+		++ -ownedOperationalActivities -> src_operational_capabilities
 	}
+
+	++ src_operational_capabilities : oa.OperationalActivity{
+		name := "Root Operational Activity"
+		aggregationKind := enum::information.AggregationKind::UNSET
+		kind := enum::fa.FunctionKind::FUNCTION
+		visibility := enum::capellacore.VisibilityKind::UNSET
+	}
+	
 	
 	++ src_interface_pkg : cs.InterfacePkg{
 		name := "Interfaces"
