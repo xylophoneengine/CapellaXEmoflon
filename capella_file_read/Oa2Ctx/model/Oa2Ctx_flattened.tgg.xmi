@@ -321,7 +321,7 @@
         <valueExpr xsi:type="language:TGGLiteralExpression" value="0"/>
       </attrExpr>
     </nodes>
-    <nodes name="trg_abstract_capability_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.18">
+    <nodes name="trg_abstract_capability_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.19">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//CapabilityPkg"/>
       <attrExpr>
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
@@ -335,7 +335,7 @@
         <valueExpr xsi:type="language:TGGLiteralExpression" value="&quot;System Analysis&quot;"/>
       </attrExpr>
     </nodes>
-    <nodes name="trg_data_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.19" outgoingEdges="//@rules.1/@edges.25">
+    <nodes name="trg_data_pkg" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.18" outgoingEdges="//@rules.1/@edges.25">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore#//DataPkg"/>
       <attrExpr>
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
@@ -549,11 +549,11 @@
     <edges name="hex_literal_min_val__abstractType__trg_dt_hex_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.18" trgNode="//@rules.1/@nodes.28">
       <type href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractTypedElement/abstractType"/>
     </edges>
-    <edges name="trg_ctx_arch__ownedAbstractCapabilityPkg__trg_abstract_capability_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.20" trgNode="//@rules.1/@nodes.19">
-      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
-    </edges>
     <edges name="trg_ctx_arch__ownedDataPkg__trg_data_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.20" trgNode="//@rules.1/@nodes.21">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedDataPkg"/>
+    </edges>
+    <edges name="trg_ctx_arch__ownedAbstractCapabilityPkg__trg_abstract_capability_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.20" trgNode="//@rules.1/@nodes.19">
+      <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
     </edges>
     <edges name="trg_ctx_arch__ownedFunctionPkg__trg_function_pkg_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.20" trgNode="//@rules.1/@nodes.29">
       <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore#//AbstractFunctionalArchitecture/ownedFunctionPkg"/>

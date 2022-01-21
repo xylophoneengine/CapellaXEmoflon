@@ -1,7 +1,7 @@
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"
 #import "platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore"
 //#import "platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore"
-//#import "platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore"
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore"
 //#import "platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore"
 //#import "platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore"
 
@@ -9,16 +9,22 @@
 	
 #source {
 	oa
+	cs
 }
 
 #target {
 	ctx
+	cs
 } 
 
 #correspondence {
 	Oa2Sa{
 		#src-> oa.OperationalAnalysis
 		#trg-> ctx.SystemAnalysis
+	}
+	Entity2SystemComponent{
+		#src-> oa.Entity
+		#trg-> ctx.SystemComponent
 	}
 }
 

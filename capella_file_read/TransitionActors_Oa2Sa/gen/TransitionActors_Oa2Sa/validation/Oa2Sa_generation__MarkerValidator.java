@@ -6,8 +6,13 @@ package TransitionActors_Oa2Sa.validation;
 
 import TransitionActors_Oa2Sa.Oa2Sa;
 
-import org.polarsys.capella.core.data.ctx.SystemAnalysis;
+import org.polarsys.capella.core.data.cs.Part;
 
+import org.polarsys.capella.core.data.ctx.SystemAnalysis;
+import org.polarsys.capella.core.data.ctx.SystemComponent;
+import org.polarsys.capella.core.data.ctx.SystemComponentPkg;
+
+import org.polarsys.capella.core.data.oa.EntityPkg;
 import org.polarsys.capella.core.data.oa.OperationalAnalysis;
 
 /**
@@ -19,7 +24,11 @@ import org.polarsys.capella.core.data.oa.OperationalAnalysis;
 public interface Oa2Sa_generation__MarkerValidator {
 	boolean validate();
 
+	boolean validateCREATE__SRC__src_entity_pkg(EntityPkg value);
 	boolean validateCREATE__SRC__src_oa_arch(OperationalAnalysis value);
 	boolean validateCREATE__TRG__trg_sa_arch(SystemAnalysis value);
+	boolean validateCREATE__TRG__trg_system_as_component(SystemComponent value);
+	boolean validateCREATE__TRG__trg_system_as_part(Part value);
+	boolean validateCREATE__TRG__trg_system_component_pkg(SystemComponentPkg value);
 	boolean validateCREATE__CORR__new_oa2sa(Oa2Sa value);
 }

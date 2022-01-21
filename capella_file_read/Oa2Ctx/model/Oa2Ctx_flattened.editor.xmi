@@ -564,13 +564,13 @@
         <attribute href="platform:/resource/org.polarsys.capella.common.data.core.gen/model/ModellingCore.ecore#//AbstractNamedElement/name"/>
         <valueExp xsi:type="tgg:LiteralExpression" value="&quot;System Analysis&quot;"/>
       </attributeAssignments>
-      <linkVariablePatterns target="//@rules.1/@targetPatterns.12">
-        <op value="++"/>
-        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
-      </linkVariablePatterns>
       <linkVariablePatterns target="//@rules.1/@targetPatterns.14">
         <op value="++"/>
         <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedDataPkg"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.12">
+        <op value="++"/>
+        <type href="platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//BlockArchitecture/ownedAbstractCapabilityPkg"/>
       </linkVariablePatterns>
       <linkVariablePatterns target="//@rules.1/@targetPatterns.22">
         <op value="++"/>

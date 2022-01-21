@@ -74,10 +74,30 @@ public class TransitionActors_Oa2SaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TransitionActors_Oa2SaPackage.ENTITY2_SYSTEM_COMPONENT: {
+				Entity2SystemComponent entity2SystemComponent = (Entity2SystemComponent)theEObject;
+				T result = caseEntity2SystemComponent(entity2SystemComponent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case TransitionActors_Oa2SaPackage.OA2_SA_GENERATION_MARKER: {
 				Oa2Sa_generation__Marker oa2Sa_generation__Marker = (Oa2Sa_generation__Marker)theEObject;
 				T result = caseOa2Sa_generation__Marker(oa2Sa_generation__Marker);
 				if (result == null) result = caseTGGRuleApplication(oa2Sa_generation__Marker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TransitionActors_Oa2SaPackage.OA2_SA_TRANSITION_ACTORS_MARKER: {
+				Oa2Sa_transition_actors__Marker oa2Sa_transition_actors__Marker = (Oa2Sa_transition_actors__Marker)theEObject;
+				T result = caseOa2Sa_transition_actors__Marker(oa2Sa_transition_actors__Marker);
+				if (result == null) result = caseTGGRuleApplication(oa2Sa_transition_actors__Marker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TransitionActors_Oa2SaPackage.OA2_SA_TRANSITION_ACTORS_RECURSIVELY_MARKER: {
+				Oa2Sa_transition_actors_recursively__Marker oa2Sa_transition_actors_recursively__Marker = (Oa2Sa_transition_actors_recursively__Marker)theEObject;
+				T result = caseOa2Sa_transition_actors_recursively__Marker(oa2Sa_transition_actors_recursively__Marker);
+				if (result == null) result = caseTGGRuleApplication(oa2Sa_transition_actors_recursively__Marker);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -101,6 +121,21 @@ public class TransitionActors_Oa2SaSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entity2 System Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entity2 System Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntity2SystemComponent(Entity2SystemComponent object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Oa2 Sa generation Marker</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -112,6 +147,36 @@ public class TransitionActors_Oa2SaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOa2Sa_generation__Marker(Oa2Sa_generation__Marker object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oa2 Sa transition actors Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oa2 Sa transition actors Marker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOa2Sa_transition_actors__Marker(Oa2Sa_transition_actors__Marker object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oa2 Sa transition actors recursively Marker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oa2 Sa transition actors recursively Marker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOa2Sa_transition_actors_recursively__Marker(Oa2Sa_transition_actors_recursively__Marker object) {
 		return null;
 	}
 

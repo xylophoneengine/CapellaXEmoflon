@@ -4,8 +4,13 @@ package TransitionActors_Oa2Sa;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.polarsys.capella.core.data.ctx.SystemAnalysis;
+import org.polarsys.capella.core.data.cs.Part;
 
+import org.polarsys.capella.core.data.ctx.SystemAnalysis;
+import org.polarsys.capella.core.data.ctx.SystemComponent;
+import org.polarsys.capella.core.data.ctx.SystemComponentPkg;
+
+import org.polarsys.capella.core.data.oa.EntityPkg;
 import org.polarsys.capella.core.data.oa.OperationalAnalysis;
 
 import runtime.TGGRuleApplication;
@@ -19,8 +24,12 @@ import runtime.TGGRuleApplication;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__SRC__src_entity_pkg <em>CREATE SRC src entity pkg</em>}</li>
  *   <li>{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__SRC__src_oa_arch <em>CREATE SRC src oa arch</em>}</li>
  *   <li>{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__TRG__trg_sa_arch <em>CREATE TRG trg sa arch</em>}</li>
+ *   <li>{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__TRG__trg_system_as_component <em>CREATE TRG trg system as component</em>}</li>
+ *   <li>{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__TRG__trg_system_as_part <em>CREATE TRG trg system as part</em>}</li>
+ *   <li>{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__TRG__trg_system_component_pkg <em>CREATE TRG trg system component pkg</em>}</li>
  *   <li>{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__CORR__new_oa2sa <em>CREATE CORR new oa2sa</em>}</li>
  * </ul>
  *
@@ -29,6 +38,28 @@ import runtime.TGGRuleApplication;
  * @generated
  */
 public interface Oa2Sa_generation__Marker extends EObject, TGGRuleApplication {
+	/**
+	 * Returns the value of the '<em><b>CREATE SRC src entity pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE SRC src entity pkg</em>' reference.
+	 * @see #setCREATE__SRC__src_entity_pkg(EntityPkg)
+	 * @see TransitionActors_Oa2Sa.TransitionActors_Oa2SaPackage#getOa2Sa_generation__Marker_CREATE__SRC__src_entity_pkg()
+	 * @model required="true"
+	 * @generated
+	 */
+	EntityPkg getCREATE__SRC__src_entity_pkg();
+
+	/**
+	 * Sets the value of the '{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__SRC__src_entity_pkg <em>CREATE SRC src entity pkg</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE SRC src entity pkg</em>' reference.
+	 * @see #getCREATE__SRC__src_entity_pkg()
+	 * @generated
+	 */
+	void setCREATE__SRC__src_entity_pkg(EntityPkg value);
+
 	/**
 	 * Returns the value of the '<em><b>CREATE SRC src oa arch</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -72,6 +103,72 @@ public interface Oa2Sa_generation__Marker extends EObject, TGGRuleApplication {
 	 * @generated
 	 */
 	void setCREATE__TRG__trg_sa_arch(SystemAnalysis value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg system as component</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg system as component</em>' reference.
+	 * @see #setCREATE__TRG__trg_system_as_component(SystemComponent)
+	 * @see TransitionActors_Oa2Sa.TransitionActors_Oa2SaPackage#getOa2Sa_generation__Marker_CREATE__TRG__trg_system_as_component()
+	 * @model required="true"
+	 * @generated
+	 */
+	SystemComponent getCREATE__TRG__trg_system_as_component();
+
+	/**
+	 * Sets the value of the '{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__TRG__trg_system_as_component <em>CREATE TRG trg system as component</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg system as component</em>' reference.
+	 * @see #getCREATE__TRG__trg_system_as_component()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_system_as_component(SystemComponent value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg system as part</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg system as part</em>' reference.
+	 * @see #setCREATE__TRG__trg_system_as_part(Part)
+	 * @see TransitionActors_Oa2Sa.TransitionActors_Oa2SaPackage#getOa2Sa_generation__Marker_CREATE__TRG__trg_system_as_part()
+	 * @model required="true"
+	 * @generated
+	 */
+	Part getCREATE__TRG__trg_system_as_part();
+
+	/**
+	 * Sets the value of the '{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__TRG__trg_system_as_part <em>CREATE TRG trg system as part</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg system as part</em>' reference.
+	 * @see #getCREATE__TRG__trg_system_as_part()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_system_as_part(Part value);
+
+	/**
+	 * Returns the value of the '<em><b>CREATE TRG trg system component pkg</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CREATE TRG trg system component pkg</em>' reference.
+	 * @see #setCREATE__TRG__trg_system_component_pkg(SystemComponentPkg)
+	 * @see TransitionActors_Oa2Sa.TransitionActors_Oa2SaPackage#getOa2Sa_generation__Marker_CREATE__TRG__trg_system_component_pkg()
+	 * @model required="true"
+	 * @generated
+	 */
+	SystemComponentPkg getCREATE__TRG__trg_system_component_pkg();
+
+	/**
+	 * Sets the value of the '{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker#getCREATE__TRG__trg_system_component_pkg <em>CREATE TRG trg system component pkg</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>CREATE TRG trg system component pkg</em>' reference.
+	 * @see #getCREATE__TRG__trg_system_component_pkg()
+	 * @generated
+	 */
+	void setCREATE__TRG__trg_system_component_pkg(SystemComponentPkg value);
 
 	/**
 	 * Returns the value of the '<em><b>CREATE CORR new oa2sa</b></em>' reference.

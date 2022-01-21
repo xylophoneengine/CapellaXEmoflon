@@ -57,7 +57,10 @@ public class TransitionActors_Oa2SaFactoryImpl extends EFactoryImpl implements T
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case TransitionActors_Oa2SaPackage.OA2_SA: return createOa2Sa();
+			case TransitionActors_Oa2SaPackage.ENTITY2_SYSTEM_COMPONENT: return createEntity2SystemComponent();
 			case TransitionActors_Oa2SaPackage.OA2_SA_GENERATION_MARKER: return createOa2Sa_generation__Marker();
+			case TransitionActors_Oa2SaPackage.OA2_SA_TRANSITION_ACTORS_MARKER: return createOa2Sa_transition_actors__Marker();
+			case TransitionActors_Oa2SaPackage.OA2_SA_TRANSITION_ACTORS_RECURSIVELY_MARKER: return createOa2Sa_transition_actors_recursively__Marker();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -78,9 +81,39 @@ public class TransitionActors_Oa2SaFactoryImpl extends EFactoryImpl implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Entity2SystemComponent createEntity2SystemComponent() {
+		Entity2SystemComponentImpl entity2SystemComponent = new Entity2SystemComponentImpl();
+		return entity2SystemComponent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Oa2Sa_generation__Marker createOa2Sa_generation__Marker() {
 		Oa2Sa_generation__MarkerImpl oa2Sa_generation__Marker = new Oa2Sa_generation__MarkerImpl();
 		return oa2Sa_generation__Marker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Oa2Sa_transition_actors__Marker createOa2Sa_transition_actors__Marker() {
+		Oa2Sa_transition_actors__MarkerImpl oa2Sa_transition_actors__Marker = new Oa2Sa_transition_actors__MarkerImpl();
+		return oa2Sa_transition_actors__Marker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Oa2Sa_transition_actors_recursively__Marker createOa2Sa_transition_actors_recursively__Marker() {
+		Oa2Sa_transition_actors_recursively__MarkerImpl oa2Sa_transition_actors_recursively__Marker = new Oa2Sa_transition_actors_recursively__MarkerImpl();
+		return oa2Sa_transition_actors_recursively__Marker;
 	}
 
 	/**

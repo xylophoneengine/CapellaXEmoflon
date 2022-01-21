@@ -6,12 +6,65 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity2SystemComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponent"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Oa2Sa_generation__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_entity_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//EntityPkg"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_oa_arch"
         lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_sa_arch"
         lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_system_as_component"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_system_as_part"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//Part"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_system_component_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponentPkg"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__new_oa2sa"
         lowerBound="1" eType="ecore:EClass platform:/resource/TransitionActors_Oa2Sa/model/TransitionActors_Oa2Sa.ecore#//Oa2Sa"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Oa2Sa_transition_actors__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__src_entity_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//EntityPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__src_oa_arch"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//OperationalAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_oa_entity"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_oa_part"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//Part"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__trg_componenet_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponentPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__trg_sa_arch"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_sys_component"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_sys_part"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//Part"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__entity2component"
+        lowerBound="1" eType="ecore:EClass platform:/resource/TransitionActors_Oa2Sa/model/TransitionActors_Oa2Sa.ecore#//Entity2SystemComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__oa2sa" lowerBound="1"
+        eType="ecore:EClass platform:/resource/TransitionActors_Oa2Sa/model/TransitionActors_Oa2Sa.ecore#//Oa2Sa"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Oa2Sa_transition_actors_recursively__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_operational_entity"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__src_operational_part"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//Part"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__src_top_level_entity"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__trg_sa_arch"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_system_component"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__trg_system_component_pkg"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore#//SystemComponentPkg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__trg_system_part"
+        lowerBound="1" eType="ecore:EClass platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore#//Part"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__OaEntity2SaSysComponent"
+        lowerBound="1" eType="ecore:EClass platform:/resource/TransitionActors_Oa2Sa/model/TransitionActors_Oa2Sa.ecore#//Entity2SystemComponent"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -6,12 +6,31 @@
 #source { 
 	++ src_oa_arch : oa.OperationalAnalysis{
 		name := "Operational Analysis"
+		++ -ownedEntityPkg -> src_entity_pkg
 	}
+	
+	++ src_entity_pkg : oa.EntityPkg{
+		name := "Operational Entities"
+	}
+	
 }
 
 #target {
 	++ trg_sa_arch : ctx.SystemAnalysis{
 		name:= "System Analysis"
+		++ -ownedSystemComponentPkg -> trg_system_component_pkg
+	}
+	++ trg_system_component_pkg : ctx.SystemComponentPkg{
+		name := "Structure"
+		++ -ownedSystemComponents -> trg_system_as_component
+		++ -ownedParts -> trg_system_as_part
+	}
+	++ trg_system_as_component : ctx.SystemComponent{
+		name := "System"
+	}
+	++ trg_system_as_part : cs.Part{
+		name := "System"
+		++-abstractType->trg_system_as_component
 	}
 }
 

@@ -67,12 +67,13 @@ public class RegisterHelper {
 	
 	public static void main(String[] args) {
 		RegisterHelper reg = new RegisterHelper();
-//		String p_name = "oa_with_different_diagrams/oa_with_different_diagrams.capella";
-		String p_name = "empty_project/empty_project.capella";
-//		String p_name = "user_through_stages/user_through_stages.capella";
-
-		//		String p_name = "ToyCatapult.capella";
-		//String p_name = "In-Flight Entertainment System.capella";
+		String p_name = "oa_with_different_diagrams/oa_with_different_diagrams.capella";
+//		p_name = "empty_project/empty_project.capella";
+//		p_name = "user_through_stages/user_through_stages.capella";
+		//p_name = "ToyCatapult.capella";
+		//p_name = "In-Flight Entertainment System.capella";
+//		p_name =  "oa2ctx_actor_breakdown_diagram_in_oa_and_ctx/oa2ctx_actor_breakdown_diagram_in_oa_and_ctx.capella";
+		p_name = "oa2ctx_actor_breakdown_diagram_in_oa_only/oa2ctx_actor_breakdown_diagrams.capella";
 		ProjectImpl p = reg.loadCapellaFile(instances_path + p_name, "capella");
 		SystemEngineeringImpl se = (SystemEngineeringImpl) p.getOwnedModelRoots().get(0);
 

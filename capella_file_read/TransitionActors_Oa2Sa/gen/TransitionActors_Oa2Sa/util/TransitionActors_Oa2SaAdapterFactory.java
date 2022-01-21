@@ -74,8 +74,20 @@ public class TransitionActors_Oa2SaAdapterFactory extends AdapterFactoryImpl {
 				return createOa2SaAdapter();
 			}
 			@Override
+			public Adapter caseEntity2SystemComponent(Entity2SystemComponent object) {
+				return createEntity2SystemComponentAdapter();
+			}
+			@Override
 			public Adapter caseOa2Sa_generation__Marker(Oa2Sa_generation__Marker object) {
 				return createOa2Sa_generation__MarkerAdapter();
+			}
+			@Override
+			public Adapter caseOa2Sa_transition_actors__Marker(Oa2Sa_transition_actors__Marker object) {
+				return createOa2Sa_transition_actors__MarkerAdapter();
+			}
+			@Override
+			public Adapter caseOa2Sa_transition_actors_recursively__Marker(Oa2Sa_transition_actors_recursively__Marker object) {
+				return createOa2Sa_transition_actors_recursively__MarkerAdapter();
 			}
 			@Override
 			public Adapter caseTGGRuleApplication(TGGRuleApplication object) {
@@ -116,6 +128,20 @@ public class TransitionActors_Oa2SaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link TransitionActors_Oa2Sa.Entity2SystemComponent <em>Entity2 System Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see TransitionActors_Oa2Sa.Entity2SystemComponent
+	 * @generated
+	 */
+	public Adapter createEntity2SystemComponentAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link TransitionActors_Oa2Sa.Oa2Sa_generation__Marker <em>Oa2 Sa generation Marker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -126,6 +152,34 @@ public class TransitionActors_Oa2SaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOa2Sa_generation__MarkerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link TransitionActors_Oa2Sa.Oa2Sa_transition_actors__Marker <em>Oa2 Sa transition actors Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see TransitionActors_Oa2Sa.Oa2Sa_transition_actors__Marker
+	 * @generated
+	 */
+	public Adapter createOa2Sa_transition_actors__MarkerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link TransitionActors_Oa2Sa.Oa2Sa_transition_actors_recursively__Marker <em>Oa2 Sa transition actors recursively Marker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see TransitionActors_Oa2Sa.Oa2Sa_transition_actors_recursively__Marker
+	 * @generated
+	 */
+	public Adapter createOa2Sa_transition_actors_recursively__MarkerAdapter() {
 		return null;
 	}
 
