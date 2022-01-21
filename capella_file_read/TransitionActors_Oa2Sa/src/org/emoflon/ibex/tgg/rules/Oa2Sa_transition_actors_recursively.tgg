@@ -1,0 +1,49 @@
+#using TransitionActors_Oa2Sa.*
+#using AttrCondDefLibrary.*
+
+#rule Oa2Sa_transition_actors_recursively #with TransitionActors_Oa2Sa
+
+#source { 
+	src_top_level_entity : oa.Entity{
+		++ -ownedEntities->src_operational_entity
+		++ -ownedFeatures->src_operational_part
+	}
+	
+	++ src_operational_entity : oa.Entity
+	++ src_operational_part : cs.Part{
+		++-abstractType->src_operational_entity
+	}
+}
+
+#target {
+	trg_sa_arch : ctx.SystemAnalysis{
+		-ownedSystemComponentPkg->trg_system_component_pkg
+	}
+	
+	trg_system_component_pkg : ctx.SystemComponentPkg{
+		++ -ownedSystemComponents -> trg_system_component
+		++ -ownedParts -> trg_system_part
+	}
+	
+	++ trg_system_component : ctx.SystemComponent
+	
+	++ trg_system_part : cs.Part{
+		++ -abstractType -> trg_system_component
+	}
+}
+
+#correspondence {
+	++ OaEntity2SaSysComponent : Entity2SystemComponent{
+		#src-> src_operational_entity
+		#trg-> trg_system_component
+	}
+}
+
+#attributeConditions {
+	//context
+	eq_string(trg_sa_arch.name, "System Analysis")
+	eq_string(trg_system_component_pkg.name, "Structure")
+	//green
+	eq_string(src_operational_entity.name, src_operational_part.name)
+	eq_string(trg_system_component.name, trg_system_part.name)
+}

@@ -1,0 +1,27 @@
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/OperationalAnalysis.ecore"
+#import "platform:/resource/org.polarsys.capella.core.data.gen/model/ContextArchitecture.ecore"
+//#import "platform:/resource/org.polarsys.capella.core.data.gen/model/Information.ecore"
+//#import "platform:/resource/org.polarsys.capella.core.data.gen/model/CompositeStructure.ecore"
+//#import "platform:/resource/org.polarsys.capella.core.data.gen/model/CapellaCore.ecore"
+//#import "platform:/resource/org.polarsys.capella.core.data.gen/model/FunctionalAnalysis.ecore"
+
+#schema TransitionActors_Oa2Sa
+	
+#source {
+	oa
+}
+
+#target {
+	ctx
+} 
+
+#correspondence {
+	Oa2Sa{
+		#src-> oa.OperationalAnalysis
+		#trg-> ctx.SystemAnalysis
+	}
+}
+
+#attributeConditions {
+	
+}
