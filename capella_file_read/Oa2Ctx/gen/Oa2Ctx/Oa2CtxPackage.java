@@ -123,13 +123,22 @@ public interface Oa2CtxPackage extends EPackage {
 	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__PROTOCOL = RuntimePackage.TGG_RULE_APPLICATION__PROTOCOL;
 
 	/**
+	 * The feature id for the '<em><b>CREATE SRC src operational capabilities</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OPERATIONAL_CAPABILITIES = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 0;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>CREATE SRC src data pkg</b></em>' reference.
@@ -138,7 +147,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_DATA_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 1;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_DATA_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>CREATE SRC src entity pkg</b></em>' reference.
@@ -147,7 +156,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ENTITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 2;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ENTITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>CREATE SRC src function pkg</b></em>' reference.
@@ -156,7 +165,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_FUNCTION_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 3;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_FUNCTION_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>CREATE SRC src interface pkg</b></em>' reference.
@@ -165,7 +174,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_INTERFACE_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 4;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_INTERFACE_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>CREATE SRC src oa arch</b></em>' reference.
@@ -174,7 +183,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 5;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OA_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>CREATE SRC src role pkg</b></em>' reference.
@@ -183,7 +192,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ROLE_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 6;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ROLE_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG bool literal false</b></em>' reference.
@@ -192,7 +201,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BOOL_LITERAL_FALSE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 7;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BOOL_LITERAL_FALSE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG bool literal true</b></em>' reference.
@@ -201,7 +210,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BOOL_LITERAL_TRUE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 8;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BOOL_LITERAL_TRUE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG byte literal max val</b></em>' reference.
@@ -210,7 +219,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BYTE_LITERAL_MAX_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 9;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BYTE_LITERAL_MAX_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG byte literal min val</b></em>' reference.
@@ -219,7 +228,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BYTE_LITERAL_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 10;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_BYTE_LITERAL_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG char literal max length</b></em>' reference.
@@ -228,7 +237,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_CHAR_LITERAL_MAX_LENGTH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 11;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_CHAR_LITERAL_MAX_LENGTH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG char literal min length</b></em>' reference.
@@ -237,7 +246,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_CHAR_LITERAL_MIN_LENGTH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 12;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_CHAR_LITERAL_MIN_LENGTH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG hex literal max val</b></em>' reference.
@@ -246,7 +255,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 13;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG hex literal max val left operand</b></em>' reference.
@@ -255,7 +264,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 14;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG hex literal max val left operand left operand</b></em>' reference.
@@ -264,7 +273,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND_LEFT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 15;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND_LEFT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG hex literal max val left operand right operand</b></em>' reference.
@@ -273,7 +282,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND_RIGHT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 16;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_LEFT_OPERAND_RIGHT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG hex literal max val right operand</b></em>' reference.
@@ -282,7 +291,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_RIGHT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 17;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MAX_VAL_RIGHT_OPERAND = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG hex literal min val</b></em>' reference.
@@ -291,7 +300,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 18;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_HEX_LITERAL_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg abstract capability pkg</b></em>' reference.
@@ -300,7 +309,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 19;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_ABSTRACT_CAPABILITY_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg ctx arch</b></em>' reference.
@@ -309,7 +318,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 20;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_CTX_ARCH = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg data pkg</b></em>' reference.
@@ -318,7 +327,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DATA_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 21;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DATA_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg dt boolean</b></em>' reference.
@@ -327,7 +336,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_BOOLEAN = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 22;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_BOOLEAN = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg dt byte</b></em>' reference.
@@ -336,7 +345,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_BYTE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 23;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_BYTE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg dt char</b></em>' reference.
@@ -345,7 +354,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_CHAR = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 24;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_CHAR = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 25;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg dt data pkg</b></em>' reference.
@@ -354,7 +363,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_DATA_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 25;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_DATA_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 26;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg dt double</b></em>' reference.
@@ -363,7 +372,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_DOUBLE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 26;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_DOUBLE = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 27;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg dt float</b></em>' reference.
@@ -372,7 +381,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_FLOAT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 27;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_FLOAT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 28;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg dt hex</b></em>' reference.
@@ -381,7 +390,88 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 28;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 29;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt integer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_INTEGER = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 30;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt long</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 31;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt longlong</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONGLONG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 32;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt short</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_SHORT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 33;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt string</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_STRING = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 34;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt unsigned integer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_INTEGER = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 35;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt unsigned long</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 36;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt unsigned longlong</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONGLONG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 37;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG trg dt unsigned short</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_SHORT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 38;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg function pkg</b></em>' reference.
@@ -390,7 +480,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_FUNCTION_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 29;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_FUNCTION_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 39;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg interface pkg</b></em>' reference.
@@ -399,7 +489,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_INTERFACE_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 30;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_INTERFACE_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 40;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg mission pkg</b></em>' reference.
@@ -408,7 +498,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_MISSION_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 31;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_MISSION_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 41;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg oa realization</b></em>' reference.
@@ -417,7 +507,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_OA_REALIZATION = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 32;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_OA_REALIZATION = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 42;
 
 	/**
 	 * The feature id for the '<em><b>CREATE TRG trg system comp pkg</b></em>' reference.
@@ -426,7 +516,43 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 33;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 43;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG unsigned int min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_INT_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 44;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG unsigned long min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONG_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 45;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG unsigned longlong min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONGLONG_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 46;
+
+	/**
+	 * The feature id for the '<em><b>CREATE TRG unsigned short min val</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_SHORT_MIN_VAL = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 47;
 
 	/**
 	 * The feature id for the '<em><b>CREATE CORR oa2ctx</b></em>' reference.
@@ -435,7 +561,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 34;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_CORR_OA2CTX = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 48;
 
 	/**
 	 * The number of structural features of the '<em>Initial Model Creation owned Data Pkg Marker</em>' class.
@@ -444,7 +570,7 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 35;
+	int INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER_FEATURE_COUNT = RuntimePackage.TGG_RULE_APPLICATION_FEATURE_COUNT + 49;
 
 	/**
 	 * The number of operations of the '<em>Initial Model Creation owned Data Pkg Marker</em>' class.
@@ -937,6 +1063,17 @@ public interface Oa2CtxPackage extends EPackage {
 	EClass getInitialModelCreation_ownedDataPkg__Marker();
 
 	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src__operational_capabilities <em>CREATE SRC src operational capabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE SRC src operational capabilities</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src__operational_capabilities()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src__operational_capabilities();
+
+	/**
 	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1256,6 +1393,105 @@ public interface Oa2CtxPackage extends EPackage {
 	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_hex();
 
 	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_integer <em>CREATE TRG trg dt integer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt integer</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_integer()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_integer();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_long <em>CREATE TRG trg dt long</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt long</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_long()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_long();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_longlong <em>CREATE TRG trg dt longlong</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt longlong</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_longlong()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_longlong();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_short <em>CREATE TRG trg dt short</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt short</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_short()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_short();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_string <em>CREATE TRG trg dt string</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt string</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_string()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_string();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_integer <em>CREATE TRG trg dt unsigned integer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt unsigned integer</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_integer()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_integer();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_long <em>CREATE TRG trg dt unsigned long</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt unsigned long</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_long()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_long();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_longlong <em>CREATE TRG trg dt unsigned longlong</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt unsigned longlong</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_longlong()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_longlong();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_short <em>CREATE TRG trg dt unsigned short</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG trg dt unsigned short</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_dt_unsigned_short()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_short();
+
+	/**
 	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__trg_function_pkg <em>CREATE TRG trg function pkg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1309,6 +1545,50 @@ public interface Oa2CtxPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_system_comp_pkg();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_int_min_val <em>CREATE TRG unsigned int min val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG unsigned int min val</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_int_min_val()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_int_min_val();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_long_min_val <em>CREATE TRG unsigned long min val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG unsigned long min val</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_long_min_val()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_long_min_val();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_longlong_min_val <em>CREATE TRG unsigned longlong min val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG unsigned longlong min val</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_longlong_min_val()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_longlong_min_val();
+
+	/**
+	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_short_min_val <em>CREATE TRG unsigned short min val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>CREATE TRG unsigned short min val</em>'.
+	 * @see Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__TRG__unsigned_short_min_val()
+	 * @see #getInitialModelCreation_ownedDataPkg__Marker()
+	 * @generated
+	 */
+	EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_short_min_val();
 
 	/**
 	 * Returns the meta object for the reference '{@link Oa2Ctx.InitialModelCreation_ownedDataPkg__Marker#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}'.
@@ -1705,6 +1985,14 @@ public interface Oa2CtxPackage extends EPackage {
 		EClass INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker();
 
 		/**
+		 * The meta object literal for the '<em><b>CREATE SRC src operational capabilities</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OPERATIONAL_CAPABILITIES = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src__operational_capabilities();
+
+		/**
 		 * The meta object literal for the '<em><b>CREATE SRC src abstract capability pkg</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1937,6 +2225,78 @@ public interface Oa2CtxPackage extends EPackage {
 		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_hex();
 
 		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt integer</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_INTEGER = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_integer();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt long</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_long();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt longlong</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONGLONG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_longlong();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt short</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_SHORT = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_short();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt string</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_STRING = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_string();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt unsigned integer</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_INTEGER = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_integer();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt unsigned long</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_long();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt unsigned longlong</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONGLONG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_longlong();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG trg dt unsigned short</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_SHORT = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_short();
+
+		/**
 		 * The meta object literal for the '<em><b>CREATE TRG trg function pkg</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1975,6 +2335,38 @@ public interface Oa2CtxPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_system_comp_pkg();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG unsigned int min val</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_INT_MIN_VAL = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_int_min_val();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG unsigned long min val</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONG_MIN_VAL = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_long_min_val();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG unsigned longlong min val</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONGLONG_MIN_VAL = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_longlong_min_val();
+
+		/**
+		 * The meta object literal for the '<em><b>CREATE TRG unsigned short min val</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_SHORT_MIN_VAL = eINSTANCE.getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_short_min_val();
 
 		/**
 		 * The meta object literal for the '<em><b>CREATE CORR oa2ctx</b></em>' reference feature.

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<org.polarsys.capella.core.data.oa:OperationalAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/5.0.0" id="4c38818e-2dc0-44b2-a538-e2e285babae4" name="Operational Analysis">
-  <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg" id="eefe15d5-65f6-4457-a963-07aef7f80ca0" name="Operational Activities"/>
-  <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg" id="b9a68566-81b8-42a5-9f2e-25ed87b889e1" name="Operational Capabilities"/>
-  <ownedInterfacePkg id="882b081e-003b-4f5a-88f0-95c76aeeaf6f" name="Interfaces"/>
-  <ownedDataPkg id="6c3592fc-f245-4ed9-9b02-2c62d8997431" name="Data"/>
-  <ownedRolePkg id="73d742be-7b09-4241-b09b-f0600ecc73d1" name="Roles"/>
-  <ownedEntityPkg id="2e840050-1374-4d66-b5c4-3d5ed482d0d7" name="Operational Entities"/>
-</org.polarsys.capella.core.data.oa:OperationalAnalysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/5.0.0">
+  <org.polarsys.capella.core.data.oa:OperationalActivity id="028cf470-31c4-405c-9cce-c44ec64b07fa" name="Root Operational Activity"/>
+  <org.polarsys.capella.core.data.oa:OperationalAnalysis id="4071a293-0bdd-405e-a763-b2654b65a337" name="Operational Analysis">
+    <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg" id="ff8a556f-c9ab-4561-aefd-08ae12c056ac" name="Operational Activities"/>
+    <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg" id="cbfa980d-738e-4dcf-95a8-7e18eab95b71" name="Operational Capabilities"/>
+    <ownedInterfacePkg id="6cf54d49-2b43-4310-a6a1-a26d8828c00b" name="Interfaces"/>
+    <ownedDataPkg id="80be2901-75af-43e5-a3f6-2da8ac341737" name="Data"/>
+    <ownedRolePkg id="567061ca-f4db-4bec-88e3-10e62275839a" name="Roles"/>
+    <ownedEntityPkg id="183833b5-18d2-45ed-b9e1-327fbd81a673" name="Operational Entities"/>
+  </org.polarsys.capella.core.data.oa:OperationalAnalysis>
+</xmi:XMI>

@@ -26,6 +26,7 @@ import org.polarsys.capella.core.data.information.datavalue.LiteralBooleanValue;
 import org.polarsys.capella.core.data.information.datavalue.LiteralNumericValue;
 
 import org.polarsys.capella.core.data.oa.EntityPkg;
+import org.polarsys.capella.core.data.oa.OperationalActivity;
 import org.polarsys.capella.core.data.oa.OperationalActivityPkg;
 import org.polarsys.capella.core.data.oa.OperationalAnalysis;
 import org.polarsys.capella.core.data.oa.OperationalCapabilityPkg;
@@ -40,6 +41,7 @@ import org.polarsys.capella.core.data.oa.RolePkg;
 public interface InitialModelCreation_ownedDataPkg__MarkerValidator {
 	boolean validate();
 
+	boolean validateCREATE__SRC__src__operational_capabilities(OperationalActivity value);
 	boolean validateCREATE__SRC__src_abstract_capability_pkg(OperationalCapabilityPkg value);
 	boolean validateCREATE__SRC__src_data_pkg(DataPkg value);
 	boolean validateCREATE__SRC__src_entity_pkg(EntityPkg value);
@@ -69,10 +71,23 @@ public interface InitialModelCreation_ownedDataPkg__MarkerValidator {
 	boolean validateCREATE__TRG__trg_dt_double(NumericType value);
 	boolean validateCREATE__TRG__trg_dt_float(NumericType value);
 	boolean validateCREATE__TRG__trg_dt_hex(NumericType value);
+	boolean validateCREATE__TRG__trg_dt_integer(NumericType value);
+	boolean validateCREATE__TRG__trg_dt_long(NumericType value);
+	boolean validateCREATE__TRG__trg_dt_longlong(NumericType value);
+	boolean validateCREATE__TRG__trg_dt_short(NumericType value);
+	boolean validateCREATE__TRG__trg_dt_string(StringType value);
+	boolean validateCREATE__TRG__trg_dt_unsigned_integer(NumericType value);
+	boolean validateCREATE__TRG__trg_dt_unsigned_long(NumericType value);
+	boolean validateCREATE__TRG__trg_dt_unsigned_longlong(NumericType value);
+	boolean validateCREATE__TRG__trg_dt_unsigned_short(NumericType value);
 	boolean validateCREATE__TRG__trg_function_pkg(SystemFunctionPkg value);
 	boolean validateCREATE__TRG__trg_interface_pkg(InterfacePkg value);
 	boolean validateCREATE__TRG__trg_mission_pkg(MissionPkg value);
 	boolean validateCREATE__TRG__trg_oa_realization(OperationalAnalysisRealization value);
 	boolean validateCREATE__TRG__trg_system_comp_pkg(SystemComponentPkg value);
+	boolean validateCREATE__TRG__unsigned_int_min_val(LiteralNumericValue value);
+	boolean validateCREATE__TRG__unsigned_long_min_val(LiteralNumericValue value);
+	boolean validateCREATE__TRG__unsigned_longlong_min_val(LiteralNumericValue value);
+	boolean validateCREATE__TRG__unsigned_short_min_val(LiteralNumericValue value);
 	boolean validateCREATE__CORR__oa2ctx(OperationalAnalysis2SystemAnalysis value);
 }

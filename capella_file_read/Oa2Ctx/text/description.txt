@@ -12,6 +12,7 @@ Package Oa2Ctx <platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore>
     Reference target : SystemAnalysis
 
   Class InitialModelCreation_ownedDataPkg__Marker -> TGGRuleApplication
+    Reference CREATE__SRC__src__operational_capabilities : OperationalActivity<<1..1>>
     Reference CREATE__SRC__src_abstract_capability_pkg : OperationalCapabilityPkg<<1..1>>
     Reference CREATE__SRC__src_data_pkg : DataPkg<<1..1>>
     Reference CREATE__SRC__src_entity_pkg : EntityPkg<<1..1>>
@@ -41,11 +42,24 @@ Package Oa2Ctx <platform:/resource/Oa2Ctx/model/Oa2Ctx.ecore>
     Reference CREATE__TRG__trg_dt_double : NumericType<<1..1>>
     Reference CREATE__TRG__trg_dt_float : NumericType<<1..1>>
     Reference CREATE__TRG__trg_dt_hex : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_integer : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_long : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_longlong : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_short : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_string : StringType<<1..1>>
+    Reference CREATE__TRG__trg_dt_unsigned_integer : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_unsigned_long : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_unsigned_longlong : NumericType<<1..1>>
+    Reference CREATE__TRG__trg_dt_unsigned_short : NumericType<<1..1>>
     Reference CREATE__TRG__trg_function_pkg : SystemFunctionPkg<<1..1>>
     Reference CREATE__TRG__trg_interface_pkg : InterfacePkg<<1..1>>
     Reference CREATE__TRG__trg_mission_pkg : MissionPkg<<1..1>>
     Reference CREATE__TRG__trg_oa_realization : OperationalAnalysisRealization<<1..1>>
     Reference CREATE__TRG__trg_system_comp_pkg : SystemComponentPkg<<1..1>>
+    Reference CREATE__TRG__unsigned_int_min_val : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__unsigned_long_min_val : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__unsigned_longlong_min_val : LiteralNumericValue<<1..1>>
+    Reference CREATE__TRG__unsigned_short_min_val : LiteralNumericValue<<1..1>>
     Reference CREATE__CORR__oa2ctx : OperationalAnalysis2SystemAnalysis<<1..1>>
 
   Class Oa2Sa_create_nodes_and_try_to_set_reference__Marker -> TGGRuleApplication

@@ -4,7 +4,14 @@
 #rule InitialModelCreation_ownedDataPkg  #extends InitialModelCreation #with Oa2Ctx
 
 #source { 
-	++src_oa_arch : oa.OperationalAnalysis
+	++src_oa_arch : oa.OperationalAnalysis{
+		++ -ownedDataPkg -> src_data_pkg
+	}
+	
+	++ src_data_pkg : information.DataPkg{
+		name := "Data"
+		visibility := enum::capellacore.VisibilityKind::UNSET
+	}
 }
 
 #target {
@@ -14,17 +21,29 @@
 	}
 	
 	++ trg_data_pkg : information.DataPkg{
+		name := "Data"
+		visibility := enum::capellacore.VisibilityKind::UNSET
 		++ -ownedDataPkgs -> trg_dt_data_pkg
 	}
 	
 	++ trg_dt_data_pkg : information.DataPkg{
-		name := "Predefined"
+		name := "Predefined Types"
+		visibility := enum::capellacore.VisibilityKind::UNSET
 		++ -ownedDataTypes -> trg_dt_boolean
 		++ -ownedDataTypes -> trg_dt_byte
 		++ -ownedDataTypes -> trg_dt_char
 		++ -ownedDataTypes -> trg_dt_double
 		++ -ownedDataTypes -> trg_dt_float
 		++ -ownedDataTypes -> trg_dt_hex
+		++ -ownedDataTypes -> trg_dt_integer
+		++ -ownedDataTypes -> trg_dt_long
+		++ -ownedDataTypes -> trg_dt_longlong
+		++ -ownedDataTypes -> trg_dt_short
+		++ -ownedDataTypes -> trg_dt_string
+		++ -ownedDataTypes -> trg_dt_unsigned_integer
+		++ -ownedDataTypes -> trg_dt_unsigned_short
+		++ -ownedDataTypes -> trg_dt_unsigned_long
+		++ -ownedDataTypes -> trg_dt_unsigned_longlong
 	}
 
 /*
@@ -33,16 +52,19 @@
  
 	++ trg_dt_boolean : information.datatype.BooleanType{
 		name := "Boolean"
+		discrete := true
 		visibility := enum::capellacore.VisibilityKind::PUBLIC
 		++ -ownedLiterals -> bool_literal_false
 		++ -ownedLiterals -> bool_literal_true
 	}
 	++ bool_literal_true : information.datavalue.LiteralBooleanValue{
 		name := "True"
+		value := true
 		++ -abstractType -> trg_dt_boolean
 	}
 	++ bool_literal_false : information.datavalue.LiteralBooleanValue{
 		name := "False"
+		value := false
 		++ -abstractType -> trg_dt_boolean
 	}
 
@@ -53,18 +75,19 @@
 	++ trg_dt_byte : information.datatype.NumericType{
 		name := "Byte"
 		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		discrete := true
 		visibility := enum::capellacore.VisibilityKind::PUBLIC
 		++ -ownedMaxValue -> byte_literal_max_val
 		++ -ownedMinValue -> byte_literal_min_val
 	}
 	++ byte_literal_max_val : information.datavalue.LiteralNumericValue{
 		name := ""
-		value := 255
+		value := "255"
 		++ -abstractType -> trg_dt_byte
 	}
 	++ byte_literal_min_val : information.datavalue.LiteralNumericValue{
 		name := ""
-		value := 0
+		value := "0"
 		++ -abstractType -> trg_dt_byte
 	}
 	
@@ -74,6 +97,7 @@
 
 	++ trg_dt_char : information.datatype.StringType{
 		name := "Char"
+		discrete := true
 		visibility := enum::capellacore.VisibilityKind::PUBLIC
 		++ -ownedMinLength -> char_literal_min_length
 		++ -ownedMaxLength -> char_literal_max_length
@@ -81,14 +105,14 @@
 
 	++ char_literal_min_length : information.datavalue.LiteralNumericValue{
 		name := ""
-		value := 1
-		//TODO add abstracttype which is "UnsignedShort"
+		value := "1"
+		++ -abstractType -> trg_dt_unsigned_short
 	}
 	
 	++ char_literal_max_length : information.datavalue.LiteralNumericValue{
 		name := ""
-		value := 1
-		//TODO add abstracttype which is "UnsignedShort"
+		value := "1"
+		++ -abstractType -> trg_dt_unsigned_short
 	}
 	
 /*
@@ -97,6 +121,7 @@
 
 	++ trg_dt_double : information.datatype.NumericType{
 		name := "Double"
+		discrete := false
 		kind := enum::information.datatype.NumericTypeKind::FLOAT
 		visibility := enum::capellacore.VisibilityKind::PUBLIC
 	}
@@ -107,6 +132,7 @@
  
 	++ trg_dt_float : information.datatype.NumericType{
 		name := "Float"
+		discrete := false
 		kind := enum::information.datatype.NumericTypeKind::FLOAT
 		visibility := enum::capellacore.VisibilityKind::PUBLIC
 	}
@@ -118,6 +144,7 @@
 	++ trg_dt_hex : information.datatype.NumericType{
 		name := "Hexadecimal"
 		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		discrete := true
 		visibility := enum::capellacore.VisibilityKind::PUBLIC
 		++ - ownedMaxValue -> hex_literal_max_val
 		++ - ownedMinValue -> hex_literal_min_val
@@ -139,23 +166,148 @@
 		++ -ownedRightOperand -> hex_literal_max_val_left_operand_right_operand
 	}
 	++hex_literal_max_val_left_operand_left_operand : information.datavalue.LiteralNumericValue{
-		value := 2
+		value := "2"
 	}
 	++hex_literal_max_val_left_operand_right_operand : information.datavalue.LiteralNumericValue{
-		value := 64
+		value := "64"
 	}
 	++hex_literal_max_val_right_operand : information.datavalue.LiteralNumericValue{
-		value := 1
+		value := "1"
 	}
 	
 	//min value
 
 	++ hex_literal_min_val : information.datavalue.LiteralNumericValue{
 		name := ""
-		value := 0
+		value := "0"
 		++ -abstractType -> trg_dt_hex
 	}
+
+/*
+ * Integer predefined type
+ */
+
+	++ trg_dt_integer : information.datatype.NumericType{
+		name := "Integer"
+		discrete := true
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+	}
+
+/*
+ * Long predefined type
+ */
+
+	++ trg_dt_long : information.datatype.NumericType{
+		name := "Long"
+		discrete := true
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+	}
+
+/*
+ * LongLong predefined type
+ */
+
+	++ trg_dt_longlong : information.datatype.NumericType{
+		name := "LongLong"
+		discrete := true
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+	}
+
+/*
+ * Short predefined type
+ */
+
+	++ trg_dt_short : information.datatype.NumericType{
+		name := "Short"
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		discrete := true
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+	}
+
+/*
+ * String predefined type
+ */
 	
+	++ trg_dt_string : information.datatype.StringType{
+		name := "String"
+		discrete := true
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+	}
+
+/*
+ * UnsignedInteger predefined type
+ */
+
+	++ trg_dt_unsigned_integer : information.datatype.NumericType{
+		name := "UnsignedInteger"
+		discrete := true
+		maxInclusive := false
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		++ -ownedMinValue -> unsigned_int_min_val
+	}
+	++ unsigned_int_min_val : information.datavalue.LiteralNumericValue{
+		name := ""
+		value := "0"
+		++ -abstractType -> trg_dt_unsigned_integer
+	}
+
+/*
+ * UnsignedShort predefined type
+ */
+
+	++ trg_dt_unsigned_short : information.datatype.NumericType{
+		name := "UnsignedShort"
+		discrete := true
+		maxInclusive := false
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		++ -ownedMinValue -> unsigned_short_min_val
+	}
+	++ unsigned_short_min_val : information.datavalue.LiteralNumericValue{
+		name := ""
+		value := "0"
+		++ -abstractType -> trg_dt_unsigned_short
+	}
+
+/*
+ * UnsignedLong predefined type
+ */
+
+	++ trg_dt_unsigned_long : information.datatype.NumericType{
+		name := "UnsignedLong"
+		discrete := true
+		maxInclusive := false
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		++ -ownedMinValue -> unsigned_long_min_val
+	}
+	++ unsigned_long_min_val : information.datavalue.LiteralNumericValue{
+		name := ""
+		value := "0"
+		++ -abstractType -> trg_dt_unsigned_long
+	}
+
+/*
+ * UnsignedLongLong predefined type
+ */
+
+	++ trg_dt_unsigned_longlong : information.datatype.NumericType{
+		name := "UnsignedLongLong"
+		discrete := true
+		maxInclusive := false
+		visibility := enum::capellacore.VisibilityKind::PUBLIC
+		kind := enum::information.datatype.NumericTypeKind::INTEGER
+		++ -ownedMinValue -> unsigned_longlong_min_val
+	}
+	++ unsigned_longlong_min_val : information.datavalue.LiteralNumericValue{
+		name := ""
+		value := "0"
+		++ -abstractType -> trg_dt_unsigned_longlong
+	}
 }
 
 #correspondence {

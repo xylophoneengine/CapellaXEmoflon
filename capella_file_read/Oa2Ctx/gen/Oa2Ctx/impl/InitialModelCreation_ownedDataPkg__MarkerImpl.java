@@ -33,6 +33,7 @@ import org.polarsys.capella.core.data.information.datavalue.LiteralBooleanValue;
 import org.polarsys.capella.core.data.information.datavalue.LiteralNumericValue;
 
 import org.polarsys.capella.core.data.oa.EntityPkg;
+import org.polarsys.capella.core.data.oa.OperationalActivity;
 import org.polarsys.capella.core.data.oa.OperationalActivityPkg;
 import org.polarsys.capella.core.data.oa.OperationalAnalysis;
 import org.polarsys.capella.core.data.oa.OperationalCapabilityPkg;
@@ -48,6 +49,7 @@ import runtime.impl.TGGRuleApplicationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__SRC__src__operational_capabilities <em>CREATE SRC src operational capabilities</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__SRC__src_abstract_capability_pkg <em>CREATE SRC src abstract capability pkg</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__SRC__src_data_pkg <em>CREATE SRC src data pkg</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__SRC__src_entity_pkg <em>CREATE SRC src entity pkg</em>}</li>
@@ -77,17 +79,40 @@ import runtime.impl.TGGRuleApplicationImpl;
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_double <em>CREATE TRG trg dt double</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_float <em>CREATE TRG trg dt float</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_hex <em>CREATE TRG trg dt hex</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_integer <em>CREATE TRG trg dt integer</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_long <em>CREATE TRG trg dt long</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_longlong <em>CREATE TRG trg dt longlong</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_short <em>CREATE TRG trg dt short</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_string <em>CREATE TRG trg dt string</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_unsigned_integer <em>CREATE TRG trg dt unsigned integer</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_unsigned_long <em>CREATE TRG trg dt unsigned long</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_unsigned_longlong <em>CREATE TRG trg dt unsigned longlong</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_dt_unsigned_short <em>CREATE TRG trg dt unsigned short</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_function_pkg <em>CREATE TRG trg function pkg</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_interface_pkg <em>CREATE TRG trg interface pkg</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_mission_pkg <em>CREATE TRG trg mission pkg</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_oa_realization <em>CREATE TRG trg oa realization</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__trg_system_comp_pkg <em>CREATE TRG trg system comp pkg</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__unsigned_int_min_val <em>CREATE TRG unsigned int min val</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__unsigned_long_min_val <em>CREATE TRG unsigned long min val</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__unsigned_longlong_min_val <em>CREATE TRG unsigned longlong min val</em>}</li>
+ *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__TRG__unsigned_short_min_val <em>CREATE TRG unsigned short min val</em>}</li>
  *   <li>{@link Oa2Ctx.impl.InitialModelCreation_ownedDataPkg__MarkerImpl#getCREATE__CORR__oa2ctx <em>CREATE CORR oa2ctx</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplicationImpl implements InitialModelCreation_ownedDataPkg__Marker {
+	/**
+	 * The cached value of the '{@link #getCREATE__SRC__src__operational_capabilities() <em>CREATE SRC src operational capabilities</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__SRC__src__operational_capabilities()
+	 * @generated
+	 * @ordered
+	 */
+	protected OperationalActivity creatE__SRC__src__operational_capabilities;
+
 	/**
 	 * The cached value of the '{@link #getCREATE__SRC__src_abstract_capability_pkg() <em>CREATE SRC src abstract capability pkg</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -379,6 +404,96 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 	protected NumericType creatE__TRG__trg_dt_hex;
 
 	/**
+	 * The cached value of the '{@link #getCREATE__TRG__trg_dt_integer() <em>CREATE TRG trg dt integer</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__trg_dt_integer()
+	 * @generated
+	 * @ordered
+	 */
+	protected NumericType creatE__TRG__trg_dt_integer;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__trg_dt_long() <em>CREATE TRG trg dt long</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__trg_dt_long()
+	 * @generated
+	 * @ordered
+	 */
+	protected NumericType creatE__TRG__trg_dt_long;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__trg_dt_longlong() <em>CREATE TRG trg dt longlong</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__trg_dt_longlong()
+	 * @generated
+	 * @ordered
+	 */
+	protected NumericType creatE__TRG__trg_dt_longlong;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__trg_dt_short() <em>CREATE TRG trg dt short</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__trg_dt_short()
+	 * @generated
+	 * @ordered
+	 */
+	protected NumericType creatE__TRG__trg_dt_short;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__trg_dt_string() <em>CREATE TRG trg dt string</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__trg_dt_string()
+	 * @generated
+	 * @ordered
+	 */
+	protected StringType creatE__TRG__trg_dt_string;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__trg_dt_unsigned_integer() <em>CREATE TRG trg dt unsigned integer</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__trg_dt_unsigned_integer()
+	 * @generated
+	 * @ordered
+	 */
+	protected NumericType creatE__TRG__trg_dt_unsigned_integer;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__trg_dt_unsigned_long() <em>CREATE TRG trg dt unsigned long</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__trg_dt_unsigned_long()
+	 * @generated
+	 * @ordered
+	 */
+	protected NumericType creatE__TRG__trg_dt_unsigned_long;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__trg_dt_unsigned_longlong() <em>CREATE TRG trg dt unsigned longlong</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__trg_dt_unsigned_longlong()
+	 * @generated
+	 * @ordered
+	 */
+	protected NumericType creatE__TRG__trg_dt_unsigned_longlong;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__trg_dt_unsigned_short() <em>CREATE TRG trg dt unsigned short</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__trg_dt_unsigned_short()
+	 * @generated
+	 * @ordered
+	 */
+	protected NumericType creatE__TRG__trg_dt_unsigned_short;
+
+	/**
 	 * The cached value of the '{@link #getCREATE__TRG__trg_function_pkg() <em>CREATE TRG trg function pkg</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -429,6 +544,46 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 	protected SystemComponentPkg creatE__TRG__trg_system_comp_pkg;
 
 	/**
+	 * The cached value of the '{@link #getCREATE__TRG__unsigned_int_min_val() <em>CREATE TRG unsigned int min val</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__unsigned_int_min_val()
+	 * @generated
+	 * @ordered
+	 */
+	protected LiteralNumericValue creatE__TRG__unsigned_int_min_val;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__unsigned_long_min_val() <em>CREATE TRG unsigned long min val</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__unsigned_long_min_val()
+	 * @generated
+	 * @ordered
+	 */
+	protected LiteralNumericValue creatE__TRG__unsigned_long_min_val;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__unsigned_longlong_min_val() <em>CREATE TRG unsigned longlong min val</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__unsigned_longlong_min_val()
+	 * @generated
+	 * @ordered
+	 */
+	protected LiteralNumericValue creatE__TRG__unsigned_longlong_min_val;
+
+	/**
+	 * The cached value of the '{@link #getCREATE__TRG__unsigned_short_min_val() <em>CREATE TRG unsigned short min val</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCREATE__TRG__unsigned_short_min_val()
+	 * @generated
+	 * @ordered
+	 */
+	protected LiteralNumericValue creatE__TRG__unsigned_short_min_val;
+
+	/**
 	 * The cached value of the '{@link #getCREATE__CORR__oa2ctx() <em>CREATE CORR oa2ctx</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -455,6 +610,44 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 	@Override
 	protected EClass eStaticClass() {
 		return Oa2CtxPackage.Literals.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperationalActivity getCREATE__SRC__src__operational_capabilities() {
+		if (creatE__SRC__src__operational_capabilities != null && creatE__SRC__src__operational_capabilities.eIsProxy()) {
+			InternalEObject oldCREATE__SRC__src__operational_capabilities = (InternalEObject)creatE__SRC__src__operational_capabilities;
+			creatE__SRC__src__operational_capabilities = (OperationalActivity)eResolveProxy(oldCREATE__SRC__src__operational_capabilities);
+			if (creatE__SRC__src__operational_capabilities != oldCREATE__SRC__src__operational_capabilities) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OPERATIONAL_CAPABILITIES, oldCREATE__SRC__src__operational_capabilities, creatE__SRC__src__operational_capabilities));
+			}
+		}
+		return creatE__SRC__src__operational_capabilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperationalActivity basicGetCREATE__SRC__src__operational_capabilities() {
+		return creatE__SRC__src__operational_capabilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__SRC__src__operational_capabilities(OperationalActivity newCREATE__SRC__src__operational_capabilities) {
+		OperationalActivity oldCREATE__SRC__src__operational_capabilities = creatE__SRC__src__operational_capabilities;
+		creatE__SRC__src__operational_capabilities = newCREATE__SRC__src__operational_capabilities;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OPERATIONAL_CAPABILITIES, oldCREATE__SRC__src__operational_capabilities, creatE__SRC__src__operational_capabilities));
 	}
 
 	/**
@@ -1564,6 +1757,348 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NumericType getCREATE__TRG__trg_dt_integer() {
+		if (creatE__TRG__trg_dt_integer != null && creatE__TRG__trg_dt_integer.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__trg_dt_integer = (InternalEObject)creatE__TRG__trg_dt_integer;
+			creatE__TRG__trg_dt_integer = (NumericType)eResolveProxy(oldCREATE__TRG__trg_dt_integer);
+			if (creatE__TRG__trg_dt_integer != oldCREATE__TRG__trg_dt_integer) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_INTEGER, oldCREATE__TRG__trg_dt_integer, creatE__TRG__trg_dt_integer));
+			}
+		}
+		return creatE__TRG__trg_dt_integer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType basicGetCREATE__TRG__trg_dt_integer() {
+		return creatE__TRG__trg_dt_integer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__trg_dt_integer(NumericType newCREATE__TRG__trg_dt_integer) {
+		NumericType oldCREATE__TRG__trg_dt_integer = creatE__TRG__trg_dt_integer;
+		creatE__TRG__trg_dt_integer = newCREATE__TRG__trg_dt_integer;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_INTEGER, oldCREATE__TRG__trg_dt_integer, creatE__TRG__trg_dt_integer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType getCREATE__TRG__trg_dt_long() {
+		if (creatE__TRG__trg_dt_long != null && creatE__TRG__trg_dt_long.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__trg_dt_long = (InternalEObject)creatE__TRG__trg_dt_long;
+			creatE__TRG__trg_dt_long = (NumericType)eResolveProxy(oldCREATE__TRG__trg_dt_long);
+			if (creatE__TRG__trg_dt_long != oldCREATE__TRG__trg_dt_long) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONG, oldCREATE__TRG__trg_dt_long, creatE__TRG__trg_dt_long));
+			}
+		}
+		return creatE__TRG__trg_dt_long;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType basicGetCREATE__TRG__trg_dt_long() {
+		return creatE__TRG__trg_dt_long;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__trg_dt_long(NumericType newCREATE__TRG__trg_dt_long) {
+		NumericType oldCREATE__TRG__trg_dt_long = creatE__TRG__trg_dt_long;
+		creatE__TRG__trg_dt_long = newCREATE__TRG__trg_dt_long;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONG, oldCREATE__TRG__trg_dt_long, creatE__TRG__trg_dt_long));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType getCREATE__TRG__trg_dt_longlong() {
+		if (creatE__TRG__trg_dt_longlong != null && creatE__TRG__trg_dt_longlong.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__trg_dt_longlong = (InternalEObject)creatE__TRG__trg_dt_longlong;
+			creatE__TRG__trg_dt_longlong = (NumericType)eResolveProxy(oldCREATE__TRG__trg_dt_longlong);
+			if (creatE__TRG__trg_dt_longlong != oldCREATE__TRG__trg_dt_longlong) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONGLONG, oldCREATE__TRG__trg_dt_longlong, creatE__TRG__trg_dt_longlong));
+			}
+		}
+		return creatE__TRG__trg_dt_longlong;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType basicGetCREATE__TRG__trg_dt_longlong() {
+		return creatE__TRG__trg_dt_longlong;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__trg_dt_longlong(NumericType newCREATE__TRG__trg_dt_longlong) {
+		NumericType oldCREATE__TRG__trg_dt_longlong = creatE__TRG__trg_dt_longlong;
+		creatE__TRG__trg_dt_longlong = newCREATE__TRG__trg_dt_longlong;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONGLONG, oldCREATE__TRG__trg_dt_longlong, creatE__TRG__trg_dt_longlong));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType getCREATE__TRG__trg_dt_short() {
+		if (creatE__TRG__trg_dt_short != null && creatE__TRG__trg_dt_short.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__trg_dt_short = (InternalEObject)creatE__TRG__trg_dt_short;
+			creatE__TRG__trg_dt_short = (NumericType)eResolveProxy(oldCREATE__TRG__trg_dt_short);
+			if (creatE__TRG__trg_dt_short != oldCREATE__TRG__trg_dt_short) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_SHORT, oldCREATE__TRG__trg_dt_short, creatE__TRG__trg_dt_short));
+			}
+		}
+		return creatE__TRG__trg_dt_short;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType basicGetCREATE__TRG__trg_dt_short() {
+		return creatE__TRG__trg_dt_short;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__trg_dt_short(NumericType newCREATE__TRG__trg_dt_short) {
+		NumericType oldCREATE__TRG__trg_dt_short = creatE__TRG__trg_dt_short;
+		creatE__TRG__trg_dt_short = newCREATE__TRG__trg_dt_short;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_SHORT, oldCREATE__TRG__trg_dt_short, creatE__TRG__trg_dt_short));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringType getCREATE__TRG__trg_dt_string() {
+		if (creatE__TRG__trg_dt_string != null && creatE__TRG__trg_dt_string.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__trg_dt_string = (InternalEObject)creatE__TRG__trg_dt_string;
+			creatE__TRG__trg_dt_string = (StringType)eResolveProxy(oldCREATE__TRG__trg_dt_string);
+			if (creatE__TRG__trg_dt_string != oldCREATE__TRG__trg_dt_string) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_STRING, oldCREATE__TRG__trg_dt_string, creatE__TRG__trg_dt_string));
+			}
+		}
+		return creatE__TRG__trg_dt_string;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringType basicGetCREATE__TRG__trg_dt_string() {
+		return creatE__TRG__trg_dt_string;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__trg_dt_string(StringType newCREATE__TRG__trg_dt_string) {
+		StringType oldCREATE__TRG__trg_dt_string = creatE__TRG__trg_dt_string;
+		creatE__TRG__trg_dt_string = newCREATE__TRG__trg_dt_string;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_STRING, oldCREATE__TRG__trg_dt_string, creatE__TRG__trg_dt_string));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType getCREATE__TRG__trg_dt_unsigned_integer() {
+		if (creatE__TRG__trg_dt_unsigned_integer != null && creatE__TRG__trg_dt_unsigned_integer.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__trg_dt_unsigned_integer = (InternalEObject)creatE__TRG__trg_dt_unsigned_integer;
+			creatE__TRG__trg_dt_unsigned_integer = (NumericType)eResolveProxy(oldCREATE__TRG__trg_dt_unsigned_integer);
+			if (creatE__TRG__trg_dt_unsigned_integer != oldCREATE__TRG__trg_dt_unsigned_integer) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_INTEGER, oldCREATE__TRG__trg_dt_unsigned_integer, creatE__TRG__trg_dt_unsigned_integer));
+			}
+		}
+		return creatE__TRG__trg_dt_unsigned_integer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType basicGetCREATE__TRG__trg_dt_unsigned_integer() {
+		return creatE__TRG__trg_dt_unsigned_integer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__trg_dt_unsigned_integer(NumericType newCREATE__TRG__trg_dt_unsigned_integer) {
+		NumericType oldCREATE__TRG__trg_dt_unsigned_integer = creatE__TRG__trg_dt_unsigned_integer;
+		creatE__TRG__trg_dt_unsigned_integer = newCREATE__TRG__trg_dt_unsigned_integer;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_INTEGER, oldCREATE__TRG__trg_dt_unsigned_integer, creatE__TRG__trg_dt_unsigned_integer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType getCREATE__TRG__trg_dt_unsigned_long() {
+		if (creatE__TRG__trg_dt_unsigned_long != null && creatE__TRG__trg_dt_unsigned_long.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__trg_dt_unsigned_long = (InternalEObject)creatE__TRG__trg_dt_unsigned_long;
+			creatE__TRG__trg_dt_unsigned_long = (NumericType)eResolveProxy(oldCREATE__TRG__trg_dt_unsigned_long);
+			if (creatE__TRG__trg_dt_unsigned_long != oldCREATE__TRG__trg_dt_unsigned_long) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONG, oldCREATE__TRG__trg_dt_unsigned_long, creatE__TRG__trg_dt_unsigned_long));
+			}
+		}
+		return creatE__TRG__trg_dt_unsigned_long;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType basicGetCREATE__TRG__trg_dt_unsigned_long() {
+		return creatE__TRG__trg_dt_unsigned_long;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__trg_dt_unsigned_long(NumericType newCREATE__TRG__trg_dt_unsigned_long) {
+		NumericType oldCREATE__TRG__trg_dt_unsigned_long = creatE__TRG__trg_dt_unsigned_long;
+		creatE__TRG__trg_dt_unsigned_long = newCREATE__TRG__trg_dt_unsigned_long;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONG, oldCREATE__TRG__trg_dt_unsigned_long, creatE__TRG__trg_dt_unsigned_long));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType getCREATE__TRG__trg_dt_unsigned_longlong() {
+		if (creatE__TRG__trg_dt_unsigned_longlong != null && creatE__TRG__trg_dt_unsigned_longlong.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__trg_dt_unsigned_longlong = (InternalEObject)creatE__TRG__trg_dt_unsigned_longlong;
+			creatE__TRG__trg_dt_unsigned_longlong = (NumericType)eResolveProxy(oldCREATE__TRG__trg_dt_unsigned_longlong);
+			if (creatE__TRG__trg_dt_unsigned_longlong != oldCREATE__TRG__trg_dt_unsigned_longlong) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONGLONG, oldCREATE__TRG__trg_dt_unsigned_longlong, creatE__TRG__trg_dt_unsigned_longlong));
+			}
+		}
+		return creatE__TRG__trg_dt_unsigned_longlong;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType basicGetCREATE__TRG__trg_dt_unsigned_longlong() {
+		return creatE__TRG__trg_dt_unsigned_longlong;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__trg_dt_unsigned_longlong(NumericType newCREATE__TRG__trg_dt_unsigned_longlong) {
+		NumericType oldCREATE__TRG__trg_dt_unsigned_longlong = creatE__TRG__trg_dt_unsigned_longlong;
+		creatE__TRG__trg_dt_unsigned_longlong = newCREATE__TRG__trg_dt_unsigned_longlong;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONGLONG, oldCREATE__TRG__trg_dt_unsigned_longlong, creatE__TRG__trg_dt_unsigned_longlong));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType getCREATE__TRG__trg_dt_unsigned_short() {
+		if (creatE__TRG__trg_dt_unsigned_short != null && creatE__TRG__trg_dt_unsigned_short.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__trg_dt_unsigned_short = (InternalEObject)creatE__TRG__trg_dt_unsigned_short;
+			creatE__TRG__trg_dt_unsigned_short = (NumericType)eResolveProxy(oldCREATE__TRG__trg_dt_unsigned_short);
+			if (creatE__TRG__trg_dt_unsigned_short != oldCREATE__TRG__trg_dt_unsigned_short) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_SHORT, oldCREATE__TRG__trg_dt_unsigned_short, creatE__TRG__trg_dt_unsigned_short));
+			}
+		}
+		return creatE__TRG__trg_dt_unsigned_short;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumericType basicGetCREATE__TRG__trg_dt_unsigned_short() {
+		return creatE__TRG__trg_dt_unsigned_short;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__trg_dt_unsigned_short(NumericType newCREATE__TRG__trg_dt_unsigned_short) {
+		NumericType oldCREATE__TRG__trg_dt_unsigned_short = creatE__TRG__trg_dt_unsigned_short;
+		creatE__TRG__trg_dt_unsigned_short = newCREATE__TRG__trg_dt_unsigned_short;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_SHORT, oldCREATE__TRG__trg_dt_unsigned_short, creatE__TRG__trg_dt_unsigned_short));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SystemFunctionPkg getCREATE__TRG__trg_function_pkg() {
 		if (creatE__TRG__trg_function_pkg != null && creatE__TRG__trg_function_pkg.eIsProxy()) {
 			InternalEObject oldCREATE__TRG__trg_function_pkg = (InternalEObject)creatE__TRG__trg_function_pkg;
@@ -1754,6 +2289,158 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public LiteralNumericValue getCREATE__TRG__unsigned_int_min_val() {
+		if (creatE__TRG__unsigned_int_min_val != null && creatE__TRG__unsigned_int_min_val.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__unsigned_int_min_val = (InternalEObject)creatE__TRG__unsigned_int_min_val;
+			creatE__TRG__unsigned_int_min_val = (LiteralNumericValue)eResolveProxy(oldCREATE__TRG__unsigned_int_min_val);
+			if (creatE__TRG__unsigned_int_min_val != oldCREATE__TRG__unsigned_int_min_val) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_INT_MIN_VAL, oldCREATE__TRG__unsigned_int_min_val, creatE__TRG__unsigned_int_min_val));
+			}
+		}
+		return creatE__TRG__unsigned_int_min_val;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralNumericValue basicGetCREATE__TRG__unsigned_int_min_val() {
+		return creatE__TRG__unsigned_int_min_val;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__unsigned_int_min_val(LiteralNumericValue newCREATE__TRG__unsigned_int_min_val) {
+		LiteralNumericValue oldCREATE__TRG__unsigned_int_min_val = creatE__TRG__unsigned_int_min_val;
+		creatE__TRG__unsigned_int_min_val = newCREATE__TRG__unsigned_int_min_val;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_INT_MIN_VAL, oldCREATE__TRG__unsigned_int_min_val, creatE__TRG__unsigned_int_min_val));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralNumericValue getCREATE__TRG__unsigned_long_min_val() {
+		if (creatE__TRG__unsigned_long_min_val != null && creatE__TRG__unsigned_long_min_val.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__unsigned_long_min_val = (InternalEObject)creatE__TRG__unsigned_long_min_val;
+			creatE__TRG__unsigned_long_min_val = (LiteralNumericValue)eResolveProxy(oldCREATE__TRG__unsigned_long_min_val);
+			if (creatE__TRG__unsigned_long_min_val != oldCREATE__TRG__unsigned_long_min_val) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONG_MIN_VAL, oldCREATE__TRG__unsigned_long_min_val, creatE__TRG__unsigned_long_min_val));
+			}
+		}
+		return creatE__TRG__unsigned_long_min_val;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralNumericValue basicGetCREATE__TRG__unsigned_long_min_val() {
+		return creatE__TRG__unsigned_long_min_val;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__unsigned_long_min_val(LiteralNumericValue newCREATE__TRG__unsigned_long_min_val) {
+		LiteralNumericValue oldCREATE__TRG__unsigned_long_min_val = creatE__TRG__unsigned_long_min_val;
+		creatE__TRG__unsigned_long_min_val = newCREATE__TRG__unsigned_long_min_val;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONG_MIN_VAL, oldCREATE__TRG__unsigned_long_min_val, creatE__TRG__unsigned_long_min_val));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralNumericValue getCREATE__TRG__unsigned_longlong_min_val() {
+		if (creatE__TRG__unsigned_longlong_min_val != null && creatE__TRG__unsigned_longlong_min_val.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__unsigned_longlong_min_val = (InternalEObject)creatE__TRG__unsigned_longlong_min_val;
+			creatE__TRG__unsigned_longlong_min_val = (LiteralNumericValue)eResolveProxy(oldCREATE__TRG__unsigned_longlong_min_val);
+			if (creatE__TRG__unsigned_longlong_min_val != oldCREATE__TRG__unsigned_longlong_min_val) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONGLONG_MIN_VAL, oldCREATE__TRG__unsigned_longlong_min_val, creatE__TRG__unsigned_longlong_min_val));
+			}
+		}
+		return creatE__TRG__unsigned_longlong_min_val;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralNumericValue basicGetCREATE__TRG__unsigned_longlong_min_val() {
+		return creatE__TRG__unsigned_longlong_min_val;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__unsigned_longlong_min_val(LiteralNumericValue newCREATE__TRG__unsigned_longlong_min_val) {
+		LiteralNumericValue oldCREATE__TRG__unsigned_longlong_min_val = creatE__TRG__unsigned_longlong_min_val;
+		creatE__TRG__unsigned_longlong_min_val = newCREATE__TRG__unsigned_longlong_min_val;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONGLONG_MIN_VAL, oldCREATE__TRG__unsigned_longlong_min_val, creatE__TRG__unsigned_longlong_min_val));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralNumericValue getCREATE__TRG__unsigned_short_min_val() {
+		if (creatE__TRG__unsigned_short_min_val != null && creatE__TRG__unsigned_short_min_val.eIsProxy()) {
+			InternalEObject oldCREATE__TRG__unsigned_short_min_val = (InternalEObject)creatE__TRG__unsigned_short_min_val;
+			creatE__TRG__unsigned_short_min_val = (LiteralNumericValue)eResolveProxy(oldCREATE__TRG__unsigned_short_min_val);
+			if (creatE__TRG__unsigned_short_min_val != oldCREATE__TRG__unsigned_short_min_val) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_SHORT_MIN_VAL, oldCREATE__TRG__unsigned_short_min_val, creatE__TRG__unsigned_short_min_val));
+			}
+		}
+		return creatE__TRG__unsigned_short_min_val;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralNumericValue basicGetCREATE__TRG__unsigned_short_min_val() {
+		return creatE__TRG__unsigned_short_min_val;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCREATE__TRG__unsigned_short_min_val(LiteralNumericValue newCREATE__TRG__unsigned_short_min_val) {
+		LiteralNumericValue oldCREATE__TRG__unsigned_short_min_val = creatE__TRG__unsigned_short_min_val;
+		creatE__TRG__unsigned_short_min_val = newCREATE__TRG__unsigned_short_min_val;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_SHORT_MIN_VAL, oldCREATE__TRG__unsigned_short_min_val, creatE__TRG__unsigned_short_min_val));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public OperationalAnalysis2SystemAnalysis getCREATE__CORR__oa2ctx() {
 		if (creatE__CORR__oa2ctx != null && creatE__CORR__oa2ctx.eIsProxy()) {
 			InternalEObject oldCREATE__CORR__oa2ctx = (InternalEObject)creatE__CORR__oa2ctx;
@@ -1795,6 +2482,9 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OPERATIONAL_CAPABILITIES:
+				if (resolve) return getCREATE__SRC__src__operational_capabilities();
+				return basicGetCREATE__SRC__src__operational_capabilities();
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG:
 				if (resolve) return getCREATE__SRC__src_abstract_capability_pkg();
 				return basicGetCREATE__SRC__src_abstract_capability_pkg();
@@ -1882,6 +2572,33 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX:
 				if (resolve) return getCREATE__TRG__trg_dt_hex();
 				return basicGetCREATE__TRG__trg_dt_hex();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_INTEGER:
+				if (resolve) return getCREATE__TRG__trg_dt_integer();
+				return basicGetCREATE__TRG__trg_dt_integer();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONG:
+				if (resolve) return getCREATE__TRG__trg_dt_long();
+				return basicGetCREATE__TRG__trg_dt_long();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONGLONG:
+				if (resolve) return getCREATE__TRG__trg_dt_longlong();
+				return basicGetCREATE__TRG__trg_dt_longlong();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_SHORT:
+				if (resolve) return getCREATE__TRG__trg_dt_short();
+				return basicGetCREATE__TRG__trg_dt_short();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_STRING:
+				if (resolve) return getCREATE__TRG__trg_dt_string();
+				return basicGetCREATE__TRG__trg_dt_string();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_INTEGER:
+				if (resolve) return getCREATE__TRG__trg_dt_unsigned_integer();
+				return basicGetCREATE__TRG__trg_dt_unsigned_integer();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONG:
+				if (resolve) return getCREATE__TRG__trg_dt_unsigned_long();
+				return basicGetCREATE__TRG__trg_dt_unsigned_long();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONGLONG:
+				if (resolve) return getCREATE__TRG__trg_dt_unsigned_longlong();
+				return basicGetCREATE__TRG__trg_dt_unsigned_longlong();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_SHORT:
+				if (resolve) return getCREATE__TRG__trg_dt_unsigned_short();
+				return basicGetCREATE__TRG__trg_dt_unsigned_short();
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_FUNCTION_PKG:
 				if (resolve) return getCREATE__TRG__trg_function_pkg();
 				return basicGetCREATE__TRG__trg_function_pkg();
@@ -1897,6 +2614,18 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG:
 				if (resolve) return getCREATE__TRG__trg_system_comp_pkg();
 				return basicGetCREATE__TRG__trg_system_comp_pkg();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_INT_MIN_VAL:
+				if (resolve) return getCREATE__TRG__unsigned_int_min_val();
+				return basicGetCREATE__TRG__unsigned_int_min_val();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONG_MIN_VAL:
+				if (resolve) return getCREATE__TRG__unsigned_long_min_val();
+				return basicGetCREATE__TRG__unsigned_long_min_val();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONGLONG_MIN_VAL:
+				if (resolve) return getCREATE__TRG__unsigned_longlong_min_val();
+				return basicGetCREATE__TRG__unsigned_longlong_min_val();
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_SHORT_MIN_VAL:
+				if (resolve) return getCREATE__TRG__unsigned_short_min_val();
+				return basicGetCREATE__TRG__unsigned_short_min_val();
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_CORR_OA2CTX:
 				if (resolve) return getCREATE__CORR__oa2ctx();
 				return basicGetCREATE__CORR__oa2ctx();
@@ -1912,6 +2641,9 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OPERATIONAL_CAPABILITIES:
+				setCREATE__SRC__src__operational_capabilities((OperationalActivity)newValue);
+				return;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG:
 				setCREATE__SRC__src_abstract_capability_pkg((OperationalCapabilityPkg)newValue);
 				return;
@@ -1999,6 +2731,33 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX:
 				setCREATE__TRG__trg_dt_hex((NumericType)newValue);
 				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_INTEGER:
+				setCREATE__TRG__trg_dt_integer((NumericType)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONG:
+				setCREATE__TRG__trg_dt_long((NumericType)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONGLONG:
+				setCREATE__TRG__trg_dt_longlong((NumericType)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_SHORT:
+				setCREATE__TRG__trg_dt_short((NumericType)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_STRING:
+				setCREATE__TRG__trg_dt_string((StringType)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_INTEGER:
+				setCREATE__TRG__trg_dt_unsigned_integer((NumericType)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONG:
+				setCREATE__TRG__trg_dt_unsigned_long((NumericType)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONGLONG:
+				setCREATE__TRG__trg_dt_unsigned_longlong((NumericType)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_SHORT:
+				setCREATE__TRG__trg_dt_unsigned_short((NumericType)newValue);
+				return;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_FUNCTION_PKG:
 				setCREATE__TRG__trg_function_pkg((SystemFunctionPkg)newValue);
 				return;
@@ -2013,6 +2772,18 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 				return;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG:
 				setCREATE__TRG__trg_system_comp_pkg((SystemComponentPkg)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_INT_MIN_VAL:
+				setCREATE__TRG__unsigned_int_min_val((LiteralNumericValue)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONG_MIN_VAL:
+				setCREATE__TRG__unsigned_long_min_val((LiteralNumericValue)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONGLONG_MIN_VAL:
+				setCREATE__TRG__unsigned_longlong_min_val((LiteralNumericValue)newValue);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_SHORT_MIN_VAL:
+				setCREATE__TRG__unsigned_short_min_val((LiteralNumericValue)newValue);
 				return;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_CORR_OA2CTX:
 				setCREATE__CORR__oa2ctx((OperationalAnalysis2SystemAnalysis)newValue);
@@ -2029,6 +2800,9 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OPERATIONAL_CAPABILITIES:
+				setCREATE__SRC__src__operational_capabilities((OperationalActivity)null);
+				return;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG:
 				setCREATE__SRC__src_abstract_capability_pkg((OperationalCapabilityPkg)null);
 				return;
@@ -2116,6 +2890,33 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX:
 				setCREATE__TRG__trg_dt_hex((NumericType)null);
 				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_INTEGER:
+				setCREATE__TRG__trg_dt_integer((NumericType)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONG:
+				setCREATE__TRG__trg_dt_long((NumericType)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONGLONG:
+				setCREATE__TRG__trg_dt_longlong((NumericType)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_SHORT:
+				setCREATE__TRG__trg_dt_short((NumericType)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_STRING:
+				setCREATE__TRG__trg_dt_string((StringType)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_INTEGER:
+				setCREATE__TRG__trg_dt_unsigned_integer((NumericType)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONG:
+				setCREATE__TRG__trg_dt_unsigned_long((NumericType)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONGLONG:
+				setCREATE__TRG__trg_dt_unsigned_longlong((NumericType)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_SHORT:
+				setCREATE__TRG__trg_dt_unsigned_short((NumericType)null);
+				return;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_FUNCTION_PKG:
 				setCREATE__TRG__trg_function_pkg((SystemFunctionPkg)null);
 				return;
@@ -2130,6 +2931,18 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 				return;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG:
 				setCREATE__TRG__trg_system_comp_pkg((SystemComponentPkg)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_INT_MIN_VAL:
+				setCREATE__TRG__unsigned_int_min_val((LiteralNumericValue)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONG_MIN_VAL:
+				setCREATE__TRG__unsigned_long_min_val((LiteralNumericValue)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONGLONG_MIN_VAL:
+				setCREATE__TRG__unsigned_longlong_min_val((LiteralNumericValue)null);
+				return;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_SHORT_MIN_VAL:
+				setCREATE__TRG__unsigned_short_min_val((LiteralNumericValue)null);
 				return;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_CORR_OA2CTX:
 				setCREATE__CORR__oa2ctx((OperationalAnalysis2SystemAnalysis)null);
@@ -2146,6 +2959,8 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OPERATIONAL_CAPABILITIES:
+				return creatE__SRC__src__operational_capabilities != null;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG:
 				return creatE__SRC__src_abstract_capability_pkg != null;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_DATA_PKG:
@@ -2204,6 +3019,24 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 				return creatE__TRG__trg_dt_float != null;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX:
 				return creatE__TRG__trg_dt_hex != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_INTEGER:
+				return creatE__TRG__trg_dt_integer != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONG:
+				return creatE__TRG__trg_dt_long != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONGLONG:
+				return creatE__TRG__trg_dt_longlong != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_SHORT:
+				return creatE__TRG__trg_dt_short != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_STRING:
+				return creatE__TRG__trg_dt_string != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_INTEGER:
+				return creatE__TRG__trg_dt_unsigned_integer != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONG:
+				return creatE__TRG__trg_dt_unsigned_long != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONGLONG:
+				return creatE__TRG__trg_dt_unsigned_longlong != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_SHORT:
+				return creatE__TRG__trg_dt_unsigned_short != null;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_FUNCTION_PKG:
 				return creatE__TRG__trg_function_pkg != null;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_INTERFACE_PKG:
@@ -2214,6 +3047,14 @@ public class InitialModelCreation_ownedDataPkg__MarkerImpl extends TGGRuleApplic
 				return creatE__TRG__trg_oa_realization != null;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG:
 				return creatE__TRG__trg_system_comp_pkg != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_INT_MIN_VAL:
+				return creatE__TRG__unsigned_int_min_val != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONG_MIN_VAL:
+				return creatE__TRG__unsigned_long_min_val != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONGLONG_MIN_VAL:
+				return creatE__TRG__unsigned_longlong_min_val != null;
+			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_SHORT_MIN_VAL:
+				return creatE__TRG__unsigned_short_min_val != null;
 			case Oa2CtxPackage.INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_CORR_OA2CTX:
 				return creatE__CORR__oa2ctx != null;
 		}

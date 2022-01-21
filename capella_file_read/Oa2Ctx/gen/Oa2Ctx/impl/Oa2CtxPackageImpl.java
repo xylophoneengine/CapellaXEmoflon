@@ -176,10 +176,10 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+		CapellamodellerPackage.eINSTANCE.eClass();
+		CapellamodellerPackage.eINSTANCE.eClass();
+		CapellamodellerPackage.eINSTANCE.eClass();
 		RuntimePackage.eINSTANCE.eClass();
-		CapellamodellerPackage.eINSTANCE.eClass();
-		CapellamodellerPackage.eINSTANCE.eClass();
-		CapellamodellerPackage.eINSTANCE.eClass();
 		CapellamodellerPackage.eINSTANCE.eClass();
 		CapellamodellerPackage.eINSTANCE.eClass();
 		CapellamodellerPackage.eINSTANCE.eClass();
@@ -260,7 +260,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_abstract_capability_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src__operational_capabilities() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -269,7 +269,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_data_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_abstract_capability_pkg() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -278,7 +278,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_entity_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_data_pkg() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -287,7 +287,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_function_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_entity_pkg() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -296,7 +296,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_interface_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_function_pkg() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -305,7 +305,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_oa_arch() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_interface_pkg() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -314,7 +314,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_role_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_oa_arch() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -323,7 +323,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__bool_literal_false() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_role_pkg() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -332,7 +332,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__bool_literal_true() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__bool_literal_false() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -341,7 +341,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__byte_literal_max_val() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__bool_literal_true() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -350,7 +350,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__byte_literal_min_val() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__byte_literal_max_val() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -359,7 +359,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__char_literal_max_length() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__byte_literal_min_val() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -368,7 +368,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__char_literal_min_length() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__char_literal_max_length() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -377,7 +377,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__char_literal_min_length() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -386,7 +386,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -395,7 +395,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand_left_operand() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -404,7 +404,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand_right_operand() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand_left_operand() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -413,7 +413,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_right_operand() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_left_operand_right_operand() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -422,7 +422,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_min_val() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_max_val_right_operand() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -431,7 +431,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_abstract_capability_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__hex_literal_min_val() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -440,7 +440,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_ctx_arch() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_abstract_capability_pkg() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -449,7 +449,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_data_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_ctx_arch() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -458,7 +458,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_boolean() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_data_pkg() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -467,7 +467,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_byte() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_boolean() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -476,7 +476,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_char() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_byte() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -485,7 +485,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_data_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_char() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(25);
 	}
 
@@ -494,7 +494,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_double() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_data_pkg() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(26);
 	}
 
@@ -503,7 +503,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_float() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_double() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(27);
 	}
 
@@ -512,7 +512,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_hex() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_float() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(28);
 	}
 
@@ -521,7 +521,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_function_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_hex() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(29);
 	}
 
@@ -530,7 +530,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_interface_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_integer() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(30);
 	}
 
@@ -539,7 +539,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_mission_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_long() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(31);
 	}
 
@@ -548,7 +548,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_oa_realization() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_longlong() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(32);
 	}
 
@@ -557,7 +557,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_system_comp_pkg() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_short() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(33);
 	}
 
@@ -566,8 +566,134 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__CORR__oa2ctx() {
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_string() {
 		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(34);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_integer() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(35);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_long() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(36);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_longlong() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(37);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_short() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(38);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_function_pkg() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(39);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_interface_pkg() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(40);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_mission_pkg() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(41);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_oa_realization() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(42);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_system_comp_pkg() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(43);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_int_min_val() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(44);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_long_min_val() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(45);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_longlong_min_val() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(46);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_short_min_val() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(47);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitialModelCreation_ownedDataPkg__Marker_CREATE__CORR__oa2ctx() {
+		return (EReference)initialModelCreation_ownedDataPkg__MarkerEClass.getEStructuralFeatures().get(48);
 	}
 
 	/**
@@ -873,6 +999,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 		createEReference(operationalAnalysis2SystemAnalysisEClass, OPERATIONAL_ANALYSIS2_SYSTEM_ANALYSIS__TARGET);
 
 		initialModelCreation_ownedDataPkg__MarkerEClass = createEClass(INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_OPERATIONAL_CAPABILITIES);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ABSTRACT_CAPABILITY_PKG);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_DATA_PKG);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_SRC_SRC_ENTITY_PKG);
@@ -902,11 +1029,24 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_DOUBLE);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_FLOAT);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_HEX);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_INTEGER);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONG);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_LONGLONG);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_SHORT);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_STRING);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_INTEGER);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONG);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_LONGLONG);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_DT_UNSIGNED_SHORT);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_FUNCTION_PKG);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_INTERFACE_PKG);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_MISSION_PKG);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_OA_REALIZATION);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_TRG_SYSTEM_COMP_PKG);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_INT_MIN_VAL);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONG_MIN_VAL);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_LONGLONG_MIN_VAL);
+		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_TRG_UNSIGNED_SHORT_MIN_VAL);
 		createEReference(initialModelCreation_ownedDataPkg__MarkerEClass, INITIAL_MODEL_CREATION_OWNED_DATA_PKG_MARKER__CREATE_CORR_OA2CTX);
 
 		oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass = createEClass(OA2_SA_CREATE_NODES_AND_TRY_TO_SET_REFERENCE_MARKER);
@@ -997,6 +1137,7 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 		initEReference(getOperationalAnalysis2SystemAnalysis_Target(), theCtxPackage.getSystemAnalysis(), null, "target", null, 0, 1, OperationalAnalysis2SystemAnalysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(initialModelCreation_ownedDataPkg__MarkerEClass, InitialModelCreation_ownedDataPkg__Marker.class, "InitialModelCreation_ownedDataPkg__Marker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src__operational_capabilities(), theOaPackage.getOperationalActivity(), null, "CREATE__SRC__src__operational_capabilities", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_abstract_capability_pkg(), theOaPackage.getOperationalCapabilityPkg(), null, "CREATE__SRC__src_abstract_capability_pkg", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_data_pkg(), theInformationPackage.getDataPkg(), null, "CREATE__SRC__src_data_pkg", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__SRC__src_entity_pkg(), theOaPackage.getEntityPkg(), null, "CREATE__SRC__src_entity_pkg", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1026,11 +1167,24 @@ public class Oa2CtxPackageImpl extends EPackageImpl implements Oa2CtxPackage {
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_double(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_double", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_float(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_float", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_hex(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_hex", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_integer(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_integer", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_long(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_long", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_longlong(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_longlong", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_short(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_short", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_string(), theDatatypePackage.getStringType(), null, "CREATE__TRG__trg_dt_string", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_integer(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_unsigned_integer", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_long(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_unsigned_long", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_longlong(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_unsigned_longlong", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_dt_unsigned_short(), theDatatypePackage.getNumericType(), null, "CREATE__TRG__trg_dt_unsigned_short", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_function_pkg(), theCtxPackage.getSystemFunctionPkg(), null, "CREATE__TRG__trg_function_pkg", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_interface_pkg(), theCsPackage.getInterfacePkg(), null, "CREATE__TRG__trg_interface_pkg", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_mission_pkg(), theCtxPackage.getMissionPkg(), null, "CREATE__TRG__trg_mission_pkg", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_oa_realization(), theCtxPackage.getOperationalAnalysisRealization(), null, "CREATE__TRG__trg_oa_realization", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__trg_system_comp_pkg(), theCtxPackage.getSystemComponentPkg(), null, "CREATE__TRG__trg_system_comp_pkg", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_int_min_val(), theDatavaluePackage.getLiteralNumericValue(), null, "CREATE__TRG__unsigned_int_min_val", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_long_min_val(), theDatavaluePackage.getLiteralNumericValue(), null, "CREATE__TRG__unsigned_long_min_val", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_longlong_min_val(), theDatavaluePackage.getLiteralNumericValue(), null, "CREATE__TRG__unsigned_longlong_min_val", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__TRG__unsigned_short_min_val(), theDatavaluePackage.getLiteralNumericValue(), null, "CREATE__TRG__unsigned_short_min_val", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInitialModelCreation_ownedDataPkg__Marker_CREATE__CORR__oa2ctx(), this.getOperationalAnalysis2SystemAnalysis(), null, "CREATE__CORR__oa2ctx", null, 1, 1, InitialModelCreation_ownedDataPkg__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(oa2Sa_create_nodes_and_try_to_set_reference__MarkerEClass, Oa2Sa_create_nodes_and_try_to_set_reference__Marker.class, "Oa2Sa_create_nodes_and_try_to_set_reference__Marker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
