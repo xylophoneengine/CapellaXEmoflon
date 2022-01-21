@@ -85,6 +85,7 @@ public class RegisterHelper {
 		// save capella project
 		//reg.saveCapellaFile(se, "project_renamed");
 
+		// test string due too local git error; checking if branch was correctly changed
 		System.out.println("EOF");
 	}
 
